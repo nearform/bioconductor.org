@@ -2,7 +2,7 @@ name: PageSpeed Automation
 on: [push]
 jobs:
   run-pagespeed-performance:
-    name: Performance Metrics from PageSpeed
+    name: Performance Metrics for desktop
     runs-on: ubuntu-latest
     steps:
       - name: PageSpeed Insights - Desktop
@@ -11,9 +11,13 @@ jobs:
           url: "https://www.bioconductor.org/"
           threshold: 95
           strategy: desktop
-      - name: PageSpeed Insights - Mobile
+  run-pagespeed-performance-mobile:
+    name: Performance Metrics for mobile
+    runs-on: ubuntu-latest
+    steps:
+      - name: running Pagespeed
         uses: jakepartusch/psi-action@v1.3
         with:
           url: "https://www.bioconductor.org/"
           threshold: 95
-          strategy: Mobile
+          strategy: mobile
