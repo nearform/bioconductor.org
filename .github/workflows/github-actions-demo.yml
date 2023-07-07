@@ -8,6 +8,6 @@ jobs:
       - name: Web Accessibility Evaluation
         uses: a11ywatch/github-actions@v2.0.2
         with:
-          WEBSITE_URL: "https://www.bioconductor.org/"
+          WEBSITE_URL: "https://a11ywatch.com"
           FIX: true
           LIST: true
