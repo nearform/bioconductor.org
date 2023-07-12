@@ -4,7 +4,6 @@ jobs:
   accesibility-automation:
     name: Accesibility
     runs-on: ubuntu-latest
-    environment: staging
     steps:
       - name: checkout
         uses: actions/checkout@v3
