@@ -1,4 +1,4 @@
-## New components folder
+# New components folder
 
 The purpose of the new components folder is to house the new layouts.
 This folder serves as a centralized location for tracking edited files
