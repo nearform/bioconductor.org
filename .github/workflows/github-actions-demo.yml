@@ -5,9 +5,15 @@ jobs:
     name: Accessibility metrics
     runs-on: ubuntu-latest
     steps:
-      - name: Web Accessibility Evaluation
+      - name: run a11ywatch
         uses: a11ywatch/github-actions@v2.0.2
         with:
-          WEBSITE_URL: "https://a11ywatch.com"
-          FIX: true
+          WEBSITE_URL: https://www.bioconductor.org/
+          SITE_WIDE: true
+          SUBDOMAINS: true
+          TLD: false
+          SITEMAP: true
+          FAIL_ERRORS_COUNT: 15
           LIST: true
+          FIX: false
+          UPGRADE: false
