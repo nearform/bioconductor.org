@@ -1,18 +1,18 @@
 name: GitHub Actions accessibility demo
 on: [push]
 jobs:
-  Explore-GitHub-Actions:
-    name: Accessibility metrics
+  accesibility-automation:
+    name: Accesibility
     runs-on: ubuntu-latest
+    environment: staging
     steps:
-      - name: run a11ywatch
-        uses: a11ywatch/github-actions@v2.0.2
+      - name: checkout
+        uses: actions/checkout@v3
+      - name: install Node
+        uses: actions/setup-node@v3
         with:
-          WEBSITE_URL: https://www.bioconductor.org/
-          SITE_WIDE: true
-          SUBDOMAINS: true
-          TLD: false
-          FAIL_ERRORS_COUNT: 15
-          LIST: true
-          FIX: false
-          UPGRADE: false
+          node-version: 18
+      - name: install axe
+        run: npm install @axe-core/cli -g
+      - name: run axe
+        run: axe https://www.bioconductor.org/
