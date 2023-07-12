@@ -1,0 +1,21 @@
+name: PageSpeed Automation
+on: [push]
+jobs:
+  run-pagespeed-performance-desktop:
+    name: Performance Metrics for desktop
+    runs-on: ubuntu-latest
+    steps:
+      - name: PageSpeed Insights - Desktop
+        uses: jakepartusch/psi-action@v1.3
+        with:
+          url: "http://redesign-bioconductor-staging.s3-website-us-east-1.amazonaws.com/"
+          strategy: desktop
+  run-pagespeed-performance-mobile:
+    name: Performance Metrics for mobile
+    runs-on: ubuntu-latest
+    steps:
+      - name: running Pagespeed
+        uses: jakepartusch/psi-action@v1.3
+        with:
+          url: "http://redesign-bioconductor-staging.s3-website-us-east-1.amazonaws.com/"
+          strategy: mobile
