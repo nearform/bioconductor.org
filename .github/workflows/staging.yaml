@@ -39,7 +39,7 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
   pagespeed-automation:
     needs: staging
-    name: Performance Metrics for desktop
+    name: Performance from pagespeed
     runs-on: ubuntu-latest
     steps:
       - name: PageSpeed Insights - Desktop
@@ -52,3 +52,22 @@ jobs:
         with:
           url: ${{ secrets.STAGING_URL }}
           strategy: mobile
+  accesibility-automation:
+    needs: staging
+    name: Accesibility
+    runs-on: ubuntu-latest
+    steps:
+      - name: run a11ywatch
+        uses: a11ywatch/github-actions@v2.0.2
+        with:
+          WEBSITE_URL: ${{ secrets.WEBSITE_URL }}
+          SITE_WIDE: true
+          SUBDOMAINS: true
+          TLD: false
+          SITEMAP: true
+          FAIL_ERRORS_COUNT: 15
+          LIST: true
+          FIX: false
+          UPGRADE: false
+          COMPUTER_VISION_SUBSCRIPTION_KEY: ${{ secrets.COMPUTER_VISION_SUBSCRIPTION_KEY }}
+          COMPUTER_VISION_ENDPOINT: ${{ secrets.COMPUTER_VISION_ENDPOINT }}
