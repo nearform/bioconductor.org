@@ -12,7 +12,6 @@ jobs:
           SITE_WIDE: true
           SUBDOMAINS: true
           TLD: false
-          SITEMAP: true
           FAIL_ERRORS_COUNT: 15
           LIST: true
           FIX: false
