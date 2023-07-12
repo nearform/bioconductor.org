@@ -41,7 +41,10 @@ jobs:
     needs: staging
     name: Performance from pagespeed
     runs-on: ubuntu-latest
+    environment: staging
     steps:
+      - name: checkout
+        uses: actions/checkout@v3
       - name: PageSpeed Insights - Desktop
         uses: jakepartusch/psi-action@v1.3
         with:
@@ -56,18 +59,15 @@ jobs:
     needs: staging
     name: Accesibility
     runs-on: ubuntu-latest
+    environment: staging
     steps:
-      - name: run a11ywatch
-        uses: a11ywatch/github-actions@v2.0.2
+      - name: checkout
+        uses: actions/checkout@v3
+      - name: install Node
+        uses: actions/setup-node@v3
         with:
-          WEBSITE_URL: ${{ secrets.WEBSITE_URL }}
-          SITE_WIDE: true
-          SUBDOMAINS: true
-          TLD: false
-          SITEMAP: true
-          FAIL_ERRORS_COUNT: 15
-          LIST: true
-          FIX: false
-          UPGRADE: false
-          COMPUTER_VISION_SUBSCRIPTION_KEY: ${{ secrets.COMPUTER_VISION_SUBSCRIPTION_KEY }}
-          COMPUTER_VISION_ENDPOINT: ${{ secrets.COMPUTER_VISION_ENDPOINT }}
+          node-version: 18
+      - name: install axe
+        run: npm install @axe-core/cli -g
+      - name: run axe
+        run: axe ${{ secrets.STAGING_URL }}
