@@ -18,7 +18,7 @@ on:
       - completed
 
 jobs:
-  pagespeed-automation:
+  KPI-automation:
     name: Performance from pagespeed
     runs-on: ubuntu-latest
     steps:
@@ -27,19 +27,19 @@ jobs:
       - name: find-url
         run: |
           if [ ${{github.ref_name }} == redesign2023 ]; then
-                echo "URL=${{secrets.STAGING_URL}}" >> "$GITHUB_ENV"
+                echo "URL_TO_USE=${{vars.STAGING_URL}}" >> "$GITHUB_ENV"
           else
-                echo "URL=http://pr-preview-bioconductor-pr${{github.event.number}}.s3-website-us-east-1.amazonaws.com"
+                echo "URL_TO_USE=http://pr-preview-bioconductor-pr${{github.event.number}}.s3-website-us-east-1.amazonaws.com" >> "$GITHUB_ENV"
           fi
       - name: PageSpeed Insights - Desktop
         uses: jakepartusch/psi-action@v1.3
         with:
-          url: ${{ env.URL }}
+          url: ${{ env.URL_TO_USE }}
           strategy: desktop
       - name: PageSpeed Insights - Mobile
         uses: jakepartusch/psi-action@v1.3
         with:
-          url: ${{ env.URL }}
+          url: ${{ env.URL_TO_USE }}
           strategy: mobile
       - name: install node for axe
         uses: actions/setup-node@v3
@@ -48,4 +48,4 @@ jobs:
       - name: install axe
         run: npm install @axe-core/cli -g
       - name: run axe accesibility test
-        run: axe  ${{ env.URL }}
+        run: axe  ${{ env.URL_TO_USE }}

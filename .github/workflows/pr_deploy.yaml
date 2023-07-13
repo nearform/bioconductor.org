@@ -50,37 +50,3 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  pagespeed-automation:
-    needs: dev-pr-create-s3
-    name: Performance from pagespeed
-    runs-on: ubuntu-latest
-    environment: dev
-    steps:
-      - name: checkout
-        uses: actions/checkout@v3
-      - name: PageSpeed Insights - Desktop
-        uses: jakepartusch/psi-action@v1.3
-        with:
-          url: http://pr-preview-bioconductor-pr${{github.event.number}}.s3-website-us-east-1.amazonaws.com
-          strategy: desktop
-      - name: PageSpeed Insights - mobile
-        uses: jakepartusch/psi-action@v1.3
-        with:
-          url: http://pr-preview-bioconductor-pr${{github.event.number}}.s3-website-us-east-1.amazonaws.com
-          strategy: mobile
-  accesibility-automation:
-    needs: dev-pr-create-s3
-    name: Accesibility
-    runs-on: ubuntu-latest
-    environment: dev
-    steps:
-      - name: checkout
-        uses: actions/checkout@v3
-      - name: install Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
-      - name: install axe
-        run: npm install @axe-core/cli -g
-      - name: run axe
-        run: axe http://pr-preview-bioconductor-pr${{github.event.number}}.s3-website-us-east-1.amazonaws.com
