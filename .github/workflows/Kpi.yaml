@@ -18,8 +18,8 @@ on:
       - completed
 
 jobs:
-  KPI-automation:
-    name: Performance from pagespeed
+  pageSpeed_automation:
+    name: Pagespeed Results
     runs-on: ubuntu-latest
     steps:
       - name: checkout
@@ -41,6 +41,19 @@ jobs:
         with:
           url: ${{ env.URL_TO_USE }}
           strategy: mobile
+  accesibility_automation:
+    name: Accesibility from Axe Results
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+      - name: find-url
+        run: |
+          if [ ${{github.ref_name }} == redesign2023 ]; then
+                echo "URL_TO_USE=${{vars.STAGING_URL}}" >> "$GITHUB_ENV"
+          else
+                echo "URL_TO_USE=http://pr-preview-bioconductor-pr${{github.event.number}}.s3-website-us-east-1.amazonaws.com" >> "$GITHUB_ENV"
+          fi
       - name: install node for axe
         uses: actions/setup-node@v3
         with:
