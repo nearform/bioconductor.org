@@ -54,7 +54,7 @@ jobs:
     needs: dev-pr-create-s3
     name: Performance from pagespeed
     runs-on: ubuntu-latest
-    environment: staging
+    environment: dev
     steps:
       - name: checkout
         uses: actions/checkout@v3
@@ -66,13 +66,13 @@ jobs:
       - name: PageSpeed Insights - mobile
         uses: jakepartusch/psi-action@v1.3
         with:
-          url: ${{ secrets.STAGING_URL }}
+          url: http://pr-preview-bioconductor-pr${{github.event.number}}.s3-website-us-east-1.amazonaws.com
           strategy: mobile
   accesibility-automation:
     needs: dev-pr-create-s3
     name: Accesibility
     runs-on: ubuntu-latest
-    environment: staging
+    environment: dev
     steps:
       - name: checkout
         uses: actions/checkout@v3
