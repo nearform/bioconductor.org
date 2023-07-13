@@ -18,7 +18,7 @@ on:
       - completed
 
 jobs:
-  pageSpeed_automation:
+  pagespeed_automation:
     name: Pagespeed Results
     runs-on: ubuntu-latest
     steps:
