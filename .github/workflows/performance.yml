@@ -21,26 +21,25 @@ jobs:
       - name: run desktop psi
         run: |
           echo "DESKTOP_PSI_RESULTS<<EOF" >> $GITHUB_ENV
-          echo "$(node psi.js https://www.bioconductor.org/ desktop 70)" >> $GITHUB_ENV
+          echo "$(node psi.js https://www.bioconductor.org/ desktop 0)" >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
       - name: run mobile psi
         run: |
-          echo "MOBILE__PSI_RESULTS<<EOF" >> $GITHUB_ENV
-          echo "$(node psi.js https://www.bioconductor.org/ mobile 70)" >> $GITHUB_ENV
-          echo "EOF" >> $GITHUB_ENV
-
-      - name: run axe accesibility test
-        run: |
-          echo "AXE_RESULTS<<EOF" >> $GITHUB_ENV
-          echo "$(axe https://www.bioconductor.org/)" >> $GITHUB_ENV
+          echo "MOBILE_PSI_RESULTS<<EOF" >> $GITHUB_ENV
+          echo "$(node psi.js https://www.bioconductor.org/ mobile 0)" >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
       - name: add_comment_pageSpeed
         uses: mshick/add-pr-comment@v2
         with:
           message: |
-            ${{env.DESKTOP_RESULTS}}
-            ${{env.MOBILE_RESULTS}}
+            ${{env.DESKTOP_PSI_RESULTS}}
+            ${{env.MOBILE_PSI_RESULTS}}
           message-id: psi
+      - name: run axe accesibility test
+        run: |
+          echo "AXE_RESULTS<<EOF" >> $GITHUB_ENV
+          echo "$(axe https://www.bioconductor.org/)" >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
       - name: add_comment_axe
         uses: mshick/add-pr-comment@v2
         with:
