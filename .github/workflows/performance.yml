@@ -15,22 +15,17 @@ jobs:
         with:
           node-version: 18
       - name: install psi and axe
+        run: npm install @axe-core/cli -g
+      - name: run axe accesibility test
         run: |
-          npm install psi
-          npm install @axe-core/cli -g
-      - name: run desktop psi
-        run: |
-          echo "DESKTOP_PSI_RESULTS<<EOF" >> $GITHUB_ENV
-          echo "$(node psi.js https://www.bioconductor.org/ desktop 50)" >> $GITHUB_ENV
+          echo "AXE_RESULTS<<EOF" >> $GITHUB_ENV
+          echo "$(axe ${{env.URL_TO_USE}})" >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
-      - name: run mobile psi
-        run: |
-          echo "MOBILE_PSI_RESULTS<<EOF" >> $GITHUB_ENV
-          echo "$(node psi.js https://www.bioconductor.org/ mobile 50)" >> $GITHUB_ENV
-          echo "EOF" >> $GITHUB_ENV
-      - name: send notification
-        run: |
-          curl -X POST --data-urlencode "
-          payload={\"channel\": \"#proj-bioconductor-notif\", \"username\": \"bioconductorbot\",
-           \"text\": \"Mobile:\n${{env.MOBILE_PSI_RESULTS}}\nDesktop:\n${{env.DESKTOP_PSI_RESULTS}}\",
-            \"icon_emoji\": \":test_tube:\"}" ${{secrets.SLACK_WEBHOOK}}
+      - name: send notification axe
+        if: ${{ github.ref == 'refs/heads/redesign2023' }}
+        uses: 8398a7/action-slack@v2
+        with:
+          status: ${{ job.status }}
+          text: "${{env.AXE_RESULTS}}"
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK}}
