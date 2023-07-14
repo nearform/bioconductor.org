@@ -31,8 +31,9 @@ jobs:
       - name: send notification
         uses: 8398a7/action-slack@v2
         with:
-          status: ${{ job.status }}
-          text: "${{env.DESKTOP_PSI_RESULTS}} \n ${{env.MOBILE_PSI_RESULTS}}"
+          status: custom
+          payload: |
+            {"text": "Pagespeed Desktop:\n ${{env.DESKTOP_PSI_RESULTS}}\n Pagespeed Mobile:\n ${{env.MOBILE_PSI_RESULTS}}"}
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK}} # required
         if: always()
