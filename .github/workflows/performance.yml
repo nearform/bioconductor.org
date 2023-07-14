@@ -10,7 +10,7 @@ jobs:
         with:
           node-version: 18
       - name: install psi
-        run: $ npm install psi
+        run: npm install psi
       - name: desktop
         run: |
           echo "DESKTOP_RESULTS=$(node psi.js https://www.bioconductor.org/ desktop 70)" >> $GITHUB_ENV
