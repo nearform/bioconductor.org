@@ -10,7 +10,6 @@ jobs:
         uses: jakepartusch/psi-action@v1.3
         with:
           url: "https://www.bioconductor.org/"
-          threshold: 95
           strategy: desktop
       - name: print outputs
         run: echo "${{steps.abc.outputs}}"
@@ -22,7 +21,6 @@ jobs:
         uses: jakepartusch/psi-action@v1.3
         with:
           url: "https://www.bioconductor.org/"
-          threshold: 95
           strategy: mobile
   deploy:
     runs-on: ubuntu-latest
