@@ -3,7 +3,7 @@ on:
   pull_request:
 jobs:
   run-pagespeed-desktop:
-    name: Performance Metrics for desktop
+    name: pagespeed metrics for desktop
     runs-on: ubuntu-latest
     permissions:
       pull-requests: write
@@ -17,12 +17,18 @@ jobs:
       - name: install psi
         run: npm install psi
       - name: Desktop
-        id: desktop
         run: |
           echo "DESKTOP_RESULTS<<EOF" >> $GITHUB_ENV
+          echo "$(node psi.js https://www.bioconductor.org/ desktop 70)" >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
+      - name: Mobile
+        run: |
+          echo "MOBILE_RESULTS<<EOF" >> $GITHUB_ENV
           echo "$(node psi.js https://www.bioconductor.org/ desktop 70)" >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
       - name: add_comment
         uses: mshick/add-pr-comment@v2
         with:
-          message: ${{env.DESKTOP_RESULTS}}
+          message: |
+            ${{env.DESKTOP_RESULTS}}
+            ${{env.MOBILE_RESULTS}}
