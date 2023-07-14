@@ -2,7 +2,7 @@ name: PageSpeed Automation
 on:
   pull_request:
 jobs:
-  run-pagespeed-desktop:
+  run-pagespeed:
     name: pagespeed metrics for desktop
     runs-on: ubuntu-latest
     permissions:
@@ -14,17 +14,25 @@ jobs:
         uses: actions/setup-node@v3.7.0
         with:
           node-version: 18
-      - name: install psi
-        run: npm install psi
-      - name: Desktop
+      - name: install psi and axe
         run: |
-          echo "DESKTOP_RESULTS<<EOF" >> $GITHUB_ENV
+          npm install psi
+          npm install @axe-core/cli -g
+      - name: run desktop psi
+        run: |
+          echo "DESKTOP_PSI_RESULTS<<EOF" >> $GITHUB_ENV
           echo "$(node psi.js https://www.bioconductor.org/ desktop 70)" >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
-      - name: Mobile
+      - name: run mobile psi
         run: |
-          echo "MOBILE_RESULTS<<EOF" >> $GITHUB_ENV
+          echo "MOBILE__PSI_RESULTS<<EOF" >> $GITHUB_ENV
           echo "$(node psi.js https://www.bioconductor.org/ mobile 70)" >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
+
+      - name: run axe accesibility test
+        run: |
+          echo "AXE_RESULTS<<EOF" >> $GITHUB_ENV
+          echo "$(axe https://www.bioconductor.org/)" >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
       - name: add_comment
         uses: mshick/add-pr-comment@v2
@@ -32,3 +40,4 @@ jobs:
           message: |
             ${{env.DESKTOP_RESULTS}}
             ${{env.MOBILE_RESULTS}}
+            ${{env.AXE_RESULTS}}
