@@ -1,9 +1,12 @@
 name: PageSpeed Automation
-on: [push]
+on:
+  pull_request:
 jobs:
   run-pagespeed-desktop:
     name: Performance Metrics for desktop
     runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
@@ -20,13 +23,6 @@ jobs:
           echo "$(node psi.js https://www.bioconductor.org/ desktop 70)" >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
       - name: add_comment
-        run: echo "${{ env.DESKTOP_RESULTS }}"
-  run-pagespeed-performance-mobile:
-    name: Performance Metrics for mobile
-    runs-on: ubuntu-latest
-    steps:
-      - name: running Pagespeed
-        uses: jakepartusch/psi-action@v1.3
+        uses: mshick/add-pr-comment@v2
         with:
-          url: "https://www.bioconductor.org/"
-          strategy: mobile
+          message: ${{env.DESKTOP_RESULTS}}
