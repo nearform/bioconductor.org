@@ -29,14 +29,8 @@ jobs:
           echo "$(node psi.js https://www.bioconductor.org/ mobile 50)" >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
       - name: send notification
-        uses: 8398a7/action-slack@v2
-        with:
-          status: custom
-          username: bioconductor-bot
-          payload: |
-            {
-              "text": "${{env.DESKTOP_PSI_RESULTS}} \n ${{env.MOBILE_PSI_RESULTS}}",
-            }
-        env:
-          SLACK_WEBHOOK_URL: ${{secrets.SLACK_WEBHOOK}} # required
-        if: always()
+        run: |
+          curl -X POST --data-urlencode "
+          payload={\"channel\": \"#proj-bioconductor-notif\", \"username\": \"bioconductorbot\",
+           \"text\": \"Mobile:\n${{env.MOBILE_PSI_RESULTS}}\nDesktop:\n${{env.DESKTOP_PSI_RESULTS}}\",
+            \"icon_emoji\": \":test_tube:\"}" ${{secrets.SLACK_WEBHOOK}}
