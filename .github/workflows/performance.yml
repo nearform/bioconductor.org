@@ -28,11 +28,22 @@ jobs:
           echo "MOBILE_PSI_RESULTS<<EOF" >> $GITHUB_ENV
           echo "$(node psi.js https://www.bioconductor.org/ mobile 50)" >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
+  slack-notifications:
+    name: notify slack
+    runs-on: ubuntu-latest
+    needs: kpi_metrics
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
       - name: send notification
         uses: 8398a7/action-slack@v2
         with:
-          status: ${{ job.status }}
-          text: "${{env.DESKTOP_PSI_RESULTS}} \n ${{env.MOBILE_PSI_RESULTS}}"
+          status: custom
+          username: bioconductor-bot
+          payload: |
+            {
+              "text": "${{env.DESKTOP_PSI_RESULTS}} \n ${{env.MOBILE_PSI_RESULTS}}",
+            }
         env:
-          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK}} # required
+          SLACK_WEBHOOK_URL: ${{secrets.SLACK_WEBHOOK}} # required
         if: always()
