@@ -21,12 +21,12 @@ jobs:
       - name: run desktop psi
         run: |
           echo "DESKTOP_PSI_RESULTS<<EOF" >> $GITHUB_ENV
-          echo "$(node psi.js https://www.bioconductor.org/ desktop 0)" >> $GITHUB_ENV
+          echo "$(node psi.js https://www.bioconductor.org/ desktop 50)" >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
       - name: run mobile psi
         run: |
           echo "MOBILE_PSI_RESULTS<<EOF" >> $GITHUB_ENV
-          echo "$(node psi.js https://www.bioconductor.org/ mobile 0)" >> $GITHUB_ENV
+          echo "$(node psi.js https://www.bioconductor.org/ mobile 50)" >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
       - name: add_comment_pageSpeed
         uses: mshick/add-pr-comment@v2
@@ -44,4 +44,4 @@ jobs:
         uses: mshick/add-pr-comment@v2
         with:
           message: ${{env.AXE_RESULTS}}
-          message-id: psi
+          message-id: axe
