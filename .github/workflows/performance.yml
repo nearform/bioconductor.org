@@ -11,18 +11,10 @@ jobs:
         with:
           url: "https://www.bioconductor.org/"
           strategy: desktop
-      - name: Store Workflow Logs
-        uses: actions/github-script@v4
-        id: store_logs
-        with:
-          script: |
-            const logs = require('fs').readFileSync(process.env.GITHUB_EVENT_PATH, 'utf8');
-            console.log(logs);
-            return {
-              logs: logs
-            }
-      - name: Display Stored Logs
-        run: echo "${{ steps.store_logs.outputs.logs }}"
+      - name: results
+        id: results
+        run: echo "${{toJSON(steps.abc.output)}}"
+
   run-pagespeed-performance-mobile:
     name: Performance Metrics for mobile
     runs-on: ubuntu-latest
@@ -32,15 +24,3 @@ jobs:
         with:
           url: "https://www.bioconductor.org/"
           strategy: mobile
-      - name: Store Workflow Logs
-        uses: actions/github-script@v4
-        id: store_logs
-        with:
-          script: |
-            const logs = require('fs').readFileSync(process.env.GITHUB_EVENT_PATH, 'utf8');
-            console.log(logs);
-            return {
-              logs: logs
-            }
-      - name: Display Stored Logs
-        run: echo "${{ steps.store_logs.outputs.logs }}"
