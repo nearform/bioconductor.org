@@ -13,16 +13,12 @@ jobs:
           node-version: 18
       - name: install psi
         run: npm install psi
-      - name: desktop
+      - name: Desktop
+        id: desktop
         run: |
-          ls
-          echo "DESKTOP_RESULTS=$(node psi.js https://www.bioconductor.org/ desktop 70)" >> $GITHUB_ENV
-  add-desktop-to-comments:
-    runs-on: ubuntu-latest
-    needs: run-pagespeed-desktop
-    steps:
+          echo "DESKTOP_RESULTS=$(node psi.js https://www.bioconductor.org/ desktop 70)" >> $GITHUB_OUTPUT
       - name: add_comment
-        run: echo ${{ env.DESKTOP_RESULTS }}
+        run: echo ${{ steps.desktop.outputs.DESKTOP_RESULTS }}
   run-pagespeed-performance-mobile:
     name: Performance Metrics for mobile
     runs-on: ubuntu-latest
