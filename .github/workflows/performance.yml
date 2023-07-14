@@ -13,7 +13,7 @@ jobs:
           strategy: desktop
       - name: results
         id: results
-        run: echo "${{toJSON(steps.abc.output)}}"
+        run: echo "${{toJSON(steps.abc.outputs)}}"
 
   run-pagespeed-performance-mobile:
     name: Performance Metrics for mobile
