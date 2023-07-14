@@ -2,8 +2,8 @@ name: PageSpeed Automation
 on:
   pull_request:
 jobs:
-  run-pagespeed:
-    name: pagespeed metrics for desktop
+  kpi_metrics:
+    name: All KPI metrics
     runs-on: ubuntu-latest
     permissions:
       pull-requests: write
@@ -34,10 +34,15 @@ jobs:
           echo "AXE_RESULTS<<EOF" >> $GITHUB_ENV
           echo "$(axe https://www.bioconductor.org/)" >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
-      - name: add_comment
+      - name: add_comment_pageSpeed
         uses: mshick/add-pr-comment@v2
         with:
           message: |
             ${{env.DESKTOP_RESULTS}}
             ${{env.MOBILE_RESULTS}}
-            ${{env.AXE_RESULTS}}
+          message-id: psi
+      - name: add_comment_axe
+        uses: mshick/add-pr-comment@v2
+        with:
+          message: ${{env.AXE_RESULTS}}
+          message-id: psi
