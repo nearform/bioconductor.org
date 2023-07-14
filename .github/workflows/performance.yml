@@ -19,10 +19,10 @@ jobs:
       - name: run axe accesibility test
         run: |
           echo "AXE_RESULTS<<EOF" >> $GITHUB_ENV
-          echo "$(axe ${{env.URL_TO_USE}})" >> $GITHUB_ENV
+          echo "$(axe https://www.bioconductor.org/)" >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
       - name: send notification axe
-        if: ${{ github.ref == 'refs/heads/redesign2023' }}
+        if: ${{ github.ref == 'refs/heads/actions-testing' }}
         uses: 8398a7/action-slack@v2
         with:
           status: ${{ job.status }}
