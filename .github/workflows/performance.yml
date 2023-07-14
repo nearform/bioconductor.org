@@ -22,7 +22,6 @@ jobs:
           echo "$(axe https://www.bioconductor.org/)" >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
       - name: send notification axe
-        if: ${{ github.ref == 'refs/heads/actions-testing' }}
         uses: 8398a7/action-slack@v2
         with:
           status: ${{ job.status }}
