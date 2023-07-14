@@ -24,7 +24,7 @@ jobs:
       - name: Mobile
         run: |
           echo "MOBILE_RESULTS<<EOF" >> $GITHUB_ENV
-          echo "$(node psi.js https://www.bioconductor.org/ desktop 70)" >> $GITHUB_ENV
+          echo "$(node psi.js https://www.bioconductor.org/ mobile 70)" >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
       - name: add_comment
         uses: mshick/add-pr-comment@v2
