@@ -1,19 +1,23 @@
 name: PageSpeed Automation
 on: [push]
 jobs:
-  run-pagespeed-performance:
+  run-pagespeed-desktop:
     name: Performance Metrics for desktop
     runs-on: ubuntu-latest
     steps:
-      - name: Run PageSpeed Insights - Desktop
-        id: desktop-psi
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v3.7.0
+        with:
+          node-version: 18
+      - name: desktop
         run: |
-          output=$(bash -c "jakepartusch/psi-action@v1.3 "https://www.bioconductor.org/" --strategy=desktop" 2>&1)
-          echo "::set-output name=psi-output::$output"
-      - name: results
-        id: results
-        run: echo "${{toJSON(steps.abc.outputs)}}"
-
+          echo "DESKTOP_RESULTS=$(node psi.js https://www.bioconductor.org/ desktop 70)" >> $GITHUB_ENV
+  add-desktop-to-comments:
+    runs-on: ubuntu-latest
+    needs: run-pagespeed-desktop
+    steps:
+      - name: add_comment
+        run: echo ${{ env.DESKTOP_RESULTS }}
   run-pagespeed-performance-mobile:
     name: Performance Metrics for mobile
     runs-on: ubuntu-latest
