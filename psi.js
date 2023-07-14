@@ -14,7 +14,7 @@ const run = async () => {
 
     const key = keyInput;
 
-    const threshold = thresholdInput;
+    const threshold = Number(thresholdInput);
     const strategy = strategyInput;
     // Output a formatted report to the terminal
     console.log(`Page Speed results for ${url} using ${strategy}`);
