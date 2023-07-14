@@ -17,7 +17,7 @@ const run = async () => {
     const threshold = thresholdInput;
     const strategy = strategyInput;
     // Output a formatted report to the terminal
-    console.log(`Running Page Speed Insights for ${url}`);
+    console.log(`Page Speed results for ${url} using ${strategy}`);
     await psi.output(url, {
       ...(key ? { key } : undefined),
       ...(key ? undefined : { nokey: "true" }),
