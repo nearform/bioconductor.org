@@ -28,20 +28,29 @@ jobs:
           echo "MOBILE_PSI_RESULTS<<EOF" >> $GITHUB_ENV
           echo "$(node psi.js https://www.bioconductor.org/ mobile 50)" >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
-      - name: add_comment_pageSpeed
-        uses: mshick/add-pr-comment@v2
-        with:
-          message: |
-            ${{env.DESKTOP_PSI_RESULTS}}
-            ${{env.MOBILE_PSI_RESULTS}}
-          message-id: psi
-      - name: run axe accesibility test
-        run: |
-          echo "AXE_RESULTS<<EOF" >> $GITHUB_ENV
-          echo "$(axe https://www.bioconductor.org/)" >> $GITHUB_ENV
-          echo "EOF" >> $GITHUB_ENV
-      - name: add_comment_axe
-        uses: mshick/add-pr-comment@v2
-        with:
-          message: ${{env.AXE_RESULTS}}
-          message-id: axe
+  slackNotification-psi-Desktop:
+    needs: kpi_metrics
+    name: Slack Notification
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/redesign2023'
+    steps:
+      - uses: actions/checkout@v2
+      - name: Slack Notification
+        uses: rtCamp/action-slack-notify@v2
+        env:
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+          SLACK_TITLE: Desktop KPIs
+          SLACK_MESSAGE: ${{env.DESKTOP_PSI_RESULTS}}
+  slackNotification-psi-Mobile:
+    needs: kpi_metrics
+    name: Slack Notification
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/redesign2023'
+    steps:
+      - uses: actions/checkout@v2
+      - name: Slack Notification
+        uses: rtCamp/action-slack-notify@v2
+        env:
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+          SLACK_TITLE: Desktop KPIs
+          SLACK_MESSAGE: ${{env.MOBILE_PSI_RESULTS}}
