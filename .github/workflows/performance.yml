@@ -6,11 +6,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: PageSpeed Insights - Desktop
+        id: abc
         uses: jakepartusch/psi-action@v1.3
         with:
           url: "https://www.bioconductor.org/"
           threshold: 95
           strategy: desktop
+      - name: print outputs
+        run: echo "${{steps.abc.outputs}}"
   run-pagespeed-performance-mobile:
     name: Performance Metrics for mobile
     runs-on: ubuntu-latest
