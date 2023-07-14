@@ -13,6 +13,18 @@ jobs:
           strategy: desktop
       - name: print outputs
         run: echo "${{steps.abc.outputs}}"
+      - name: Store Workflow Logs
+        uses: actions/github-script@v4
+        id: store_logs
+        with:
+          script: |
+            const logs = require('fs').readFileSync(process.env.GITHUB_EVENT_PATH, 'utf8');
+            console.log(logs);
+            return {
+              logs: logs
+            }
+      - name: Display Stored Logs
+        run: echo "${{ steps.store_logs.outputs.logs }}"
   run-pagespeed-performance-mobile:
     name: Performance Metrics for mobile
     runs-on: ubuntu-latest
@@ -22,22 +34,15 @@ jobs:
         with:
           url: "https://www.bioconductor.org/"
           strategy: mobile
-  deploy:
-    runs-on: ubuntu-latest
-    if: github.event.issue.pull_request
-    steps:
-      - name: Add comment to PR
-        uses: actions/github-script@v6
-        if: always()
+      - name: Store Workflow Logs
+        uses: actions/github-script@v4
+        id: store_logs
         with:
           script: |
-            const name = '${{ github.workflow   }}';
-            const url = '${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}';
-            const success = '${{ job.status }}' === 'success';
-            const body = `${name}: ${success ? 'succeeded ✅' : 'failed ❌'}\n${url}`;
-
-            await github.rest.issues.createComment({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              body: body
+            const logs = require('fs').readFileSync(process.env.GITHUB_EVENT_PATH, 'utf8');
+            console.log(logs);
+            return {
+              logs: logs
+            }
+      - name: Display Stored Logs
+        run: echo "${{ steps.store_logs.outputs.logs }}"
