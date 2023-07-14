@@ -13,6 +13,7 @@ jobs:
         run: npm install psi
       - name: desktop
         run: |
+          ls
           echo "DESKTOP_RESULTS=$(node psi.js https://www.bioconductor.org/ desktop 70)" >> $GITHUB_ENV
   add-desktop-to-comments:
     runs-on: ubuntu-latest
