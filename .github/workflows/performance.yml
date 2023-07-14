@@ -20,7 +20,7 @@ jobs:
           echo "$(node psi.js https://www.bioconductor.org/ desktop 70)" >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
       - name: add_comment
-        run: echo "${{ env.DESKTOP_RESULTS }}""
+        run: echo "${{ env.DESKTOP_RESULTS }}"
   run-pagespeed-performance-mobile:
     name: Performance Metrics for mobile
     runs-on: ubuntu-latest
