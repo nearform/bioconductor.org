@@ -5,12 +5,11 @@ jobs:
     name: Performance Metrics for desktop
     runs-on: ubuntu-latest
     steps:
-      - name: PageSpeed Insights - Desktop
-        id: abc
-        uses: jakepartusch/psi-action@v1.3
-        with:
-          url: "https://www.bioconductor.org/"
-          strategy: desktop
+      - name: Run PageSpeed Insights - Desktop
+        id: desktop-psi
+        run: |
+          output=$(bash -c "jakepartusch/psi-action@v1.3 --url=${{ env.URL_TO_USE }} --strategy=desktop" 2>&1)
+          echo "::set-output name=psi-output::$output"
       - name: results
         id: results
         run: echo "${{toJSON(steps.abc.outputs)}}"
