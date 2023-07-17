@@ -31,6 +31,6 @@ jobs:
           VALIDATE_R: false
           VALIDATE_RUBY: false
           VALIDATE_JAVASCRIPT_STANDARD: false
-          JAVASCRIPT_ES_CONFIG_FILE: .eslintrc.json
+          JAVASCRIPT_ES_CONFIG_FILE: /.eslintrc.json
           DEFAULT_BRANCH: redesign2023
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
