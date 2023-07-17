@@ -1,0 +1,134 @@
+/* global styles defined at the topmost level.
+   these can be overridden by subsequent selectors. */
+
+/* Downloaded the font format */
+@font-face {
+    font-family: "Atkinson Hyperlegible";
+    src: url(AtkinsonHyperlegible-Regular.woff) format('woff');
+    src: url(AtkinsonHyperlegible-Regular.ttf) format('truetype');
+}
+
+/* CSS global styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Atkinson Hyperlegible", sans-serif;
+  
+  line-height: 120%;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 31px;
+}
+
+h3 {
+  font-size: 25px;
+}
+
+h4 {
+  font-size: 23px;
+}
+
+h5 {
+  font-size: 19px;
+}
+
+h6 {
+  font-size: 18px;
+}
+
+.hero {
+  font-size: 80px;
+
+  font-family: "Atkinson Hyperlegible", sans-serif;
+
+  line-height: 105%;
+}
+
+@media (max-width: 700px) {
+  .hero {
+    font-size: 40px;
+  }
+
+  h1 {
+    font-size: 34px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  h3 {
+    font-size: 22px;
+  }
+
+  h4 {
+    font-size: 20px;
+  }
+
+  h5 {
+    font-size: 18px;
+  }
+
+  h6 {
+    font-size: 17px;
+  }
+}
+
+p {
+
+  font-family: "Atkinson Hyperlegible", sans-serif;
+
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 130%;
+  letter-spacing: 0;
+}
+
+.code {
+  line-height: 120%;
+  font-family: "Courier";
+}
+
+.code--body {
+  font-size: 20px;
+}
+
+.code--small {
+  font-size: 16px;
+}
+
+.format--bold {
+  font-weight: bold;
+}
+
+.format--boldUnderline {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.format--underline {
+  text-decoration: underline;
+}
+
+.text--xSmall {
+  font-size: 10px;
+  line-height: 120%;
+}
+
+.text--small {
+  font-size: 13px;
+  line-height: 120%;
+}
+
+.text--large {
+  font-size: 20px;
+}
