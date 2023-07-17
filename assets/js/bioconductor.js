@@ -162,31 +162,31 @@ var tidyWorkflows = function () {
   }
 };
 
-var unRebaseMirrors = () => {
-  if (typeof window.mirror !== undefined && mirror === true) {
-    var wlh = window.location.href;
-    var segs = wlh.split("/");
-    var host = segs[2].replace(/^http:\/\//i, "");
-    segs.pop();
-    var url = segs.join("/");
+// var unRebaseMirrors = () => {
+//   if (typeof window.mirror !== undefined && mirror === true) {
+//     var wlh = window.location.href;
+//     var segs = wlh.split("/");
+//     var host = segs[2].replace(/^http:\/\//i, "");
+//     segs.pop();
+//     var url = segs.join("/");
 
-    if (segs[3] !== "packages") {
-      host += "/" + segs[3];
-    }
+//     if (segs[3] !== "packages") {
+//       host += "/" + segs[3];
+//     }
 
-    const links = document.querySelectorAll(".do_not_rebase a");
-    links.forEach((link) => {
-      var href = link.getAttribute("href");
-      if (href && !href.match(/^http:/i)) {
-        if (href.match(/^\//)) {
-          link.setAttribute("href", "http://" + host + href);
-        } else if (href.match(/^#/)) {
-          link.setAttribute("href", url + "/" + href);
-        }
-      }
-    });
-  }
-};
+//     const links = document.querySelectorAll(".do_not_rebase a");
+//     links.forEach((link) => {
+//       var href = link.getAttribute("href");
+//       if (href && !href.match(/^http:/i)) {
+//         if (href.match(/^\//)) {
+//           link.setAttribute("href", "http://" + host + href);
+//         } else if (href.match(/^#/)) {
+//           link.setAttribute("href", url + "/" + href);
+//         }
+//       }
+//     });
+//   }
+// };
 
 /*
  * The little file server we use for development does not follow symlinks, so see if we are running
@@ -234,7 +234,7 @@ var handleCitations = function () {
 };
 
 document.addEventListener("DOMContentLoaded", function () {
-  unRebaseMirrors();
+  // unRebaseMirrors();
   tidyWorkflows();
   var symlinkElements = document.querySelectorAll(".symlink");
   symlinkElements.forEach(function (element) {
