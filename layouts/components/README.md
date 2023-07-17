@@ -1,53 +1,33 @@
-# New components folder
+# Components folder
 
-The purpose of the new components folder is to house the new layouts.
-This folder serves as a centralized location for tracking edited files
-and identifying those that require updating.
+The purpose of the components folder is to store stand-alone components
+that can be included in pages, rather than full layouts. This folder serves
+as a centralized location for organizing and managing the components.
 
 ## Folder Structure
 
-The new components folder is organized in a hierarchical structure that
-facilitates efficient file management. Within this folder, each layout
+The components folder is organized in a hierarchical structure that
+facilitates efficient file management. Within this folder, each component
 is stored as an individual file.
 
 ## Reference Update in HTML file
 
-To ensure proper referencing of files within the HTML files, it is
-necessary to update the file paths whenever a layout file is modified
-and placed within the new components folder. The following section
-outlines the process of changing the file references in the HTML files
-to /components/<file_name>.
+To ensure proper referencing of files within the HTML files, follow the
+steps below when creating and integrating components into the project:
 
-1. Identify the modified layout file:
+1. Create a new component file:
 
-   - When a layout file is edited and saved in the new components
-     folder, take note of the file name.
+- When creating a new component, save it as an individual file within
+  the components folder.
 
-2. Locate HTML files referencing the modified layout file:
+2. Include the component in HTML files:
 
-   - Search through the HTML files to find any instances where the
-     modified layout file is referenced.
+- In the HTML files where you want to use the component, add the
+  necessary code to include the component file. Remember to include the
+  necessary path /components/<file_name>.
 
-3. Update the file reference:
+3. Test the HTML files:
 
-   - Replace the existing file path of the layout file with the new
-     path /components/<file_name>. Ensure that the modified file name
-     is accurately reflected in the updated reference.
-
-4. Repeat for all affected HTML files:
-
-   - If there are multiple HTML files referencing the modified layout
-     file, repeat the reference update process for each file.
-
-5. Verify the changes:
-
-   - After updating the file references in the HTML files, verify that
-     the modified layout file is correctly referenced
-     as /components/<file_name>.
-
-6. Test the updated HTML files:
-
-   - Perform thorough testing to ensure that the HTML files function as
-     intended with the updated file references. Check that all components
-     are displayed correctly and that there are no broken links or missing
-     resources.
+- Perform thorough testing to ensure that the HTML files function as intended
+  with the newly added components. Check that all components are displayed
+  correctly and that there are no broken links or missing resources.

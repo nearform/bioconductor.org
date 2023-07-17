@@ -313,16 +313,18 @@ you have been working in.
                 a `.<extension>` file containing the raw source content.
                 You can actually use whatever extension you want.
 
-            - The default behavior is that the `index.md` in each folder
-                living inside content will be filtered into HTML. For example,
-                the `index.md` living inside content/help will be written into
-                `output/help/index.html`. This scheme allows for
-                clean URLs that avoid having a file extension.
+            - The default behavior is that a content file like
+               `install.md` is filtered into HTML and then written to
+               `output/install/index.html`. This scheme allows for
+               clean URLs that avoid having a file extension.
+
+            - Folders like `about` living inside content have their own default
+                `index` files within.
 
 - layouts :: This is where the content templates live. Important details:
 
-            - Files that live directly inside the layout folder are the old
-                layouts, the new layouts would live inside /component
+            - Files that live directly inside the layout folder are the
+                layouts, the content blocks would live inside /component
 
 - lib :: Ruby helper functions and nanoc extensions live here. Files
   in this directory are automatically loaded by nanoc during
