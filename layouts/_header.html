@@ -1,7 +1,7 @@
-<header id="SiteMasthead" class="SiteMasthead">
+<div id="SiteMasthead" class="SiteMasthead">
   <div class="header-div">  
     <img
-    src=
+    src="/images/Logo.svg"
     border="0"
     class="masthead_logo"
     height="78"
@@ -11,9 +11,11 @@
   </div>
 
   <div class="header-div">
-    <a href="/about/">About</a>
-    <a href="/developers/">Community</a>
+    <div class="header-links">
+    <a class="format--bold" href="/about/">About</a>
+    <a href="/developers/">Developers</a>
     <a href="/help/">Learn</a>
+    </div>
     <form
       class="site_search"
       id="search_form"
@@ -23,7 +25,11 @@
     <input id="search_bar" name="search_bar" placeholder="Search"/>
     </form>
     <a class="header-button" href=/install/>
-      <span>Get Started <i class="fa fa-chevron-right" style="font-size:14px"></i></span>
+      <span class="format--bold">Get Started <svg xmlns="http://www.w3.org/2000/svg" width="14" height="15" viewBox="0 0 14 15" fill="none">
+        <path d="M5.25 3.66665L9.33333 7.74998L5.25 11.8333" stroke="#3792AD" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+      </span>
     </a>
   </div>
-</header>
+</div>
+<!-- <i class="fa fa-chevron-right" style="font-size:14px"></i> -->

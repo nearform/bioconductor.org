@@ -8,14 +8,6 @@
 /* reset the margins and padding of all elements so we can 
    specify them ourselves */
 
-/* some general treatments up top */
-body {
-  margin:0; padding:0;
-  background-color: #333333;
-  background-image: url(../images/site_bg.jpg);
-  background-position: top center;
-  background-repeat: no-repeat;
-}
 /* multiple lines (breaking text) won't work nicely with icons, but they
    are only used at top-level pages with short text */ 
 h1 img, h2 img { padding-right:12px; vertical-align:middle; }
@@ -34,107 +26,14 @@ code { color:#87b13f; font-family: 'Lucida Console',monaco,monospace; }
    class names play nicer with other rules. */
 #SiteContainer {
   margin:0 auto; /* floats the design center */
-  width:960px;   /* change the site design width here */
+  width:1600px;   /* change the site design width here */
   position:relative;
   /*border:2px black solid;*/
 }
+
 .SiteContainer {
   background-color: #ffffff;
 }
-
-
-/* SiteMasthead contains the topmost logo and sitenav elements */
-#SiteMasthead {
-  height: 126px;
-  white-space:nowrap;
-  position:absolute;
-  top:0;
-  left:0;
-  width:960px;
-  /*border:1px green solid;*/
-}
-.SiteMasthead {
-  font-family:Verdana,Arial,Helvetica,Sans-serif;
-  font-size:70%;
-  border-bottom: 1px #c9c5c5 solid;
-}
-.SiteMastheadRight {
-  position:relative;
-  z-index:1;
-  height:125px;
-  width:600px;
-  padding-right:48px;
-  float:right;
-  background-color:#0092ac;
-}
-.SiteMastheadRightBackground {
-  position:relative;
-  z-index:2;
-  height:100%;
-  width:100%;
-  background-image:url(../images/masthead_nav_fade.gif);
-  background-position: top left;
-  background-repeat: repeat;
-}
-.site_search {
-  position:relative;
-  z-index:3;
-  height:52px;
-  width:240px;
-  margin-top:20px;
-  padding:0;
-  float:right;
-  text-align:center;
-  color:#ffffff;
-}
-ul.masthead_nav {
-  position:relative;
-  z-index:3;
-  height:53px;
-  width:600px;
-  margin:0;
-  padding:0;
-  float:right;
-  list-style-type:none;
-} /* positioning in order to play nicely with the black vanity bar above
-     the site logo (see logo_vanity_bar) */
-li.masthead_nav_element {
-  float:left;
-  height:53px;
-  text-align:center;
-} /* note that padding-top + height = 53px, the height of the
-     ul.masthead_nav. */
-li.masthead_nav_element a {
-  font-size:130%;
-  color:#ffffff;
-  text-decoration:none;
-  font-weight:bold;
-  }
-li.masthead_nav_element a:hover { color:#c4d931; }
-li.masthead_nav_element_selected a { color:#c4d931; }
-/* used in the navigation auto-select. see global js file, checkNav(). */
-
-
-.masthead_logo { border:0; padding: 24px 0 0 30px; float:left; }
-.logo_vanity_bar {
-  position:absolute;
-  top:0;
-  left:0;
-  width:320px;
-  background-color:black;
-  height:1px;
-  z-index:1;
-} /* plays a bit with positioning and z-index in order to ride
-     under the nav also w/in this element */
-/* each masthead nav element is listed here from left to right, 
-   so you can adjust the width of each (if necessary). total
-   width all all elements should not exceed 648px */
-#masthead_nav_element_1 { width:120px; }
-#masthead_nav_element_2 { width:120px; }
-#masthead_nav_element_3 { width:120px; }
-#masthead_nav_element_4 { width:120px; }
-#masthead_nav_element_5 { width:120px; }
-
 
 /* PageContent is the main content on the page */
 #PageContent { padding:140px 20px 0 20px;  /*border:1px red solid;*/ }
