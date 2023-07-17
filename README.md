@@ -110,6 +110,7 @@ below.
         docker rm <container_id / container_name>
 
 8.  Once you have reviewed your changes, make a new branch and send a pull
+
     request to the `devel` branch. The pull request should be made from your
     `my_changes` branch to the [devel branch on GitHub][].
 
@@ -280,6 +281,39 @@ you have been working in.
 
 ### Test in a browser by going to http://localhost:3000/
 
+### Linters
+
+You will require node and npm to install the linters.
+Installation instructions for your specific OS can be found on the node.js website:
+
+https://nodejs.org/en/download
+
+Or if you would like to use your package manager to install, you can find instructions here:
+
+https://nodejs.org/en/download/package-manager
+
+Install linters:
+
+    npm ci
+
+This project includes stylelint and eslint.
+
+stylelint(for linting css code):
+
+    npm run css-lint
+
+eslint(will lint everything in the assets folder):
+
+    npm run js-lint
+
+or if you need to specify a directory or a file:
+
+    npx eslint <directory/ file>
+
+To run all linters :
+
+    npm run lint-all
+
 ## Overview of site source code
 
 - README.md :: You are reading this file or a file generated from
@@ -308,17 +342,23 @@ you have been working in.
 - content :: This is where the bulk of the raw (source form) site
   content lives. Important details:
 
-             - Content always has two related files: a `.yaml` file
-               containing item attributes and a `.<extension>` file
-               containing the raw source content. You can actually
-               use whatever extension you want.
+            - Each page has two related files:
+                a `.yaml` file containing item attributes and
+                a `.<extension>` file containing the raw source content
+                this can be `.md` or `.html`.
 
-             - The default behavior is that a content file like
-               `help.md` is filtered into HTML and then written to
-               `output/help/index.html`. This scheme allows for
-               clean URLs that avoid having a file extension.
+            - The default behavior is that a content file like
+               `install.md` is filtered into HTML and then written to
+               `output/install/index.html`. This scheme allows for
+                clean URLs that avoid having a file extension.
 
-- layouts :: This is where the content templates live.
+            - Folders like `about` living inside content have their own default
+                `index` files within.
+
+- layouts :: This is where the content templates live. Important details:
+
+            - Files that live directly inside the layout folder are the
+                layouts, the content blocks would live inside /component
 
 - lib :: Ruby helper functions and nanoc extensions live here. Files
   in this directory are automatically loaded by nanoc during
