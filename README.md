@@ -308,15 +308,15 @@ you have been working in.
 - content :: This is where the bulk of the raw (source form) site
   content lives. Important details:
 
-            - Content and the other folders always have two related files:
+            - Each page has two related files:
                 a `.yaml` file containing item attributes and
-                a `.<extension>` file containing the raw source content.
-                You can actually use whatever extension you want.
+                a `.<extension>` file containing the raw source content
+                this can be `.md` or `.html`.
 
             - The default behavior is that a content file like
                `install.md` is filtered into HTML and then written to
                `output/install/index.html`. This scheme allows for
-               clean URLs that avoid having a file extension.
+                clean URLs that avoid having a file extension.
 
             - Folders like `about` living inside content have their own default
                 `index` files within.
