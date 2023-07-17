@@ -9,13 +9,7 @@
    specify them ourselves */
 
 /* some general treatments up top */
-body {
-  margin:0; padding:0;
-  background-color: #333333;
-  background-image: url(../images/site_bg.jpg);
-  background-position: top center;
-  background-repeat: no-repeat;
-}
+
 /* multiple lines (breaking text) won't work nicely with icons, but they
    are only used at top-level pages with short text */ 
 h1 img, h2 img { padding-right:12px; vertical-align:middle; }
@@ -32,15 +26,7 @@ code { color:#87b13f; font-family: 'Lucida Console',monaco,monospace; }
    width of the site. we provide both an id and a class name in order
    to allow more flexible cascading: id rules are highly ranked while
    class names play nicer with other rules. */
-#SiteContainer {
-  margin:0 auto; /* floats the design center */
-  width:960px;   /* change the site design width here */
-  position:relative;
-  /*border:2px black solid;*/
-}
-.SiteContainer {
-  background-color: #ffffff;
-}
+
 
 
 /* SiteMasthead contains the topmost logo and sitenav elements */
