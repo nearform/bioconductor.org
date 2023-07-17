@@ -8,7 +8,7 @@ const run = async () => {
   try {
     const url = urlInput;
     if (!url) {
-      throw new error("Url is required to run Page Speed Insights.");
+      throw new Error("Url is required to run Page Speed Insights.");
     }
 
     const key = keyInput;
@@ -24,8 +24,8 @@ const run = async () => {
       format: "cli",
       threshold,
     });
-  } catch (error) {
-    throw error.message;
+  } catch (e) {
+    throw e.message;
   }
 };
 
