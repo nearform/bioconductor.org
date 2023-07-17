@@ -66,7 +66,7 @@ jobs:
       - name: install psi and axe
         run: |
           npm install psi
-          npm install @axe-core/cli -g
+          npm install @axe-core/cli
       - name: run desktop psi
         run: |
           echo "DESKTOP_PSI_RESULTS<<EOF" >> $GITHUB_ENV
@@ -87,7 +87,7 @@ jobs:
       - name: run axe accesibility test
         run: |
           echo "AXE_RESULTS<<EOF" >> $GITHUB_ENV
-          echo "$(axe ${{env.URL_TO_USE}})" >> $GITHUB_ENV
+          echo "$(npx axe ${{env.URL_TO_USE}})" >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
       - name: add_comment_axe
         uses: mshick/add-pr-comment@v2
