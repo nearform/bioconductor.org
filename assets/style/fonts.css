@@ -22,7 +22,6 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Atkinson Hyperlegible", sans-serif;
   line-height: 120%;
 }
 
@@ -52,7 +51,6 @@ h6 {
 
 .hero {
   font-size: 5rem; /* 80px */
-  font-family: "Atkinson Hyperlegible", sans-serif;
   line-height: 105%;
 }
 
@@ -88,7 +86,6 @@ h6 {
 }
 
 p {
-  font-family: "Atkinson Hyperlegible", sans-serif;
   margin-top: 0;
   margin-bottom: 0;
   font-size: 1rem; /* 16px */
