@@ -209,6 +209,8 @@ p, a, span {
   background: #fff;
 }
 
+@media (min-width: 700px) {
+
 .header-div {
   display: flex;
   justify-content: flex-start;
@@ -217,8 +219,9 @@ p, a, span {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: transparent;
   color: #070707;
+  transition: 300ms;
 }
 
 .header-links {
@@ -232,18 +235,28 @@ a {
   text-decoration-thickness: 3px;
 }
 
-#search_bar {
+.search-container {
+  border: 1px solid var(--neutral-N75);
   border-radius: 64px;
-  padding-left: 30px;
-  border: 1px solid var(--primary-p-50, #ebf4f7);
-  background-image: url(https://cdn-icons-png.flaticon.com/512/4194/4194718.png) no-repeat left;
-  background-size: 20px;
-  width: 240px;
+  width: 240px; 
   height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 12px;
+  padding-right: 12px;
 }
 
-#search_bar:focus {
-  border-color: linear-gradient(to right,  #008daf, #0484a9, #18a603);
+.site_search {
+  display: flex;
+  align-items: center;
+}
+
+#search_bar {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  padding-left: 5px
 }
 
 .masthead_logo {
@@ -272,7 +285,7 @@ a {
 }
 
 .header-button:hover svg path {
-  stroke: white;
+  stroke: #fff;
 }
 
 .header-button span {
@@ -284,11 +297,16 @@ a {
   transition: background 0.5s ease;
   width: 100%;
   gap: 5px;
-  margin-bottom: 1px;
-  margin-left: 1px;
-  margin-right: 1px;
+  margin: 0.5px 1px 1px 1px;
 }
 
 .header-button:hover span {
-  background: #035771;
+  background: var(--primary-P400);
+} 
+}
+
+@media (max-width: 700px) {
+  .header-div {
+    display:none;
+  }
 }
