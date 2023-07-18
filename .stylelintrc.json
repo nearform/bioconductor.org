@@ -1,4 +1,3 @@
 {
-  "extends": ["stylelint-config-standard"],
-  "ignoreFiles": ["assets/style/bioconductor.css"]
+  "extends": ["stylelint-config-standard"]
 }
