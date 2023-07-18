@@ -16,10 +16,7 @@ jobs:
       - name: install psi
         run: npm install psi
       - name: Mobile
-        run: |
-          echo "MOBILE_RESULTS<<EOF" >> $GITHUB_ENV
-          echo "$(node psi.js https://www.bioconductor.org/ desktop 70)" >> $GITHUB_ENV
-          echo "EOF" >> $GITHUB_ENV
+        run: DESKTOP_PSI_RESULTS="$(node psi.js https://www.bioconductor.org/ desktop 50)"
       - name: add_comment
         run: |
           echo "${{env.MOBILE_RESULTS}}"
