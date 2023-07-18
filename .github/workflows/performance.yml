@@ -15,7 +15,8 @@ jobs:
         with:
           node-version: 18
       - name: install psi and axe
-        run: |
+        run: npm init
+          npm install
           npm install psi
           npm install @axe-core/cli
       - name: run desktop psi
