@@ -1,52 +1,51 @@
-
 /* Css global color variables */
 /* You can use `var(--variable-name)` to get the value. */
 
 :root {
-  /* Primary colors */
-  --primary-P50: #ebf4f7;
-  --primary-P75: #add2dd;
-  --primary-P100: #8bc0cf;
-  --primary-P200: #59a5bb;
+  /* primary colors */
+  --primary-p50: #ebf4f7;
+  --primary-p75: #add2dd;
+  --primary-p100: #8bc0cf;
+  --primary-p200: #59a5bb;
   --primary: #3792AD;
-  --primary-P400: #035771;
-  --primary-P500: #003242;
+  --primary-p400: #035771;
+  --primary-p500: #003242;
 
-  /* Secondary colors */
-  --secondary-S50: #f3fae9;
-  --secondary-S75: #cf9a6;
-  --secondary-S100: #bbe081;
-  --secondary-S200: #9ed34a;
+  /* secondary colors */
+  --secondary-s50: #f3fae9;
+  --secondary-s75: #cfe9a6;
+  --secondary-s100: #bbe081;
+  --secondary-s200: #9ed34a;
   --secondary: #8aca25;
-  --secondary-S400: #618d1a;
-  --secondary-S500: #547b17;
+  --secondary-s400: #618d1a;
+  --secondary-s500: #547b17;
 
-  /* Warning colors */
-  --warning-W50: #fef9eb;
-  --warning-W75: #f9e8ad;
-  --warning-W100: #f7df8a;
-  --warning-W200: #f3d158;
+  /* warning colors */
+  --warning-w50: #fef9eb;
+  --warning-w75: #f9e8ad;
+  --warning-w100: #f7df8a;
+  --warning-w200: #f3d158;
   --warning: #f1c736;
-  --warning-W400: #a98b26;
-  --warning-W500: #937921;
+  --warning-w400: #a98b26;
+  --warning-w500: #937921;
 
-  /* Error colors */
-  --error-E50: #feebeb;
-  --error-E75: #f9adad;
-  --error-E100: #f78a8a;
-  --error-E200: #f35858;
+  /* error colors */
+  --error-e50: #feebeb;
+  --error-e75: #f9adad;
+  --error-e100: #f78a8a;
+  --error-e200: #f35858;
   --error: #F13636;
-  --error-E400: #F13636;
-  --error-E500: #932121;
+  --error-e400: #F13636;
+  --error-e500: #932121;
 
-  /* Neutral colors */
-  --neutral-N50: #F9F9F9;
-  --neutral-N75: #E9EBF8;
-  --neutral-N100: #A1A6B3;
-  --neutral-N200: #797F92;
+  /* neutral colors */
+  --neutral-n50: #F9F9F9;
+  --neutral-n75: #e9eBF8;
+  --neutral-n100: #A1A6B3;
+  --neutral-n200: #797F92;
   --neutral: #5D657C;
-  --neutral-N400: #414757;
-  --neutral-N500: #393E4C;
+  --neutral-n400: #414757;
+  --neutral-n500: #393e4C;
 
   /* Miscellaneous colors */
   --misc-positive: #008A00;
@@ -55,8 +54,8 @@
   --misc-annotations: #FF8A00;
 
 	/* Gradients */
-  --gradient-warmCool: linear-gradient(to right, #FF2F4B, #4E5CFF);
+  --gradient-warmcool: linear-gradient(to right, #FF2F4B, #4e5CFF);
   --gradient-brand: linear-gradient(to right, #0087AF, #0484A9, #18A603);
-  --gradient-brandReverse: linear-gradient(to right, #18A603, #0484A9, #0087AF);
-  --gradient-purpleBlue: linear-gradient(to right, #445CF3, #A333F1);
+  --gradient-brandreverse: linear-gradient(to right, #18A603, #0484A9, #0087AF);
+  --gradient-purpleblue: linear-gradient(to right, #445CF3, #A333F1);
 }

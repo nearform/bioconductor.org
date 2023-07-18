@@ -4,8 +4,15 @@
 /* Downloaded the font format */
 @font-face {
     font-family: "Atkinson Hyperlegible";
-    src: url(AtkinsonHyperlegible-Regular.woff) format('woff');
-    src: url(AtkinsonHyperlegible-Regular.ttf) format('truetype');
+    src: url("fonts/AtkinsonHyperlegible-Regular.woff") format('woff');
+    src: url("fonts/AtkinsonHyperlegible-Regular.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: "Atkinson Hyperlegible";
+    src: url("fonts/AtkinsonHyperlegible-Bold.woff") format('woff');
+    src: url("fonts/AtkinsonHyperlegible-Bold.ttf") format('truetype');
+    font-weight: bold;
 }
 
 /* CSS global styles */
@@ -16,7 +23,6 @@ h4,
 h5,
 h6 {
   font-family: "Atkinson Hyperlegible", sans-serif;
-  
   line-height: 120%;
 }
 
@@ -46,9 +52,7 @@ h6 {
 
 .hero {
   font-size: 80px;
-
   font-family: "Atkinson Hyperlegible", sans-serif;
-
   line-height: 105%;
 }
 
@@ -83,9 +87,7 @@ h6 {
 }
 
 p {
-
   font-family: "Atkinson Hyperlegible", sans-serif;
-
   margin-top: 0;
   margin-bottom: 0;
   font-size: 16px;
@@ -95,40 +97,40 @@ p {
 
 .code {
   line-height: 120%;
-  font-family: "Courier";
+  font-family: Courier;
 }
 
-.code--body {
+.code-body {
   font-size: 20px;
 }
 
-.code--small {
+.code-small {
   font-size: 16px;
 }
 
-.format--bold {
+.format-bold {
   font-weight: bold;
 }
 
-.format--boldUnderline {
+.format-boldunderline {
   text-decoration: underline;
   font-weight: bold;
 }
 
-.format--underline {
+.format-underline {
   text-decoration: underline;
 }
 
-.text--xSmall {
+.text-xsmall {
   font-size: 10px;
   line-height: 120%;
 }
 
-.text--small {
+.text-small {
   font-size: 13px;
   line-height: 120%;
 }
 
-.text--large {
+.text-large {
   font-size: 20px;
 }
