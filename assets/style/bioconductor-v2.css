@@ -1,1 +1,14 @@
-/* New css would go here */
+body {
+  font-family: "Atkinson Hyperlegible", sans-serif;
+}
+
+/* SiteContainer is the single div containing every other element in the site.
+   it floats center, with no vertical margins, and provides the overall
+   width of the site. we provide both an id and a class name in order
+   to allow more flexible cascading: id rules are highly ranked while
+   class names play nicer with other rules. */
+
+#SiteContainer {
+  margin: 0 auto; /* floats the design center */
+  width: 100rem; /* change the site design width here */
+}
