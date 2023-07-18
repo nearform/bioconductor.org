@@ -8,7 +8,9 @@ body {
    to allow more flexible cascading: id rules are highly ranked while
    class names play nicer with other rules. */
 
+/* stylelint-disable */
 #SiteContainer {
   margin: 0 auto; /* floats the design center */
   width: 1600px; /* change the site design width here */
 }
+/* stylelint-enable */
