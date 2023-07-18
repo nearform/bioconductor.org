@@ -8,15 +8,17 @@ jobs:
     permissions:
       pull-requests: write
     steps:
-      - name: Checkout Code
+      - name: checkout
         uses: actions/checkout@v3
       - name: Setup Node.js environment
         uses: actions/setup-node@v3.7.0
         with:
           node-version: 18
       - name: install psi and axe
-        run: npm install psi
-      - name: run psi
+        run: |
+          npm install psi
+          npm install @axe-core/cli
+      - name: run desktop psi
         run: $DESKTOP_PSI_RESULTS << $(node psi.js ${{env.URL_TO_USE}} desktop 50)
       - name: do console
         run: echo "$DESKTOP_PSI_RESULTS"
