@@ -630,9 +630,6 @@ ul.inline_list li {
   .noprint {
     display: none;
   }
-  #SiteContainer {
-    margin: auto;
-  }
   #SiteGlobalFooter {
     padding: 0;
     padding-top: 3em;
