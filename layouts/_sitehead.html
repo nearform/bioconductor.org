@@ -3,7 +3,7 @@
   <meta http-equiv="Content-Language" content="en-us" />
   <meta name="robots" content="all" />
 
-  <% if item.identifier =~ /^\/help\/bioc-views\/package-pages\// \ and not
+  <% if item.identifier =~ /^\/help\/bioc-views\/package-pages\// and not
   item.identifier =~ /\/all-/ %>
   <meta property="og:title" content="<%= item[:title] %>" />
   <meta property="og:type" content="website" />
@@ -11,19 +11,16 @@
   <meta property="og:description" content="<%= item[:Description] %>" />
   <meta
     property="og:url"
-    content="http://bioconductor.org/packages/<%=item[:title]%>/"
-  />
+    content="http://bioconductor.org/packages/<%=item[:title]%>/" />
   <meta
     property="og:image"
-    content="http://bioconductor.org/images/logo/jpg/bioconductor_logo_rgb.jpg"
-  />
+    content="http://bioconductor.org/images/logo/jpg/bioconductor_logo_rgb.jpg" />
   <% end %>
 
   <!-- Google tag (gtag.js) -->
   <script
     async
-    src="https://www.googletagmanager.com/gtag/js?id=G-WJMEEH1J58"
-  ></script>
+    src="https://www.googletagmanager.com/gtag/js?id=G-WJMEEH1J58"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() {
@@ -34,12 +31,17 @@
     gtag("config", "G-WJMEEH1J58");
   </script>
 
-  <% if (item.identifier =~ /BiocViews\.html$/) item[:rebase] = true end %> <%
+  <%
+    if (item.identifier =~ /BiocViews\.html$/)
+      item[:rebase] = true
+    end
+  %>
+
+  <%
   if !item[:rebase].nil? && item[:rebase]%>
   <script
     type="text/javascript"
-    src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"
-  ></script>
+    src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
   <script type="text/javascript">
     if (!window.location.href.match(/bioconductor\.org|\/\/localhost/i)) {
       var mirror = true;
@@ -52,40 +54,37 @@
   landing pages:%>
   <script src="/js/jquery.tools.min.js"></script>
 
-  <% title = " - #{@item[:title]}" title = "" if @item[:title].nil? or
-  @item[:title].strip.empty? %>
+  <%
+    title = " - #{@item[:title]}"
+    title = "" if @item[:title].nil? or @item[:title].strip.empty?
+  %>
   <title>Bioconductor<%= title %></title>
   <link
     rel="stylesheet"
     type="text/css"
     href="/style/colors.css"
-    media="screen"
-  />
+    media="screen" />
   <link
     rel="stylesheet"
     type="text/css"
     href="/style/fonts.css"
-    media="screen"
-  />
+    media="screen" />
   <link
     rel="stylesheet"
     type="text/css"
     href="/style/bioconductor-v2.css"
-    media="screen"
-  />
+    media="screen" />
   <link
     rel="stylesheet"
     type="text/css"
     href="/style/bioconductor.css"
-    media="screen"
-  />
+    media="screen" />
   <% if item.identifier =~ /^\/help\/workflows\/.*\// %>
   <link
     rel="stylesheet"
     type="text/css"
     href="/style/workflows.css"
-    media="screen"
-  />
+    media="screen" />
   <% end %>
   <link rel="SHORTCUT ICON" type="image/x-icon" href="/favicon.ico" />
   <link rel="ICON" type="image/x-icon" href="/favicon.ico" />

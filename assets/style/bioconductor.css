@@ -305,91 +305,6 @@ ul.section_nav li {
 
 /* SiteGlobalFooter is the olive box at page bottom which
    contains global site navigation elements, copyright and logos */
-#SiteGlobalFooter {
-  background-color: #345208; /* matches fade at bottom edge */
-  padding: 24px;
-  margin-top: 30px;
-  background-image: url(../images/global_footer_fade.gif);
-  background-position: top left;
-  background-repeat: repeat-x;
-  clear: both;
-  /* in case the right hand column and page body above me get squirrely */
-}
-.SiteGlobalFooter {
-  color: #ffffff;
-  font-family: Verdana, Arial, Helvetica, Sans-serif;
-  font-size: 70%;
-}
-/* slightly tighter spacing in the footer */
-.SiteGlobalFooter p {
-  padding-bottom: 0.4em;
-}
-.SiteGlobalFooter a {
-  color: #ffffff;
-  text-decoration: none;
-}
-.SiteGlobalFooter a:hover {
-  text-decoration: underline;
-}
-.SiteGlobalFooter ul {
-  list-style-type: none;
-}
-
-ul.footer_nav_list {
-  margin: 0;
-  line-height: 1.2;
-  margin-left: 0;
-  margin-top: 18px;
-  padding-left: 0;
-}
-/* the five main nav elements, not their contents */
-li.footer_nav_list_element {
-  float: left;
-}
-/* boosts intra-element spacing */
-.footer_nav_list_element li {
-  padding-bottom: 0.5em;
-}
-/* each footer nav element is listed here from left to right, 
-   so you can adjust the width of each (if necessary). total
-   width all all elements should not exceed 912px = the design
-   width of 960px - 2 x 24px padding */
-.footer_nav_list_element_0 {
-  width: 50px;
-}
-.footer_nav_list_element_1 {
-  width: 220px;
-}
-.footer_nav_list_element_2 {
-  width: 220px;
-}
-.footer_nav_list_element_3 {
-  width: 200px;
-}
-.footer_nav_list_element_4 {
-  width: 220px;
-}
-
-/* little logos for fhcrc and bioconductor link back to their respective
-   locations */
-.global_footer_logo_bc {
-  float: right;
-  padding-left: 70px;
-  padding-right: 30px;
-}
-.global_footer_logo_bc img {
-  border: 0;
-  width: 154px;
-  height: 51px;
-}
-.global_footer_logo_fhcrc {
-  float: right;
-}
-.global_footer_logo_fhcrc img {
-  border: 0;
-  width: 154px;
-  height: 51px;
-}
 
 /* copyright and attribution portion of the global footer */
 .attribution_copyright {
@@ -629,11 +544,6 @@ ul.inline_list li {
   /* for elements that you don't want to print, give them a class of noprint */
   .noprint {
     display: none;
-  }
-  #SiteGlobalFooter {
-    padding: 0;
-    padding-top: 3em;
-    border-top: 1px black solid;
   }
   .attribution_copyright {
     padding: 0;
