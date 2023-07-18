@@ -1,21 +1,23 @@
 const psi = require("psi");
 const process = require("process");
-const urlInput = process.argv[2];
+const url = process.argv[2];
 const strategyInput = process.argv[3];
 const thresholdInput = process.argv[4];
 const keyInput = process.argv[5];
 const run = async () => {
   try {
-    const url = urlInput;
+    const strategy = strategyInput?.toLowerCase();
+    const key = keyInput || undefined;
+    const threshold = Number(thresholdInput);
     if (!url) {
-      throw new Error("Url is required to run Page Speed Insights.");
+      throw new Error("A valid Url is required to run Page Speed Insights.");
+    }
+    if (!strategy || (strategy !== "desktop" && strategy !== "mobile")) {
+      throw new Error(
+        "A valid strategy is required to run Page Speed Insights. (desktop or mobile)"
+      );
     }
 
-    const key = keyInput;
-
-    const threshold = Number(thresholdInput);
-    const strategy = strategyInput;
-    // Output a formatted report to the terminal
     console.log(`Page Speed results for ${url} using ${strategy}`);
     await psi.output(url, {
       ...(key ? { key } : undefined),
