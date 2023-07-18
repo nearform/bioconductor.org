@@ -10,5 +10,5 @@ body {
 
 #SiteContainer {
   margin: 0 auto; /* floats the design center */
-  width: 100rem; /* change the site design width here */
+  width: 1600px; /* change the site design width here */
 }
