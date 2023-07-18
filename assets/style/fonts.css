@@ -3,16 +3,16 @@
 
 /* Downloaded the font format */
 @font-face {
-    font-family: "Atkinson Hyperlegible";
-    src: url("fonts/AtkinsonHyperlegible-Regular.woff") format('woff');
-    src: url("fonts/AtkinsonHyperlegible-Regular.ttf") format('truetype');
+  font-family: "Atkinson Hyperlegible";
+  src: url("fonts/AtkinsonHyperlegible-Regular.woff") format("woff");
+  src: url("fonts/AtkinsonHyperlegible-Regular.ttf") format("truetype");
 }
 
 @font-face {
-    font-family: "Atkinson Hyperlegible";
-    src: url("fonts/AtkinsonHyperlegible-Bold.woff") format('woff');
-    src: url("fonts/AtkinsonHyperlegible-Bold.ttf") format('truetype');
-    font-weight: bold;
+  font-family: "Atkinson Hyperlegible";
+  src: url("fonts/AtkinsonHyperlegible-Bold.woff") format("woff");
+  src: url("fonts/AtkinsonHyperlegible-Bold.ttf") format("truetype");
+  font-weight: bold;
 }
 
 /* CSS global styles */
@@ -56,7 +56,7 @@ h6 {
   line-height: 105%;
 }
 
-@media (max-width: 700px) {
+@media screen and (max-width: 700px) {
   .hero {
     font-size: 40px;
   }
@@ -97,7 +97,7 @@ p {
 
 .code {
   line-height: 120%;
-  font-family: Courier;
+  font-family: Courier, monospace;
 }
 
 .code-body {

@@ -1,4 +1,5 @@
 /* Css global color variables */
+
 /* You can use `var(--variable-name)` to get the value. */
 
 :root {
@@ -7,7 +8,7 @@
   --primary-p75: #add2dd;
   --primary-p100: #8bc0cf;
   --primary-p200: #59a5bb;
-  --primary: #3792AD;
+  --primary: #3792ad;
   --primary-p400: #035771;
   --primary-p500: #003242;
 
@@ -34,28 +35,28 @@
   --error-e75: #f9adad;
   --error-e100: #f78a8a;
   --error-e200: #f35858;
-  --error: #F13636;
-  --error-e400: #F13636;
+  --error: #f13636;
+  --error-e400: #f13636;
   --error-e500: #932121;
 
   /* neutral colors */
-  --neutral-n50: #F9F9F9;
-  --neutral-n75: #e9eBF8;
-  --neutral-n100: #A1A6B3;
-  --neutral-n200: #797F92;
-  --neutral: #5D657C;
+  --neutral-n50: #f9f9f9;
+  --neutral-n75: #e9ebf8;
+  --neutral-n100: #a1a6b3;
+  --neutral-n200: #797f92;
+  --neutral: #5d657c;
   --neutral-n400: #414757;
-  --neutral-n500: #393e4C;
+  --neutral-n500: #393e4c;
 
   /* Miscellaneous colors */
-  --misc-positive: #008A00;
-  --misc-neutral: #007A9F;
-  --misc-warning: #FFC600;
-  --misc-annotations: #FF8A00;
+  --misc-positive: #008a00;
+  --misc-neutral: #007a9f;
+  --misc-warning: #ffc600;
+  --misc-annotations: #ff8a00;
 
-	/* Gradients */
-  --gradient-warmcool: linear-gradient(to right, #FF2F4B, #4e5CFF);
-  --gradient-brand: linear-gradient(to right, #0087AF, #0484A9, #18A603);
-  --gradient-brandreverse: linear-gradient(to right, #18A603, #0484A9, #0087AF);
-  --gradient-purpleblue: linear-gradient(to right, #445CF3, #A333F1);
+  /* Gradients */
+  --gradient-warmcool: linear-gradient(to right, #ff2f4b, #4e5cff);
+  --gradient-brand: linear-gradient(to right, #0087af, #0484a9, #18a603);
+  --gradient-brandreverse: linear-gradient(to right, #18a603, #0484a9, #0087af);
+  --gradient-purpleblue: linear-gradient(to right, #445cf3, #a333f1);
 }
