@@ -4,7 +4,8 @@ on:
     types: [opened, reopened, synchronize]
 jobs:
   dev-pr-create-s3:
-    if: github.event.pull_request.draft == false
+    if: github.event.pull_request.draft == false && ${{startsWith(github.ref, 'refs/heads/feat/') || startsWith(github.ref, 'refs/heads/fix/')}} 
+
     runs-on: ubuntu-latest
     environment: dev
     steps:
