@@ -15,19 +15,8 @@ jobs:
           node-version: 18
       - name: install psi
         run: npm install psi
-      - name: Desktop
-        run: |
-          echo "DESKTOP_RESULTS<<EOF" >> $GITHUB_ENV
-          echo "$(node psi.js https://www.bioconductor.org/ desktop 70)" >> $GITHUB_ENV
-          echo "EOF" >> $GITHUB_ENV
       - name: Mobile
-        run: |
-          echo "MOBILE_RESULTS<<EOF" >> $GITHUB_ENV
-          echo "$(node psi.js https://www.bioconductor.org/ desktop 70)" >> $GITHUB_ENV
-          echo "EOF" >> $GITHUB_ENV
+        run: DESKTOP_PSI_RESULTS << $(node psi.js ${{env.URL_TO_USE}} desktop 50)
       - name: add_comment
-        uses: mshick/add-pr-comment@v2
-        with:
-          message: |
-            ${{env.DESKTOP_RESULTS}}
-            ${{env.MOBILE_RESULTS}}
+        run: |
+          echo "${{env.DESKTOP_PSI_RESULTS}}"
