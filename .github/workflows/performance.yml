@@ -16,15 +16,7 @@ jobs:
           node-version: 18
       - name: install psi and axe
         run: npm install @axe-core/cli -g
-      - name: run axe accesibility test
-        run: |
-          echo "AXE_RESULTS<<EOF" >> $GITHUB_ENV
-          echo "$(axe https://www.bioconductor.org/)" >> $GITHUB_ENV
-          echo "EOF" >> $GITHUB_ENV
-      - name: send notification axe
-        uses: 8398a7/action-slack@v2
-        with:
-          status: ${{ job.status }}
-          text: "${{env.AXE_RESULTS}}"
-        env:
-          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK}}
+      - name: run psi
+        run: DESKTOP_PSI_RESULTS << $(node psi.js ${{env.URL_TO_USE}} desktop 50)
+      - name: do console
+        run: echo "$DESKTOP_PSI_RESULTS"
