@@ -7,6 +7,8 @@ const keyInput = process.argv[5];
 const run = async () => {
   try {
     const strategy = strategyInput?.toLowerCase();
+    console.log(strategy !== "desktop" && strategy !== "mobile");
+    console.log(strategy !== "mobile");
     const key = keyInput || undefined;
     const threshold = Number(thresholdInput);
     if (!url) {
