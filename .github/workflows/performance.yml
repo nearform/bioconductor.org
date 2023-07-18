@@ -19,4 +19,4 @@ jobs:
         run: DESKTOP_PSI_RESULTS="$(node psi.js https://www.bioconductor.org/ desktop 50)"
       - name: add_comment
         run: |
-          echo "${{env.MOBILE_RESULTS}}"
+          echo "$DESKTOP_PSI_RESULTS
