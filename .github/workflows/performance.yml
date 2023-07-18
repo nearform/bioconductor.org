@@ -17,6 +17,6 @@ jobs:
       - name: install psi and axe
         run: npm install @axe-core/cli -g
       - name: run psi
-        run: DESKTOP_PSI_RESULTS << $(node psi.js ${{env.URL_TO_USE}} desktop 50)
+        run: $DESKTOP_PSI_RESULTS << $(node psi.js ${{env.URL_TO_USE}} desktop 50)
       - name: do console
         run: echo "$DESKTOP_PSI_RESULTS"
