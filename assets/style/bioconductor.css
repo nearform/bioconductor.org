@@ -271,29 +271,7 @@ ul.section_nav li {
 	padding-left:12px;
 }
 
-
-/* SiteGlobalFooter is the olive box at page bottom which
-   contains global site navigation elements, copyright and logos */
-#SiteGlobalFooter {
-  background-color: #345208; /* matches fade at bottom edge */
-  padding: 24px;
-  margin-top:30px;
-  background-image: url(../images/global_footer_fade.gif);
-  background-position: top left;
-  background-repeat: repeat-x;
-  clear:both;
-  /* in case the right hand column and page body above me get squirrely */
-}
-.SiteGlobalFooter {
-  color: #ffffff;
-  font-family:Verdana,Arial,Helvetica,Sans-serif;
-  font-size:70%;
-}
 /* slightly tighter spacing in the footer */
-.SiteGlobalFooter p { padding-bottom:.4em }
-.SiteGlobalFooter a { color:#ffffff; text-decoration:none; }
-.SiteGlobalFooter a:hover { text-decoration:underline; }
-.SiteGlobalFooter ul { list-style-type:none; }
 
 ul.footer_nav_list {
   margin:0;
