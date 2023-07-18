@@ -1,25 +1,33 @@
 name: PageSpeed Automation
-on:
-  pull_request:
+on: push
 jobs:
-  kpi_metrics:
-    name: All KPI metrics
+  run-pagespeed-desktop:
+    name: pagespeed metrics for desktop
     runs-on: ubuntu-latest
     permissions:
       pull-requests: write
     steps:
-      - name: checkout
+      - name: Checkout Code
         uses: actions/checkout@v3
       - name: Setup Node.js environment
         uses: actions/setup-node@v3.7.0
         with:
           node-version: 18
-      - name: install psi and axe
-        run: npm init
-          npm install
-          npm install psi
-          npm install @axe-core/cli
-      - name: run desktop psi
-        run: $DESKTOP_PSI_RESULTS << $(node psi.js ${{env.URL_TO_USE}} desktop 50)
-      - name: do console
-        run: echo "$DESKTOP_PSI_RESULTS"
+      - name: install psi
+        run: npm install psi
+      - name: Desktop
+        run: |
+          echo "DESKTOP_RESULTS<<EOF" >> $GITHUB_ENV
+          echo "$(node psi.js https://www.bioconductor.org/ desktop 70)" >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
+      - name: Mobile
+        run: |
+          echo "MOBILE_RESULTS<<EOF" >> $GITHUB_ENV
+          echo "$(node psi.js https://www.bioconductor.org/ desktop 70)" >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
+      - name: add_comment
+        uses: mshick/add-pr-comment@v2
+        with:
+          message: |
+            ${{env.DESKTOP_RESULTS}}
+            ${{env.MOBILE_RESULTS}}
