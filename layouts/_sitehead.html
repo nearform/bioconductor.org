@@ -3,9 +3,9 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="Content-Language" content="en-us" />
   <meta name="robots" content="all" />
-  
-<% if  item.identifier =~ /^\/help\/bioc-views\/package-pages\// \
-  and not item.identifier =~ /\/all-/ %>
+
+  <% if item.identifier =~ /^\/help\/bioc-views\/package-pages\// and not
+  item.identifier =~ /\/all-/ %>
   <meta property="og:title" content="<%= item[:title] %>" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Bioconductor" />
@@ -25,30 +25,35 @@
 </script>
 
   <%
-    if (item.identifier  =~ /BiocViews\.html$/)
-        item[:rebase] = true
+    if (item.identifier =~ /BiocViews\.html$/)
+      item[:rebase] = true
     end
-   %>
-  
-  <% if !item[:rebase].nil? && item[:rebase]%>
-    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
-    <script type="text/javascript">
-        if (!window.location.href.match(/bioconductor\.org|\/\/localhost/i)) {
-            var mirror = true;
-            document.write('<base href="//www.bioconductor.org"/>\n');
-        } 
-    </script>
+  %>
+
+  <%
+  if !item[:rebase].nil? && item[:rebase]%>
+  <script
+    type="text/javascript"
+    src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"
+  ></script>
+  <script type="text/javascript">
+    if (!window.location.href.match(/bioconductor\.org|\/\/localhost/i)) {
+      var mirror = true;
+      document.write('<base href="//www.bioconductor.org"/>\n');
+    }
+  </script>
+    
   <% else %>
     <script type="text/javascript" src="/js/jquery.js"></script>
   <% end %>
   <%# see about including this conditionally, only needed for pkg landing pages:%>
   <script src="/js/jquery.tools.min.js"></script>
-
-  
-  <% 
-	title = " - #{@item[:title]}"
-	title = "" if @item[:title].nil? or @item[:title].strip.empty?
+    
+  <%
+    title = " - #{@item[:title]}"
+    title = "" if @item[:title].nil? or @item[:title].strip.empty?
   %>
+    
   <title>Bioconductor<%= title %></title>
   <link rel="stylesheet" type="text/css" href="/style/fonts.css" media="screen" />
   <link rel="stylesheet" type="text/css" href="/style/colors.css" media="screen" />
