@@ -4,12 +4,11 @@
   left: 0;
   margin: 0 auto;
   width: 100%;
-  height: 98px;
+  height: 140px;   /* announcements height = 140px || no announcements height = 98px */
   background: #fff;
   display: flex;
   align-items: center;
-  flex-direction: column;
-  /* If there are no announcements, comment out flex-direction */
+  flex-direction: column;   /* If there are no announcements, comment out flex-direction  */
 }
 
 .header-size {
@@ -20,8 +19,7 @@
   justify-content: space-between;
   align-items: center;
   width: calc(100% - 2rem);
-  margin-top: 10px;
-  /* If there are no announcements, comment out margin-top */
+  margin-top: 10px;   /* If there are no announcements, comment out margin-top */
 }
 
 @media (width >= 700px) {
