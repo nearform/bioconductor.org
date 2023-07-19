@@ -1,4 +1,4 @@
-.GlobalFooter {
+.global-footer {
   margin-right: auto;
   margin-left: auto;
   max-width: 87.5rem; /* 1400px*/
@@ -18,7 +18,7 @@
 }
 
 @media (max-width: 400px) {
-  .GlobalFooter {
+  .global-footer {
     max-width: 24.375rem; /* 390px  */
     gap: 2rem; /* 32px  */
     height: 47.3125rem; /* 757px  */
