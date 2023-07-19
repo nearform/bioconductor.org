@@ -306,12 +306,6 @@ ul.section_nav li {
 /* SiteGlobalFooter is the olive box at page bottom which
    contains global site navigation elements, copyright and logos */
 
-/* copyright and attribution portion of the global footer */
-.attribution_copyright {
-  padding-bottom: 30px;
-  border-bottom: 1px #a8bf7c solid;
-}
-
 /* here is the styling for shaded boxes. the content author should NOT
    use these classes directly... instead, create a div as follows:
    

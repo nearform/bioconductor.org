@@ -1,27 +1,33 @@
 <footer id="SiteGlobalFooter" class="SiteGlobalFooter">
   <div class="link-container">
-    <div class="list-container">
-      <h3><a href="/about/index.html">About</a></h3>
+    <div class="link-container-inner">
+      <ul class="list-container">
+        <a class="base" href="/about/index.html"><h3>About</h3></a>
         <a href="/about/annual-reports/">Annual Reports</a>
         <a href="/about/core-team/">Core Team</a>
         <a href="/about/mirrors/">Mirrors</a>
         <a href="/about/related-projects/">Related Projects</a>
         <a href="/about/code-of-conduct/">Code of Conduct</a>
+      </ul>
+      <ul class="list-container">
+        <a href="/developers/index.html"><h3>Community</h3></a>
+        <a href="https://contributions.bioconductor.org/develop-overview.html"
+          >Package Guidelines</a
+        >
+        <a
+          href="https://contributions.bioconductor.org/submission-overview.html"
+          >Package Submission</a
+        >
+        <a href="/developers/release-schedule/">Release Schedule</a>
+        <a
+          href="https://contributions.bioconductor.org/git-version-control.html"
+          >Source Control</a
+        >
+      </ul>
     </div>
-    <div class="list-container">
-      <h3><a href="/developers/index.html">Community</a></h3>
-          <a href="https://contributions.bioconductor.org/develop-overview.html"
-            >Package Guidelines</a>
-          <a
-            href="https://contributions.bioconductor.org/submission-overview.html"
-            >Package Submission</a>
-          <a href="/developers/release-schedule/">Release Schedule</a>
-          <a
-            href="https://contributions.bioconductor.org/git-version-control.html"
-            >Source Control</a>
-    </div>
-    <div class="list-container">
-      <h3><a href="/help/index.html">Learn</a></h3>
+    <div class="link-container-inner">
+      <ul class="list-container">
+        <a href="/help/index.html"><h3>Learn</h3></a>
         <a href="/packages/release/workflows/">Workflows</a>
         <a href="/help/package-vignettes/">Package Vignettes</a>
         <a href="/help/faq/">FAQ</a>
@@ -33,27 +39,46 @@
         <a href="https://anvil.bioconductor.org/">Bioc in AnVIL</a>
         <a href="/help/community/">Community Resources</a>
       </ul>
-    </div>
-    <div class="list-container">
-      <h3><a href="/install/index.html">Get started</a></h3>
+      <ul class="list-container">
+        <a href="/install/index.html"><h3>Get started</h3></a>
         <a href="/install/index.html#install-R">Install R</a>
         <a href="/install/index.html#find-bioconductor-packages">
-          Find Bioconductor Packages</a>
+          Find Bioconductor Packages</a
+        >
         <a href="/install/index.html#install-bioconductor-packages"
-            >Install Bioconductor Packages</a>
+          >Install Bioconductor Packages</a
+        >
         <a href="/install/index.html#update-bioconductor-packages"
-            >Update Bioconductor Packages</a>
+          >Update Bioconductor Packages</a
+        >
+      </ul>
     </div>
   </div>
-  <div class="contact-container">
+  <div class="logo-contact-container">
     <div class="attribution_copyright">
-      <p>Contact us:
-        <a href="https://support.bioconductor.org/">support.bioconductor.org</a>
+      <p>
+        Contact us:
+        <a class="text-underline" href="https://support.bioconductor.org/"
+          >support.bioconductor.org</a
+        >
       </p>
       <p>Copyright &copy; 2003 - <%= Time.now.year %> Bioconductor</p>
     </div>
-     <span class="global_footer_logo_bc noprint">
-      <img src="/images/BC-Logo.svg" height="51" width="154" alt=""/>
-    </span>
+
+    <div class="socials-logo-container">
+      <span class="socials">
+        <img src="/images/icons/svgs/twitter.svg" />
+        <img src="/images/icons/svgs/youtube.svg" />
+        <img src="/images/icons/svgs/linkedin.svg" />
+        <img src="/images/icons/svgs/mastodon.svg" />
+      </span>
+      <span class="global_footer_logo_bc noprint">
+        <img
+          src="/images/logo/svg/BC-Logo-White.svg"
+          height="51"
+          width="154"
+          alt="" />
+      </span>
+    </div>
   </div>
 </footer>

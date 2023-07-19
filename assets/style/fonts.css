@@ -62,26 +62,32 @@ h6 {
 
   h1 {
     font-size: 2.1rem; /* 34px */
+    font-weight: 700;
   }
 
   h2 {
     font-size: 1.5rem; /* 24px */
+    font-weight: 700;
   }
 
   h3 {
     font-size: 1.4rem; /* 22px */
+    font-weight: 700;
   }
 
   h4 {
     font-size: 1.25rem; /* 20px */
+    font-weight: 700;
   }
 
   h5 {
     font-size: 1.125rem; /* 18px */
+    font-weight: 400;
   }
 
   h6 {
     font-size: 1.1rem; /* 17px */
+    font-weight: 400;
   }
 }
 
@@ -91,8 +97,17 @@ p {
   font-size: 1rem; /* 16px */
   line-height: 130%;
   letter-spacing: 0;
+  text-decoration: none;
 }
 
+.base {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 1rem; /* 16px */
+  line-height: 130%;
+  letter-spacing: 0;
+  text-decoration: none;
+}
 .code {
   line-height: 120%;
   font-family: Courier, monospace;
