@@ -96,34 +96,6 @@ function renderShadedBoxes(){
 // check each page load to see if there is any shaded_box class
 addEvent(window,'load',renderShadedBoxes);
 
-
-
-// Masthead site navigation. we have five or more site navigation elements
-// appearing at page top, and depending upon the current page url, we want
-// the corresponding element to be olive and color unchanged at hover. we do this by pattern matching
-// on the page url (client side), and turning the corresponding element olive.
-// the position of each of the patterns corresponds to the masthead nav element number,
-// e.g., the third element, /help/, which is index 3 (option base 1), matches masthead_nav_element_3
-// we use one Array of matching patterns for each element in case one element needs to match more than one patten.
-// examples are shown below, but adjust for your info architecture.
-var masthead_nav_elements = Array( Array(/^\/$/, /^\/index\.html$/),Array(/\/install\//, /install\.html/),
-	Array(/\/help\//),Array(/\/developers\//),Array(/\/about\//) );
-function checkNav(){
-  for(var i=0; i<masthead_nav_elements.length; i++){
-  for(var j=0; j<masthead_nav_elements[i].length; j++){
-    if( masthead_nav_elements[i]&&masthead_nav_elements[i][j] ){ // skips elements that are blank
-	  if (window.location.pathname.match(masthead_nav_elements[i][j])) {
-        // match at element i. make it olive
-        if( document.getElementById('masthead_nav_element_'+(i+1)) ){
-            document.getElementById('masthead_nav_element_'+(i+1)).className='masthead_nav_element masthead_nav_element_selected';
-            return; // matched, so no need to continue checking.
-        }
-      }
-    }
-  }}
-}
-addEvent(window,'load',checkNav);
-
 Object.size = function(obj) {
     var size = 0, key;
     for (key in obj) {
@@ -257,58 +229,6 @@ jQuery(function() {
     jQuery(".rpack").tooltip({tip: "#tooltip"});//{ effect: 'slide'});
     handleCitations();
 });
-
-// // another document ready function, for try-it-now
-// jQuery(function(){
-//     if (jQuery("#tryitnow_instance_started").length > 0) {
-//         jQuery("#initially_hidden").hide();
-//         var dnsName = getParameterByName("dns");
-//         var key = getParameterByName("key");
-//         var url = "http://" + dnsName + ":8787";
-//         var action = url + "/auth-do-sign-in";
-//         var link = "../launch?username=ubuntu&password=bioc&url=" + url;
-//         link += "&encrypted=";
-//         jQuery("#ami_link").attr("href", link);
-//         jQuery("#instance_url").html(url);
-
-//         var payload, exp, mod;
-//         payload = "ubuntu\nbioc";
-//         var chunks = key.split(':', 2);
-//         exp = chunks[0];
-//         mod = chunks[1];
-
-//         var encrypted = encrypt(payload, exp, mod);
-
-//         var link = jQuery("#ami_link").attr("href");
-//         jQuery("#ami_link").attr("href", link + encrypted);
-//         jQuery("#instance_loading").html("");
-//         jQuery("#initially_hidden").show();
-//     }
-
-
-//     if (jQuery("#launch_tryitnow").length > 0) { // is this launch.md?
-//         jQuery("#hide_this_stuff").hide();
-//         var username = getParameterByName("username");
-//         var password = getParameterByName("password");
-//         var encrypted = getParameterByName("encrypted");
-//         encrypted = encrypted.replace(/ /g, "+");
-//         var url = getParameterByName("url");
-//         var action = url + "/auth-do-sign-in";
-//         jQuery("form").get(1).setAttribute("action", action);
-//         document.getElementById("username").value = username;
-//         document.getElementById("password").value = password;
-//         //todo change this:
-//         document.getElementById('persist').value = document.getElementById('staySignedIn').checked ? "1" : "0";
-//         document.getElementById('clientPath').value = window.location.pathname;
-//         document.getElementById('package').value = encrypted;
-//         document.realform.submit();
-//     }
-
-//     if (jQuery("#captcha_js").length > 0) {
-//         jQuery("#captcha_js").html("<script type='text/javascript' src='http://cloud.bioconductor.org:2112/cgi-bin/get_captcha.js'></script>")
-//     }
-
-// });
 
 var submit_tryitnow = function() {
     jQuery("#tryitnow_button").attr("disabled", "disabled");
