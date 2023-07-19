@@ -24,6 +24,8 @@ body {
   background: #fff;
   display: flex;
   align-items: center;
+  flex-direction: column;  
+  /* If there are no announcements, comment out flex-direction */
 }
 
 .header-size {
@@ -34,6 +36,8 @@ body {
   justify-content: space-between;
   align-items: center;
   width: calc(100% - 2rem);
+  margin-top: 10px;
+  /* If there are no announcements, comment out margin-top */
 }
 
 @media (width >= 700px) {

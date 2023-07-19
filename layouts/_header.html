@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <header id="site-masthead" class="site-masthead">
+  <%= render("/_announcement/") %>
+ <!-- If there are no announcements, comment out the element  -->
   <div class="header-size">
     <div class="header-logo">  
-    <img
-    src="/images/Logo.svg"
-    class="masthead-logo"
-    alt="Bioconductor - open source software for bioinformatics"
-    />
+      <a href="/">
+        <img
+          src="/images/Logo.svg"
+          class="masthead-logo"
+          alt="Bioconductor - open source software for bioinformatics"
+        />
+      </a>
     </div>
 
-    <nav class="header-desktop" id="header-div-desktop"> 
+    <nav class="header-desktop"> 
       <div class="nav-links">
         <a class="format-bold" href="/about/">About</a>
         <a class="format-bold" href="/developers/">Developers</a>
@@ -37,5 +41,6 @@
       </span>
     </a>
     </nav>
+
   </div>  
 </header>
