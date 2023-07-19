@@ -36,7 +36,7 @@ body {
   width: calc(100% - 2rem);
 }
 
-@media (min-width: 700px) {
+@media (width >= 700px) {
   .header-logo {
     display: flex;
     align-items: center;
@@ -78,22 +78,22 @@ body {
     padding-right: 12px;
   }
 
-  .site_search {
+  .site-search {
     display: flex;
     align-items: center;
   }
 
-  #search_bar {
+  #search-bar {
     border: none;
     outline: none;
     background-color: transparent;
     padding-left: 5px;
   }
 
-  .masthead_logo {
+  .masthead-logo {
     display: flex;
-    width: 201.388px;
-    height: 57.95px;
+    width: 201px;
+    height: 58px;
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
@@ -135,7 +135,7 @@ body {
   }
 }
 
-@media (max-width: 700px) {
+@media (width <= 700px) {
   #header-div-desktop {
     display: none;
   }

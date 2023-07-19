@@ -1,1 +1,9 @@
 assets/style/bioconductor.css
+
+assets/js/search.js
+assets/js/bioconductor.js
+
+layouts/_sitehead.html
+layouts/_footer.html
+layouts/course.html
+layouts/default.html

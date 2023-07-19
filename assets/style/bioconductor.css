@@ -533,18 +533,7 @@ ul.inline_list li {
     padding: 0;
     border: 0;
   }
-  /* move the logo to the bottom of the print-out */
-  #SiteMasthead {
-    height: auto;
-    position: static;
-  }
-  .SiteMasthead {
-    border-bottom: 0;
-  }
-  .masthead_logo {
-    padding: 0;
-    float: none;
-  }
+
   /* shaded boxes don't need to be shaded on print. since they are
      background images, they won't usually be printed anyway so this
      rule tightens up the spacing. */
