@@ -4,7 +4,11 @@
   <body>
     <%= render("/_nav/", :section_navigation => has_subnav?(@item) &&
     subnav_items(@item).length > 0) %>
-    <div id="site-container" class="site-container">
+    <main>
+      <div class='container'>
+        <% if @item[:hero] %>d
+        <%= render(@item[:hero]) %>
+        <%end%>
       <div id="PageContent" class="PageContent WithRightRail">
         <%= render("/_crumbs/") %>
         <h1><img src="/images/icons/help.gif" alt="" /><%= @item[:title] %></h1>
@@ -28,6 +32,6 @@
         %>
       </div>
       <%= render("/_footer/") %>
-    </div>
+    </main>
   </body>
 </html>
