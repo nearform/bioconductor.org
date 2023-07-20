@@ -12,16 +12,16 @@ prefix="og: http://ogp.me/ns#">
           <%= render(@item[:hero]) %>
         <%end%>
 
-      	<% if (@item.identifier != '/')%>
+      	<% if (@item.identifier != '/') %>
       	  <%= render("/_crumbs/") %>
       	<% end %>
   
-       <% if @item.attributes.has_key?(:package_index_page)%>
-          <%= render("/_pkg_idx/", :info => @item.attributes)%>
+       <% if @item.attributes.has_key?(:package_index_page) %>
+          <%= render("/_pkg_idx/", :info => @item.attributes) %>
         <% end %>
 
-        <% if @item.attributes.has_key?(:Package)%>
-          <%= render("/_bioc_views_package_detail/", :package => @item.attributes)%>
+        <% if @item.attributes.has_key?(:Package) %>
+          <%= render("/_bioc_views_package_detail/", :package => @item.attributes) %>
         <% end %>
 
        	<% if has_subnav?(@item) %>
