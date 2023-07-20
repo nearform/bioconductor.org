@@ -118,7 +118,7 @@
 }
 
 @media (width <= 700px) {
-  #header-desktop {
+  .header-desktop {
     display: none;
   }
 }
