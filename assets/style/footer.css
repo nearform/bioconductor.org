@@ -1,7 +1,7 @@
 .global-footer {
   margin-left: auto;
   margin-right: auto;
-  width: 100%; /* 1400p x*/
+  width: 100%; /* 1400p x */
   background-color: #121212;
   padding: 2.5rem 6.25rem; /* 40px, 100px */
   border-style: solid;
@@ -14,10 +14,12 @@
   margin-bottom: 0;
   clear: both;
 }
+
 .global-footer-container {
-  max-width: 1400px;
+  max-width: 87.5rem; /* 1400px */
   margin: auto;
 }
+
 .link-container-inner {
   display: flex;
   justify-content: flex-start;
@@ -28,7 +30,6 @@
 .link-container {
   display: flex;
 }
-
 .list-container {
   display: flex;
   flex-direction: column;
@@ -48,8 +49,8 @@
 }
 
 .copyright p {
-  margin-bottom: 0;
-  padding: 0;
+  margin-bottom: 0px;
+  padding: 0px;
 }
 
 .copyright {
@@ -67,7 +68,7 @@
 .socials-logo-container {
   display: flex;
   align-items: center;
-  gap: 64px;
+  gap: 4rem;
 }
 .socials img {
   padding-right: 2rem; /* 30px  */
@@ -75,16 +76,16 @@
 }
 
 .socials {
-  margin-top: 10px;
-  margin-top: 26px;
+  margin-top: 0.5rem;
+  margin-top: 1.5rem;
 }
 .footer-logo {
   padding: 0;
 }
 
 .footer-logo img {
-  width: 193.332px;
-  height: 55.632px;
+  width: 12rem;
+  height: 3.5rem;
   padding-top: 1rem;
 }
 
@@ -97,7 +98,7 @@
   .global-footer {
     display: flex;
     height: auto;
-    padding: 32px;
+    padding: 2rem;
     justify-content: center;
   }
 
@@ -106,11 +107,11 @@
   }
 
   .list-container {
-    min-width: 160px;
+    min-width: 10rem;
     margin-inline-end: 0px;
   }
   .list-container-inner {
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
   }
 
   .logo-contact-container {
@@ -118,7 +119,7 @@
     flex-direction: column;
   }
   .copyright {
-    margin-top: 32px;
+    margin-top: 2rem;
   }
 
   .footer-logo {
@@ -127,17 +128,17 @@
   }
 
   .footer-logo img {
-    width: 193.332px;
-    height: 55.632px;
+    width: 12rem;
+    height: 3.5rem;
   }
   .socials-logo-container {
     display: block;
-    padding: 24px 0rem;
+    padding: 1rem 0rem;
   }
 
   .socials {
     margin: auto;
-    padding-right: 16px;
-    padding-left: 16px;
+    padding-right: 1rem;
+    padding-left: 1rem;
   }
 }
