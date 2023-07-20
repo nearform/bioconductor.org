@@ -5,7 +5,12 @@ prefix="og: http://ogp.me/ns#">
   <body>
     <%= render("/_nav/", :section_navigation => has_subnav?(@item) && subnav_items(@item).length > 0) %>
 
-    <div id="site-container" class="site-container">
+    <main>
+      <div class='container'>
+        <% if @item[:hero] %>d
+        <%= render(@item[:hero]) %>
+        <%end%>
+
       <% if has_subnav?(@item) %>
       <div id="PageContent" class="PageContent WithRightRail">
       <% else %>
@@ -32,8 +37,8 @@ prefix="og: http://ogp.me/ns#">
 	  <a name="section-navigation"></a> <!-- accessibility anchor -->
 	  <%= render("/_subnav/", :pages => subnav_items(@item)) %>
 	<% end %>
-
-      </div>
+    </div>
+      </main>
 
       <%= render("/_footer/") %>
     </div>
