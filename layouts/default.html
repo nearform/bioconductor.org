@@ -5,39 +5,30 @@ prefix="og: http://ogp.me/ns#">
   <body>
     <%= render("/_nav/", :section_navigation => has_subnav?(@item) && subnav_items(@item).length > 0) %>
 
+    <div style="height: 200px" data-note="This is a temporary container so the header doesn't overlap the content">.</div>
     <main>
       <div class='container'>
-        <% if @item[:hero] %>d
-        <%= render(@item[:hero]) %>
+        <% if @item[:hero] %>
+          <%= render(@item[:hero]) %>
         <%end%>
 
-      <% if has_subnav?(@item) %>
-      <div id="PageContent" class="PageContent WithRightRail">
-      <% else %>
-      <div id="PageContent" class="PageContent">
-      <% end %>
+      	<% if (@item.identifier != '/')%>
+      	  <%= render("/_crumbs/") %>
+      	<% end %>
+  
+       <% if @item.attributes.has_key?(:package_index_page)%>
+          <%= render("/_pkg_idx/", :info => @item.attributes)%>
+        <% end %>
 
+        <% if @item.attributes.has_key?(:Package)%>
+          <%= render("/_bioc_views_package_detail/", :package => @item.attributes)%>
+        <% end %>
 
-	<% if (@item.identifier != '/')%>
-	  <%= render("/_crumbs/") %>
-	<% end %>
+       	<% if has_subnav?(@item) %>
+          <nav id="subnav"><%= render("/_subnav/", :pages => subnav_items(@item)) %></nav>
+      	<% end %>
 
-	<% if @item.attributes.has_key?(:package_index_page)%>
-	    <%= render("/_pkg_idx/", :info => @item.attributes)%>
-	<% end %>
-	<% if @item.attributes.has_key?(:Package)%>
-	    <%= render("/_bioc_views_package_detail/", :package => @item.attributes)%>
-	<% end %>
-	<%# end hack%>
-
-	<%= yield if block_given? %>
-	<% if has_subnav?(@item) %>
-	  </div>
-	  <div id="RightRail" class="RightRail">
-	  <a name="section-navigation"></a> <!-- accessibility anchor -->
-	  <%= render("/_subnav/", :pages => subnav_items(@item)) %>
-	<% end %>
-    </div>
+        <%= yield if block_given? %>
       </main>
 
       <%= render("/_footer/") %>
