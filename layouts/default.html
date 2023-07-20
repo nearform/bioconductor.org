@@ -6,12 +6,12 @@ prefix="og: http://ogp.me/ns#">
     <%= render("/_nav/", :section_navigation => has_subnav?(@item) && subnav_items(@item).length > 0) %>
 
     <div style="height: 200px" data-note="This is a temporary container so the header doesn't overlap the content">.</div>
+    <% if @item[:hero] %>
+      <section class='hero'><%= render(@item[:hero]) %></section>
+    <%end%>
+  
     <main>
       <div class='container'>
-        <% if @item[:hero] %>
-          <section class='hero'><%= render(@item[:hero]) %></section>
-        <%end%>
-  
         <% if @item.attributes.has_key?(:package_index_page) %>
           <%= render("/_pkg_idx/", :info => @item.attributes) %>
         <% end %>
@@ -21,7 +21,7 @@ prefix="og: http://ogp.me/ns#">
         <% end %>
 
        	<% if has_subnav?(@item) %>
-        <section class='left-col'><%= render("/components/subnav/", :pages => subnav_items(@item)) %></section>
+          <section class='left-col'><%= render("/components/subnav/", :pages => subnav_items(@item)) %></section>
       	<% end %>
 
         <section class='content'>
