@@ -1,7 +1,7 @@
 .global-footer {
-  margin-right: auto;
   margin-left: auto;
-  max-width: 87.5rem; /* 1400p x*/
+  margin-right: auto;
+  max-width: 100%; /* 1400p x*/
   background-color: #121212;
   padding: 2.5rem 6.25rem; /* 40px, 100px */
   border-style: solid;
@@ -10,32 +10,31 @@
   margin-top: 1.875rem; /* 30px */
   color: var(--default-white, #fff);
   font-size: 70%;
-  display: flex;
-  flex-direction: column;
   height: 29.25rem; /* 468px */
-  gap: 1.5625rem; /* 25px  */
-  clear: both;
+  margin-bottom: 0;
 }
-
+.global-footer-container {
+  max-width: 1400px;
+  margin: auto;
+}
 .link-container-inner {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 13.125rem; /* 210px  */
+  justify-content: flex-start;
+  width: 100%;
+  padding: 0px;
 }
 
 .link-container {
   display: flex;
-  flex-direction: row;
-  gap: 13.125rem; /* 210px  */
 }
 
 .list-container {
   display: flex;
   flex-direction: column;
   align-items: start;
-  gap: 0.625rem; /* 10px  */
-  padding-inline-start: 0;
+  gap: 0.625rem;
+  padding-inline-start: 0px;
+  margin-right: auto;
 }
 
 .text-footer {
@@ -88,36 +87,37 @@
   padding-top: 1rem;
 }
 
-@media (width <= 700px) {
+/* @media (width <= 1280px) {
+  .link-container {
+    flex-direction: column;
+  }
+} */
+@media (width <= 823px) {
   .global-footer {
-    max-width: 100%; /* 390px  */
-    gap: 2rem; /* 32px  */
-    height: auto; /* 757px  */
+    display: flex;
+    height: auto;
     padding: 32px;
-    align-items: center;
+    justify-content: center;
   }
 
   .link-container {
-    flex-direction: column;
-    gap: 0px;
+    display: block;
   }
 
-  .link-container-inner {
-    flex-direction: row;
-    gap: 37px;
-  }
   .list-container {
-    display: flex;
     min-width: 160px;
+    margin-inline-end: 0px;
+  }
+  .list-container-inner {
+    margin-bottom: 20px;
   }
 
   .logo-contact-container {
-    display: block;
-    margin-left: -78px;
+    align-items: flex-start;
+    flex-direction: column;
   }
   .copyright {
-    margin-top: 0px;
-    margin-left: 0px;
+    margin-top: 32px;
   }
 
   .footer-logo {
