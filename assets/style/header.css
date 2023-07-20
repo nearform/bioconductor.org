@@ -38,7 +38,8 @@
   gap: 32px;
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links a.active {
   text-decoration: underline;
   text-underline-offset: 7px;
   text-decoration-thickness: 3px;
@@ -88,6 +89,10 @@
   width: 141px;
 }
 
+.header-button svg path {
+  transition: stroke 0.5s ease;
+}
+
 .header-button:hover {
   color: #fff;
 }
@@ -113,7 +118,7 @@
 }
 
 @media (width <= 700px) {
-  #header-div-desktop {
+  #header-desktop {
     display: none;
   }
 }

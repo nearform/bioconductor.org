@@ -20,6 +20,28 @@ try {
 	// do nothing
 }
 
+//Sitehead code that will underline the nav element if the page URL matches the element 
+
+const nav_elements = [
+  /^\/about\//,
+  /^\/developers\//,
+  /^\/help\//
+];
+
+function checkNav() {
+  const currentPath = window.location.pathname;
+  const navLinks = document.querySelectorAll('.nav-links a');
+
+  navLinks.forEach((link, index) => {
+    if (currentPath.match(nav_elements[index])) {
+      link.classList.add('active');
+    } else {
+      link.classList.remove('active');
+    }
+  });
+}
+
+window.addEventListener('load', checkNav);
 
 
 function log(message) {
