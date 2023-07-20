@@ -11,7 +11,11 @@ prefix="og: http://ogp.me/ns#">
     <%end%>
   
     <main>
+      <% if has_subnav?(@item) %>
+      <div class='container main-subnav'>
+      <% else %>
       <div class='container'>
+      <% end %>
         <% if @item.attributes.has_key?(:package_index_page) %>
           <%= render("/_pkg_idx/", :info => @item.attributes) %>
         <% end %>

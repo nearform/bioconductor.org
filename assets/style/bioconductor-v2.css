@@ -10,16 +10,16 @@ body {
   max-width: 1400px;
 }
 
-main > .container {
+main > .container.main-subnav {
   display: grid;
   gap: 2rem;
+  grid-template-columns: 300px 1fr;
   grid-template-areas:
     "left-col .";
 }
 
 .left-col {
   grid-area: left-col;
-  width: 300px;
 }
 
 nav.subnav {
@@ -63,7 +63,7 @@ nav.subnav a {
   text-decoration: none;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   main > .container {
     display: block;
   }
