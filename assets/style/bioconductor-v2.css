@@ -64,3 +64,13 @@ nav.subnav a::after {
   color: var(--neutral-n400);
   text-decoration: none;
 }
+
+@media (max-width: 480px) {
+  main > .container {
+    display: block;
+  }
+
+  .left-col {
+    display: none;
+  }
+}
