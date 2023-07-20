@@ -10,7 +10,7 @@ body {
    to allow more flexible cascading: id rules are highly ranked while
    class names play nicer with other rules. */
 
-#site-container {
+.site-container {
   margin: 0 auto; /* floats the design center */
   max-width: 1400px; /* change the site design width here */
 }
