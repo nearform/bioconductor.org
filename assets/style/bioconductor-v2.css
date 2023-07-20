@@ -1,22 +1,14 @@
-
 body {
-  background-color: white
-}
-.SiteContainer {
-  margin-left: auto;
-  margin-right: auto;
-  width:100vh;  
-  max-width: 1400px;
-  display: flex;
-  padding: 32px 100px 48px 100px;
-  flex-direction: column;
-  align-items: center;
-  gap: 32px;
-  background-color: #ffffff;
+  font-family: "Atkinson Hyperlegible", sans-serif;
 }
 
-@media (max-width: 768px) {
-  .SiteContainer {
-    max-width: 358px;
-  }
+/* "site-container" is the single div containing every other element in the site.
+   it floats center, with no vertical margins, and provides the overall
+   width of the site. we provide both an id and a class name in order
+   to allow more flexible cascading: id rules are highly ranked while
+   class names play nicer with other rules. */
+
+#site-container {
+  margin: 0 auto; /* floats the design center */
+  width: 1600px; /* change the site design width here */
 }
