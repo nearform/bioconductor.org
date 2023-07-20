@@ -9,14 +9,10 @@ prefix="og: http://ogp.me/ns#">
     <main>
       <div class='container'>
         <% if @item[:hero] %>
-          <%= render(@item[:hero]) %>
+          <section class='hero'><%= render(@item[:hero]) %></section>
         <%end%>
-
-      	<% if (@item.identifier != '/') %>
-      	  <%= render("/_crumbs/") %>
-      	<% end %>
   
-       <% if @item.attributes.has_key?(:package_index_page) %>
+        <% if @item.attributes.has_key?(:package_index_page) %>
           <%= render("/_pkg_idx/", :info => @item.attributes) %>
         <% end %>
 
@@ -25,10 +21,16 @@ prefix="og: http://ogp.me/ns#">
         <% end %>
 
        	<% if has_subnav?(@item) %>
-          <nav id="subnav"><%= render("/_subnav/", :pages => subnav_items(@item)) %></nav>
+        <section class='left-col'><%= render("/components/subnav/", :pages => subnav_items(@item)) %></section>
       	<% end %>
 
-        <%= yield if block_given? %>
+        <section class='content'>
+      	  <% if (@item.identifier != '/') %>
+      	    <%= render("/components/breadcrumbs/") %>
+        	<% end %>
+
+          <%= yield if block_given? %>
+        </section>
       </main>
 
       <%= render("/_footer/") %>
