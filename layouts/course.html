@@ -2,11 +2,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
   <%= render("/_sitehead/") %>
   <body>
+    <%= render("/components/_header/") %>
     <%= render("/_nav/", :section_navigation => has_subnav?(@item) &&
     subnav_items(@item).length > 0) %>
 
     <div id="site-container" class="site-container">
-      <%= render("/_header/") %>
       <div id="PageContent" class="PageContent WithRightRail">
         <%= render("/_crumbs/") %>
         <h1><img src="/images/icons/help.gif" alt="" /><%= @item[:title] %></h1>

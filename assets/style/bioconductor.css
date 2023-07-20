@@ -16,11 +16,6 @@ h2 img {
   vertical-align: middle;
 }
 
-p,
-table {
-  padding-bottom: 1em;
-} /* makes a nice separation between paragraphs */
-
 .olive {
   color: #87b13f;
 } /* anything can be colored olive */

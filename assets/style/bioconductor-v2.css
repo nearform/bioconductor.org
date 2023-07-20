@@ -1,5 +1,7 @@
 body {
   font-family: "Atkinson Hyperlegible", sans-serif;
+  width: 100%;
+  margin: 0;
 }
 
 /* "site-container" is the single div containing every other element in the site.
@@ -11,5 +13,4 @@ body {
 #site-container {
   margin: 0 auto; /* floats the design center */
   max-width: 1400px; /* change the site design width here */
-  position: relative;
 }

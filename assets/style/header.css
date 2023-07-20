@@ -1,124 +1,114 @@
-#site-masthead {
+.site-masthead {
   position: fixed;
-  top: 0;
-  left: 0;
-  margin: 0 auto;
   width: 100%;
-  height: 140px;   /* announcements height = 140px || no announcements height = 98px */
   background: #fff;
-  display: flex;
-  align-items: center;
-  flex-direction: column;   /* If there are no announcements, comment out flex-direction  */
 }
 
 .header-size {
   margin: 0 auto;
   max-width: 1400px;
-  position: relative;
+  height: 98px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: calc(100% - 2rem);
-  margin-top: 10px;   /* If there are no announcements, comment out margin-top */
+  width: calc(100% - 3rem);
 }
 
-@media (width >= 700px) {
-  .header-logo {
-    display: flex;
-    align-items: center;
-  }
+.header-logo {
+  display: flex;
+  align-items: center;
+}
 
-  .header-desktop {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 20px;
-  }
+.header-desktop {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
 
-  a {
-    text-decoration: transparent;
-    color: #070707;
-    transition: 300ms;
-  }
+.header-size a {
+  text-decoration: transparent;
+  color: #070707;
+  transition: 300ms;
+}
 
-  .nav-links {
-    display: flex;
-    gap: 32px;
-  }
+.nav-links {
+  display: flex;
+  gap: 32px;
+}
 
-  .nav-links a:hover {
-    text-decoration: underline;
-    text-underline-offset: 7px;
-    text-decoration-thickness: 3px;
-  }
+.nav-links a:hover {
+  text-decoration: underline;
+  text-underline-offset: 7px;
+  text-decoration-thickness: 3px;
+}
 
-  .search-container {
-    border: 1px solid var(--neutral-n75);
-    border-radius: 64px;
-    width: 240px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-left: 12px;
-    padding-right: 12px;
-  }
+.search-container {
+  border: 1px solid var(--neutral-n75);
+  border-radius: 64px;
+  width: 240px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 12px;
+  padding-right: 12px;
+}
 
-  .site-search {
-    display: flex;
-    align-items: center;
-  }
+.site-search {
+  display: flex;
+  align-items: center;
+}
 
-  #search-bar {
-    border: none;
-    outline: none;
-    background-color: transparent;
-    padding-left: 5px;
-  }
+#search-bar {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  padding-left: 5px;
+}
 
-  .masthead-logo {
-    display: flex;
-    width: 201px;
-    height: 58px;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
-  }
+.masthead-logo {
+  display: flex;
+  width: 201px;
+  height: 58px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
 
-  .header-button {
-    background-image: var(--gradient-brand);
-    border-radius: 128px;
-    box-sizing: border-box;
-    color: var(--primary-p400);
-    display: flex;
-    height: 40px;
-    padding: 2px;
-    width: 141px;
-  }
+.header-button {
+  background-image: var(--gradient-brand);
+  border-radius: 128px;
+  box-sizing: border-box;
+  color: var(--primary-p400);
+  display: flex;
+  height: 40px;
+  padding: 2px;
+  width: 141px;
+}
 
-  .header-button:hover {
-    color: #fff;
-  }
+.header-button:hover {
+  color: #fff;
+}
 
-  .header-button:hover svg path {
-    stroke: #fff;
-  }
+.header-button:hover svg path {
+  stroke: #fff;
+}
 
-  .header-button span {
-    align-items: center;
-    border-radius: 64px;
-    display: flex;
-    justify-content: center;
-    background: #fff;
-    transition: background 0.5s ease;
-    width: 100%;
-    gap: 5px;
-    margin: 1px;
-  }
+.header-button span {
+  align-items: center;
+  border-radius: 64px;
+  display: flex;
+  justify-content: center;
+  background: #fff;
+  transition: background 0.5s ease;
+  width: 100%;
+  gap: 5px;
+  margin: 1px;
+}
 
-  .header-button:hover span {
-    background: var(--primary-p400);
-  }
+.header-button:hover span {
+  background: var(--primary-p400);
 }
 
 @media (width <= 700px) {
