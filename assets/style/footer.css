@@ -93,7 +93,7 @@
     flex-direction: column;
   }
 } */
-@media (width <= 823px) {
+@media (width <= 768px) {
   .global-footer {
     display: flex;
     height: auto;
