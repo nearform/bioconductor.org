@@ -12,6 +12,7 @@
   font-size: 70%;
   height: 29.25rem; /* 468px */
   margin-bottom: 0;
+  clear: both;
 }
 .global-footer-container {
   max-width: 1400px;
