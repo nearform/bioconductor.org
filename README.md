@@ -292,9 +292,7 @@ Or if you would like to use your package manager to install, you can find instru
 
 https://nodejs.org/en/download/package-manager
 
-Install linters:
-
-    npm ci
+Install linters: `npm ci`
 
 This project includes liners for HTML, CSS, JavaScript, and markdown files.
 instructions for each
@@ -307,7 +305,7 @@ For each linter here are the options available:
   - `npm run js-lint <(optional)directory/file>` (default directory is current working directory)
 - htmllint (HTML)
   - `npm run html-lint <(optional)directory/file>` (default directory is current working directory)
-- MarkdownLint (Markdown)
+- markdownLint (Markdown)
   - `npm run md-lint <(required)directory/file>`
 
 ## Overview of site source code
