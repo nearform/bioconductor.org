@@ -8,7 +8,7 @@
   },
   "scripts": {
     "lint": "npm run css-lint && npm run js-lint",
-    "css-lint": "npx stylelint \"**/*.css\" ",
+    "css-lint": "npx stylelint",
     "js-lint": "npx eslint",
     "md-lint": "npx markdownlint",
     "html-lint": "npx htmllint"
