@@ -94,7 +94,11 @@ nav.subnav a, .shaded_box ul li a {
     display: block;
   }
 
-  .left-col {
-    display: none;
-  }
+.left-col {
+  display: none;
+}
+
+.site-container {
+  margin: 0 auto; /* floats the design center */
+  max-width: 1400px; /* change the site design width here */
 }
