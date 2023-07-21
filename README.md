@@ -296,23 +296,19 @@ Install linters:
 
     npm ci
 
-This project includes stylelint and eslint.
+This project includes liners for HTML, CSS, JavaScript, and markdown files.
+instructions for each
+To run all linters you can use the command `npm run lint`
+For each linter here are the options available:
 
-stylelint(for linting css code):
-
-    npm run css-lint
-
-eslint(will lint everything in the assets folder):
-
-    npm run js-lint
-
-or if you need to specify a directory or a file:
-
-    npx eslint <directory/ file>
-
-To run all linters :
-
-    npm run lint-all
+- stylelint (CSS):
+  - `npm run css-lint`
+- eslint (JavaScript):
+  - `npm run js-lint <(optional)directory/file>` (default directory is current working directory)
+- htmllint (HTML)
+  - `npm run html-lint <(optional)directory/file>` (default directory is current working directory)
+- MarkdownLint (Markdown)
+  - `npm run md-lint <(required)directory/file>`
 
 ## Overview of site source code
 
