@@ -15,7 +15,7 @@
   "license": "ISC",
   "devDependencies": {
     "eslint": "^8.44.0",
-    "html-validate": "^8.0.5",
+    "htmlhint": "^1.1.4",
     "stylelint": "^15.10.1",
     "stylelint-config-standard": "^34.0.0"
   }

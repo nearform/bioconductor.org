@@ -1,7 +1,0 @@
-{
-  "extends": ["html-validate:recommended"],
-  "rules": {
-    "doctype-html": "off",
-    "spec-char-escape": "off"
-  }
-}
