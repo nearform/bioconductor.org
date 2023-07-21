@@ -14,12 +14,6 @@
   font-size: 0.8125rem;
 }
 
-/* .announcement-default {
-  background-color: var(--misc-dark);
-  color: #fff;
-  stroke: #fff;
-} */
-
 .announcement-warning {
   background-color: var(--misc-warning);
   color: #070707;
