@@ -22,13 +22,13 @@ const parseInputs = (inputs) => {
         break;
       default:
         throw new Error(
-          "Invalid input format, please use the following: url=<your url>, strategy=<desktop/mobile>, threshold=<number 1-100/none>, apiKey=<your key/none"
+          "Invalid input format, please use the following: url=<your url>,strategy=<desktop/mobile>,threshold=<number(1-100)/none>,apiKey=<yourkey/none"
         );
     }
   });
   if (!url || !strategy || !threshold || !apiKey) {
     throw new Error(
-      "Invalid input format, please use the following: url=<your url>, strategy=<desktop/mobile>, threshold=<number 1-100/none>, apiKey=<your key/none"
+      "Invalid input format,please use the following: url=<your url> strategy=<desktop/mobile>,threshold=<number 1-100/none>,apiKey=<yourkey/none"
     );
   }
 
