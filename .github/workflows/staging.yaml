@@ -57,12 +57,20 @@ jobs:
       - name: run desktop psi
         run: |
           echo "DESKTOP_PSI_RESULTS<<EOF" >> $GITHUB_ENV
+<<<<<<< Updated upstream
           echo "$(node PageSpeed.js ${{env.STAGING_URL}} desktop 50)" >> $GITHUB_ENV
+=======
+          echo "$(node PageSpeed.js url=${{vars.STAGING_URL}},strategy=desktop,threshold=40,apiKey=none)" >> $GITHUB_ENV
+>>>>>>> Stashed changes
           echo "EOF" >> $GITHUB_ENV
       - name: run mobile psi
         run: |
           echo "MOBILE_PSI_RESULTS<<EOF" >> $GITHUB_ENV
+<<<<<<< Updated upstream
           echo "$(node PageSpeed.js ${{env.STAGING_URL}} mobile 50)" >> $GITHUB_ENV
+=======
+          echo "$(node PageSpeed.js url=${{vars.STAGING_URL}},strategy=mobile,threshold=40,apiKey=none)" >> $GITHUB_ENV
+>>>>>>> Stashed changes
           echo "EOF" >> $GITHUB_ENV
       - name: run axe accesibility test
         run: |
