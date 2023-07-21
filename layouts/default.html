@@ -7,14 +7,14 @@ prefix="og: http://ogp.me/ns#">
 
     <div style="height: 200px" data-note="This is a temporary container so the header doesn't overlap the content">.</div>
     <% if @item[:hero] %>
-      <section class='hero'><%= render(@item[:hero]) %></section>
+      <section class="hero"><%= render(@item[:hero]) %></section>
     <%end%>
   
     <main>
       <% if has_subnav?(@item) %>
-      <div class='container main-subnav'>
+      <div class="container main-subnav">
       <% else %>
-      <div class='container'>
+      <div class="container">
       <% end %>
         <% if @item.attributes.has_key?(:package_index_page) %>
           <%= render("/_pkg_idx/", :info => @item.attributes) %>
@@ -24,14 +24,14 @@ prefix="og: http://ogp.me/ns#">
           <%= render("/_bioc_views_package_detail/", :package => @item.attributes) %>
         <% end %>
 
-       	<% if has_subnav?(@item) %>
-          <section class='left-col'><%= render("/components/subnav/", :pages => subnav_items(@item)) %></section>
-      	<% end %>
+        <% if has_subnav?(@item) %>
+          <section class="left-col"><%= render("/components/subnav/", :pages => subnav_items(@item)) %></section>
+        <% end %>
 
-        <section class='content'>
-      	  <% if (@item.identifier != '/') %>
+        <section class="content">
+          <% if (@item.identifier != '/') %>
       	    <%= render("/components/breadcrumbs/") %>
-        	<% end %>
+          <% end %>
 
           <%= yield if block_given? %>
         </section>

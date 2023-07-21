@@ -69,7 +69,7 @@ nav.subnav a, .shaded_box ul li a {
   list-style-type: none;
   display: flex;
   gap: 0.5rem;
-  margin: 0 0 0.75rem 0;
+  margin: 0 0 0.75rem;
   padding: 0;
   line-height: 1.3rem;
 }
@@ -89,7 +89,7 @@ nav.subnav a, .shaded_box ul li a {
   text-decoration: none;
 }
 
-@media (max-width: 768px) {
+@media (width <= 768px) {
   main > .container {
     display: block;
   }
