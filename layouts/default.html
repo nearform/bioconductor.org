@@ -5,7 +5,6 @@ prefix="og: http://ogp.me/ns#">
   <body>
     <%= render("/_nav/", :section_navigation => has_subnav?(@item) && subnav_items(@item).length > 0) %>
 
-    <div style="height: 200px" data-note="This is a temporary container so the header doesn't overlap the content">.</div>
     <% if @item[:hero] %>
       <section class="hero"><%= render(@item[:hero]) %></section>
     <%end%>
