@@ -1,5 +1,5 @@
 <header id="site-masthead" class="site-masthead">
-  <%= render("/components/_announcement/") %>
+  <%= render("/components/announcement/") %>
   <!-- If there are no announcements, comment out the element  -->
   <div class="header-size">
     <div class="header-logo">
@@ -7,7 +7,7 @@
         <img
           src="/images/logo/svg/Logo.svg"
           class="masthead-logo"
-          alt="Bioconductor - open source software for bioinformatics"
+          alt="Bioconductor home"
         />
       </a>
     </div>
@@ -29,15 +29,16 @@
           <img
             src="/images/icons/search-icon.svg"
             class="search-icon"
-            alt="Search icon"
+            alt=""
+            aria-hidden="true"
           />
-          <input id="search-bar" name="search-bar" placeholder="Search" />
+          <input class="search-bar" name="search-bar" placeholder="Search" />
         </form>
       </div>
 
-      <a class="header-button" href="/install/">
-        <span class="format-bold"
-          >Get Started
+      <a class="header-button format-bold" href="/install/">
+        <span class="get-started format-bold">
+          Get Started
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="14"
