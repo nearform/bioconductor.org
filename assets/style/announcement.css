@@ -16,8 +16,8 @@
 
 .announcement-warning {
   background-color: var(--misc-warning);
-  color: #070707;
-  stroke: #070707;
+  color: var(--misc-dark);
+  stroke: var(--misc-dark);
 }
 
 .announcement-error {
