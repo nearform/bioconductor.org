@@ -22,7 +22,7 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: "us-east-1"
       - name: Delete Website Bucket
-        if: ${{env.exists == 'true'}}
+        if: ${{env.BUCKET_EXISTS == 'true'}}
         uses: danburtenshaw/s3-website-pr-action@v2.0.1
         with:
           bucket-prefix: "pr-preview-bioconductor"
