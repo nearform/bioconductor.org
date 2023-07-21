@@ -1,0 +1,6 @@
+{
+  "rules": {
+    "spec-char-escape": false,
+    "doctype-first": false
+  }
+}
