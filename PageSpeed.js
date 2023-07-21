@@ -49,7 +49,7 @@ const parseInputs = (inputs) => {
     url,
     strategy,
     threshold: threshold === "none" ? 70 : Number(threshold),
-    key: apiKey === "none" ? undefined : key,
+    key: apiKey === "none" ? undefined : apiKey,
   };
 };
 
