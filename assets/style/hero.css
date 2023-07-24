@@ -1,0 +1,17 @@
+.hero {
+  max-width: 1400px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 72px;
+  margin-bottom: 72px;
+  text-align: center;
+}
+
+/* .hero * {
+  margin: auto;
+} */
+
+.hero p {
+  margin-top: 24px;
+  margin-bottom: 40px;
+}
