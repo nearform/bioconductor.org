@@ -8,10 +8,10 @@
   },
   "scripts": {
     "lint": "npm run css-lint && npm run js-lint",
-    "css-lint": "npx stylelint",
-    "js-lint": "npx eslint",
-    "md-lint": "npx markdownlint",
-    "html-lint": "npx htmllint"
+    "lint-css": "npx stylelint",
+    "lint-js": "npx eslint",
+    "lint-md": "npx markdownlint",
+    "lint-html": "npx htmllint"
   },
   "author": "",
   "license": "ISC",
