@@ -124,6 +124,10 @@ header {
   display: none;
 }
 
+br {
+  display: none;
+}
+
 .bar {
   display: block;
   width: 25px;
@@ -157,7 +161,7 @@ header {
   }
 
   .header-nav.active {
-    top: 8.9rem;
+    top: 10rem;
   }
 
   .nav-mobile {
@@ -176,13 +180,7 @@ header {
     width: 100vw;
     flex-direction: column;
     align-items: flex-start;
-    gap: 0rem;
-  }
-
-  .nav-links div {
-    width: 100%;
-    border-top: 1px solid var(--neutral-n75);
-    border-bottom: 1px solid var(--neutral-n75);
+    gap: 1rem;
   }
 
   .nav-links a {
