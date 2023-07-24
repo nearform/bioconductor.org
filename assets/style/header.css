@@ -152,7 +152,6 @@ br {
   height: 3px;
   border-radius: 25px;
   margin: 5px auto;
-  -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   background-color: #101010;
 }
@@ -174,7 +173,7 @@ br {
     left: 0;
     background-color: #fff;
     transition: 0.3s;
-    gap: 0rem;
+    gap: 0;
     z-index: -1;
   }
 
@@ -213,7 +212,7 @@ br {
     align-items: center;
     justify-content: space-between;
     padding-left: 0.75rem;
-    padding-right: 0rem;
+    padding-right: 0;
   }
 
   .header-button {
