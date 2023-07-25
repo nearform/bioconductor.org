@@ -142,16 +142,16 @@ a,
   text-decoration: underline;
 }
 
-.base-xsmall {
+.text-xsmall {
   font-size: 0.6rem; /* 10px */
   line-height: 120%;
 }
 
-.base-small {
+.text-small {
   font-size: 0.8rem; /* 13px */
   line-height: 120%;
 }
 
-.base-large {
+.text-large {
   font-size: 1.25rem; /* 20px */
 }
