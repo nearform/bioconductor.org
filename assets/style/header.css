@@ -236,11 +236,11 @@ input:focus::placeholder {
     display: none;
   }
 
-  .nav-links a,
+  /* .nav-links a,
   .search-container,
   .header-button {
     margin: 0.5rem 0;
-  }
+  } */
 
   .hamburger {
     display: block;
