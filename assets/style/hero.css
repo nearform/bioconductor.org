@@ -1,19 +1,12 @@
 .hero {
   max-width: 1400px;
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: 72px;
-  margin-bottom: 72px;
+  margin: 72px auto;
   text-align: center;
 }
-
-/* .hero * {
-  margin: auto;
-} */
-
 .hero h1 {
   color: var(--primary-p500);
 }
+/* stylelint-disable */
 
 .hero mark {
   color: lavender;
@@ -21,6 +14,8 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+/* stylelint-enable */
 
 .hero p {
   margin-top: 24px;
