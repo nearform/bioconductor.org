@@ -1,36 +1,38 @@
-button {
-  height: 2rem;
-  padding: 0 0.5rem;
+.button {
+  padding: 0.6rem 1.625rem 0.6rem;
   border-radius: 8rem;
   background: var(--primary-p400);
   transition: 0.3s;
   color: #fff;
-  border: none;
   font-family: inherit;
-}
-
-button:hover {
-  background: var(--primary-p500);
-}
-
-.hero-button {
-  height: 54px;
-  padding: 0 1.625rem;
-  border-radius: 16rem;
-  background: var(--gradient-brandreverse);
-  margin-bottom: 0.3rem;
-  transition: 0.3s;
   cursor: pointer;
 }
 
-.hero-button img {
+.button:hover {
+  background: var(--primary-p500);
+}
+
+.button-hero {
+  padding: 1rem 1.625rem 1rem;
+  border-radius: 16rem;
+  background: var(--gradient-brandreverse);
+  margin-bottom: 0.3rem;
+}
+
+padding: 1rem 26px 1rem;
+border-radius: 16rem;
+background: var(--gradient-brandreverse);
+margin-bottom: 0.3rem;
+transition: 0.3s;
+cursor: pointer;
+.button-hero img {
   width: 1rem;
   height: 1rem;
   vertical-align: middle;
 }
 
 /* stylelint-disable */
-.hero-button:hover {
+.button-hero:hover {
   background: var(--gradient-brand);
   box-shadow: 0 5px 4px 0 rgba(0, 0, 0, 0.18) inset;
 }
