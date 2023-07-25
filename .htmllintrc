@@ -46,6 +46,7 @@
   "class-no-dup": true,
   "class-style": false,
   "id-class-ignore-regex": false,
+  "id-unique": false,
   "img-req-alt": true,
   "img-req-src": true,
   "html-valid-content-model": true,
