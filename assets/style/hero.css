@@ -1,0 +1,29 @@
+.hero {
+  max-width: 1400px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 72px;
+  margin-bottom: 72px;
+  text-align: center;
+}
+
+/* .hero * {
+  margin: auto;
+} */
+
+.hero h1 {
+  color: var(--primary-p500);
+}
+
+.hero mark {
+  color: lavender;
+  background: var(--gradient-brandreverse);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+  margin-top: 24px;
+  margin-bottom: 40px;
+  font-weight: 400;
+}
