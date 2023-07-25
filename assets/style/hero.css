@@ -7,14 +7,12 @@
   color: var(--primary-p500);
 }
 /* stylelint-disable */
-
 .hero mark {
   color: lavender;
   background: var(--gradient-brandreverse);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
 /* stylelint-enable */
 
 .hero p {
