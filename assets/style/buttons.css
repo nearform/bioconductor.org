@@ -13,15 +13,10 @@ button:hover {
 }
 
 .hero-button {
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 700;
-  text-align: center;
   height: 54px;
   padding: 0 1.625rem;
   border-radius: 16rem;
   background: var(--gradient-brandreverse);
-  line-height: 1.2rem;
   margin-bottom: 0.3rem;
   transition: 0.3s;
   cursor: pointer;
