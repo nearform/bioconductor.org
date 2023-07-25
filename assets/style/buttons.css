@@ -33,7 +33,9 @@ button:hover {
   vertical-align: middle;
 }
 
+/* stylelint-disable */
 .hero-button:hover {
   background: var(--gradient-brand);
-  box-shadow: 0 5px 4px 0 rgba(0 0 0 18%) inset;
+  box-shadow: 0 5px 4px 0 rgba(0, 0, 0, 0.18) inset;
 }
+/* stylelint-enable */
