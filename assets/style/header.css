@@ -198,15 +198,17 @@ hr.solid {
     flex-direction: column;
     gap: 0;
     padding-left: 2rem;
+    margin-top: 0.5rem;
+    border-top: 1px solid var(--neutral-n75);
+    padding-top: 0.5rem;
   }
 
   .nav-links a {
     text-decoration: none !important;
     width: 100vw;
-    padding: 0.5rem 0;
-    line-height: 1.3rem;
     border-bottom: 1px solid var(--neutral-n75);
     padding-left: 1.5rem;
+    padding-bottom: 1rem;
   }
 
   .search-container {
