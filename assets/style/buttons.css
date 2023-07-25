@@ -6,6 +6,7 @@ button {
   transition: 0.3s;
   color: #fff;
   border: none;
+  font-family: inherit;
 }
 
 button:hover {
