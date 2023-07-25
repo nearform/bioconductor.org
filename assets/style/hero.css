@@ -3,9 +3,11 @@
   margin: 72px auto;
   text-align: center;
 }
+
 .hero h1 {
   color: var(--primary-p500);
 }
+
 /* stylelint-disable */
 .hero mark {
   color: lavender;
