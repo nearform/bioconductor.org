@@ -1,24 +1,21 @@
 .information-container {
   display: flex;
   background-color: inherit;
+  gap: 2rem;
 }
 
 .information-container section {
   display: flex;
-  padding: 32px;
+  padding: 2rem;
   flex-direction: column;
+  width: 23.8rem;
+  max-width: 23.8rem;
   justify-content: center;
   align-items: flex-start;
-  border-radius: 8px;
-  background: var(--default-white, #fff);
+  border-radius: 0.5rem;
+  background-color: white;
 }
 
-.information-container * {
-  display: flex;
-  padding: 32px;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  border-radius: 8px;
-  background: var(--default-white, #fff);
+.information-container section * {
+  text-align: start;
 }
