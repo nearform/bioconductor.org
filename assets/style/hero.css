@@ -20,5 +20,10 @@
 .hero p {
   margin-top: 24px;
   margin-bottom: 40px;
-  font-weight: 400;
+}
+
+@media screen and (width <= 768px) {
+  .hero p {
+    font-size: 1rem;
+  }
 }
