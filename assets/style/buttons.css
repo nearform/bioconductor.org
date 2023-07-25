@@ -6,6 +6,8 @@
   color: #fff;
   font-family: inherit;
   cursor: pointer;
+  display: block;
+  width: fit-content;
 }
 
 .button:hover {
@@ -17,6 +19,7 @@
   border-radius: 16rem;
   background: var(--gradient-brandreverse);
   margin-bottom: 0.3rem;
+  margin: auto;
 }
 
 .button-hero img {
