@@ -5,17 +5,17 @@
 }
 
 .information-container section {
-  display: flex;
+  flex: 1;
+  height: auto;
   padding: 2rem;
-  flex-direction: column;
-  width: 23.8rem;
-  max-width: 23.8rem;
-  justify-content: center;
-  align-items: flex-start;
   border-radius: 0.5rem;
   background-color: white;
 }
 
 .information-container section * {
   text-align: start;
+}
+
+.information-container section a {
+  display: block;
 }

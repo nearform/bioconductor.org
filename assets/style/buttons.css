@@ -1,39 +1,15 @@
-button {
-  height: 32px;
-  padding: 0px 8px;
+.button {
+  padding: 0.6rem 1.625rem;
   border-radius: 8rem;
   background: var(--primary-p400);
   transition: 0.3s;
   color: #fff;
-  border: none;
-  font-family: "Atkinson Hyperlegible";
+  font-family: inherit;
+  cursor: pointer;
+  display: block;
+  width: fit-content;
 }
-button:hover {
+
+.button:hover {
   background: var(--primary-p500);
-}
-.hero-button {
-  font-family: Atkinson Hyperlegible;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 120%;
-  text-align: center;
-  height: 54px;
-  padding: 0px 26px;
-  border-radius: 16rem;
-  background: var(--gradient-brandreverse);
-  line-height: 120%;
-  margin-bottom: 0.3rem;
-  transition: 0.3s;
-}
-
-.hero-button img {
-  width: 1rem;
-  height: 1rem;
-  vertical-align: middle;
-}
-
-.hero-button:hover {
-  background: var(--gradient-brand);
-  box-shadow: 0px 5px 4px 0px rgba(0, 0, 0, 0.18) inset;
 }
