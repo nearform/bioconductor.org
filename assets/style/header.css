@@ -153,11 +153,7 @@ br {
   border-radius: 25px;
   margin: 5px auto;
   transition: all 0.3s ease-in-out;
-  background-color: #101010;
-}
-
-hr.solid {
-  display: none;
+  background-color: var(--misc-dark);
 }
 
 @media (width <= 768px) {
