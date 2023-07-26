@@ -172,7 +172,7 @@ input:focus::placeholder {
   }
 
   .header-nav.active {
-    top: 10rem;
+    top: 9rem;
   }
 
   .nav-mobile {
