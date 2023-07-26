@@ -1,59 +1,65 @@
-.learn-gradient {
-    background-image: var(--gradient-brand);
-    border-radius: 4px;
-    padding: 1px;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+/* components css */
+.gradient-border {
+  border-radius: 4px;
+  padding: 1px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
-.learn-block {
-    background: #fff;
-    padding: 1rem;
-    border-radius: 4px;
+.section-block {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 4px;
 }
 
-.learn-block h4 {
-    margin-top: 0;
+.section-block h4,
+.section-block h2 {
+  margin-top: 0;
 }
 
-.learn-content{
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
+/* Learn section CSS */
+.learn {
+  background-image: var(--gradient-brand);
+}
+
+.learn-content {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
 }
 
 .info {
-    flex:1;
-    gap: 0.5rem;
+  flex: 1;
+  gap: 0.5rem;
 }
 
 .info p {
-    padding-bottom: 1rem ;
+  padding-bottom: 1rem;
 }
 
 .learn-nav {
-    display: flex;
-    flex-direction: column;
-    gap: 0.625rem;
-    flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  flex: 1;
 }
 
 .learn-nav a {
-    border: 1px solid var(--primary-p75);
-    border-radius: 0.5rem;
-    padding: 1rem;
-    align-items: center;
-    text-decoration: underline;
-    color: inherit;
-    display: flex;
-    justify-content: space-between;
-    /* gradient backgrounds are difficult to add transition */
-    transition: background 0.5s ease;
+  border: 1px solid var(--primary-p75);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  align-items: center;
+  text-decoration: underline;
+  color: inherit;
+  display: flex;
+  justify-content: space-between;
+  /* gradient backgrounds are difficult to add transition */
+  transition: background 0.5s ease;
 }
 
 .learn-nav a:hover {
-    background-image: var(--gradient-brand);
-    color: #fff;
+  background-image: var(--gradient-brand);
+  color: #fff;
 }
 
 .learn-nav svg path {
@@ -63,47 +69,82 @@
 }
 
 .learn-nav a:hover svg path {
-    stroke: #fff;
-    transform: translateX(3px);
+  stroke: #fff;
+  transform: translateX(3px);
 }
 
 .button-padding {
-    width: 50%;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+  width: 50%;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 .info .brand-border-button {
-    height: 2.5rem;
-    width: 100%
+  height: 2.5rem;
+  width: 100%;
 }
 
 @media (width <= 768px) {
-    .learn-block {
-        display: flex;
-        flex-direction: column;
-    }
+  .learn-block {
+    display: flex;
+    flex-direction: column;
+  }
 
-    .learn-content {
-        display: flex;
-        flex-direction: column;
-    }
+  .learn-content {
+    display: flex;
+    flex-direction: column;
+  }
 
-    .button-padding {
-        width: 60%;
-    }
+  .button-padding {
+    width: 60%;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .learn-nav a:hover {
-      background: inherit;
-      color: inherit;
-      transition: none;
-    }
-
-    .learn-nav a:hover svg path {
-        stroke: var(--primary-p75);
-        transition: none;
-        transform: none;
-    }
+  .learn-nav a:hover {
+    background: inherit;
+    color: inherit;
+    transition: none;
   }
+
+  .learn-nav a:hover svg path {
+    stroke: var(--primary-p75);
+    transition: none;
+    transform: none;
+  }
+}
+
+/* Join section CSS */
+.join {
+  background-image: var(--gradient-reversewarmcool);
+  border-radius: 8px;
+}
+
+.join-block {
+  padding: 0 0 2rem 4rem;
+  border-radius: 8px;
+}
+
+.join-block h2 {
+  padding-top: 4rem;
+}
+
+.text-gradient {
+  background: var(--gradient-reversewarmcool);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.join-buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 3rem;
+  padding-top: 2rem;
+}
+
+.learn-more {
+  padding-left: 1rem;
+  color: var(--primary-p400);
+}
