@@ -2,21 +2,22 @@ pre:has(code) {
   font-family: "Atkinson Hyperlegible", sans-serif;
   background-color: var(--code-blocks-dark);
   color: white;
-  padding: 0 1rem;
+  padding: 1rem;
   border: 1px solid var(--primary);
   border-radius: 5px;
 }
 
 code,
-.hljs,
+pre code.hljs,
 .hljs-punctuation {
   padding: 0;
   margin: 0;
   background: none;
   color: white;
+  display: contents;
 }
 
-code.dark .hljs-string {
+.hljs-string {
   color: var(--code-dark-string);
 }
 
@@ -28,4 +29,8 @@ pre:has(code.light) {
 code.light .hljs-punctuation,
 code.light {
   color: var(--default-body);
+}
+
+code.light .hljs-string {
+  color: var(--code-light-string);
 }
