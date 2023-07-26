@@ -74,3 +74,19 @@
 .info .brand-border-button {
     height: 2.5rem;
 }
+
+@media (width <= 768px) {
+    .learn-block {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .learn-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .button-padding {
+        width: 60%;
+    }
+}
