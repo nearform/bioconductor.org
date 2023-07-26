@@ -1,2 +1,6 @@
 ---
-title: Example Markdown File
+title: Example Index File
+suppress_subnav: true
+subnav:
+  - include: components/examples/sidebar
+  - include: _bioc_release_packages
