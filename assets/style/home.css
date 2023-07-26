@@ -115,6 +115,10 @@
 }
 
 /* Join section CSS */
+#join-slide-1 {
+  display: none;
+}
+
 .join {
   background-image: var(--gradient-reversewarmcool);
   border-radius: 8px;
@@ -123,6 +127,9 @@
 .join-block {
   padding: 0 0 2rem 4rem;
   border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .join-block h2 {
@@ -142,6 +149,15 @@
   gap: 1rem;
   padding-bottom: 3rem;
   padding-top: 2rem;
+}
+
+.join-buttons a {
+  width: fit-content;
+}
+
+.join-img-div {
+  width: 334px;
+  flex-shrink: 0;
 }
 
 .learn-more {
