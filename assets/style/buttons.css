@@ -4,7 +4,6 @@
   background: var(--primary-p400);
   transition: 0.3s;
   color: #fff;
-  font-family: inherit;
   cursor: pointer;
   display: block;
   width: fit-content;
@@ -18,8 +17,7 @@
   padding: 1rem 1.625rem;
   border-radius: 16rem;
   background: var(--gradient-brandreverse);
-  margin: auto;
-  margin-bottom: 0.3rem;
+  margin: auto auto 0.3rem;
 }
 
 .button-hero img {
