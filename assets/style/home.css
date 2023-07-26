@@ -1,5 +1,6 @@
 .learn-gradient {
     background-image: var(--gradient-brand);
+    border-radius: 4px;
     padding: 1px;
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -8,6 +9,7 @@
 .learn-block {
     background: #fff;
     padding: 1rem;
+    border-radius: 4px;
 }
 
 .learn-block h4 {
