@@ -29,13 +29,16 @@
           <% end %>
 
           <section class="content">
-            <% if (@item.identifier != '/') %> <%=
-            render("/components/breadcrumbs/") %> <% end %> <%= yield if
-            block_given? %>
+            <% if (@item.identifier != '/') %>
+              <%= render("/components/breadcrumbs/") %>
+            <% end %>
+  
+            <%= yield if block_given? %>
           </section>
         </div>
       </div>
     </main>
-    <%= render("/components/footer/") %>
+      <%= render("/components/footer/") %>
+      <%= render("/components/sitescripts/") %>
   </body>
 </html>
