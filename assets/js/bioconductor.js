@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   window.addEventListener("click", mobileMenu);
 
-  const navLink = document.querySelectorAll("#mobile-link");
+  const navLink = document.querySelectorAll(".mobile-link");
 
   function closeMenu() {
     hamburger.classList.remove("active");
