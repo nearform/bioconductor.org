@@ -10,7 +10,6 @@
 
 /* stylelint-disable */
 .hero mark {
-  color: lavender;
   background: var(--gradient-brandreverse);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
