@@ -16,7 +16,7 @@
 
 .button-border {
   margin-top: 16px;
-  padding: 2px 2px 2px 2px;
+  padding: 2px;
   background: var(--gradient-brand);
   border-radius: 8rem;
   width: fit-content;
@@ -34,12 +34,15 @@
   border: none;
   outline: none;
 }
+
 .brand-border-button * {
   vertical-align: middle;
 }
+
 .brand-border-button svg {
   margin-bottom: 2px;
 }
+
 .brand-border-button svg path {
   transition: stroke 0.5s ease;
 }
