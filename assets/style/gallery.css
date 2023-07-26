@@ -12,4 +12,10 @@
 .gallery-card img {
   display: block;
   width: 100%;
+  margin-bottom: 1rem;
+}
+
+.gallery-card a {
+  color: black;
+  text-decoration: underline;
 }
