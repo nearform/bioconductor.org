@@ -1,5 +1,5 @@
 .button {
-  padding: 0.6rem 1.625rem;
+  padding: 0.6rem 0.8rem;
   border-radius: 8rem;
   background: var(--primary-p400);
   transition: 0.3s;
@@ -12,4 +12,42 @@
 
 .button:hover {
   background: var(--primary-p500);
+}
+
+.button-border {
+  margin-top: 16px;
+  padding: 2px 2px 2px 2px;
+  background: var(--gradient-brand);
+  border-radius: 8rem;
+  width: fit-content;
+  min-width: fit-content;
+  height: fit-content;
+}
+
+.brand-border-button {
+  padding: 12px;
+  padding-bottom: 5px;
+  padding-top: 9px;
+  border-radius: 8rem;
+  background: white;
+  color: var(--primary-p400);
+  border: none;
+  outline: none;
+}
+.brand-border-button * {
+  vertical-align: middle;
+}
+.brand-border-button svg {
+  margin-bottom: 2px;
+}
+.brand-border-button svg path {
+  transition: stroke 0.5s ease;
+}
+
+.brand-border-button:hover {
+  color: #fff;
+}
+
+.brand-border-button:hover svg path {
+  stroke: #fff;
 }

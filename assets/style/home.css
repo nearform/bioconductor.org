@@ -6,12 +6,31 @@
 
 .information-container section {
   flex: 1;
-  height: auto;
+  max-height: 382px;
+  max-width: 382px;
   padding: 2rem;
   border-radius: 0.5rem;
   background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .information-container section * {
   text-align: start;
+}
+
+.news p {
+  border-left: 3px solid;
+  border-color: var(--primary);
+  padding-left: 12px;
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+@media screen and (width <= 700px) {
+  .information-container {
+    flex-direction: column;
+    align-items: center;
+  }
 }
