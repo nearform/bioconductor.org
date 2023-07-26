@@ -1,0 +1,5 @@
+---
+title: Example Index File
+suppress_subnav: true
+subnav:
+  - include: components/examples/sidebar
