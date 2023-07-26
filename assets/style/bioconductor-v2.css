@@ -1,9 +1,6 @@
 body {
   font-family: "Atkinson Hyperlegible", sans-serif;
   margin: 0;
-}
-
-main {
   background: var(--neutral-n50);
 }
 
