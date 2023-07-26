@@ -95,6 +95,13 @@ a {
   text-decoration: none;
 }
 
+.base {
+  font-size: 1rem; /* 16px */
+  line-height: 130%;
+  letter-spacing: 0;
+  text-decoration: none;
+}
+
 .code {
   line-height: 120%;
   font-family: Courier, monospace;
