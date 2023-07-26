@@ -50,14 +50,14 @@ h6 {
   font-size: 1.1rem; /* 18px */
 }
 
-.text-hero {
+.hero {
   font-size: 5rem; /* 80px */
   line-height: 105%;
 }
 
 @media screen and (width <= 700px) {
   /* 700px */
-  .text-hero {
+  .hero {
     font-size: 2.5rem; /* 40px */
   }
 
