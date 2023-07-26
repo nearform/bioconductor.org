@@ -3,6 +3,10 @@ body {
   margin: 0;
 }
 
+main {
+  background: var(--neutral-n50);
+}
+
 .container {
   margin: 0 auto;
   width: calc(100% - 3rem);

@@ -1,16 +1,17 @@
 button {
-  height: 32px;
-  padding: 0px 8px;
+  padding: 0.6rem 1.625rem;
   border-radius: 8rem;
   background: var(--primary-p400);
   transition: 0.3s;
   color: #fff;
-  border: none;
-  font-family: "Atkinson Hyperlegible";
+  font-family: inherit;
+  cursor: pointer;
 }
+
 button:hover {
   background: var(--primary-p500);
 }
+
 .hero-button {
   font-family: Atkinson Hyperlegible;
   font-size: 18px;
@@ -36,4 +37,45 @@ button:hover {
 .hero-button:hover {
   background: var(--gradient-brand);
   box-shadow: 0px 5px 4px 0px rgba(0, 0, 0, 0.18) inset;
+}
+
+.brand-border-button {
+  background-image: var(--gradient-brand);
+  border-radius: 8rem;
+  box-sizing: border-box;
+  color: var(--primary-p400);
+  display: flex;
+  padding: 1px;
+}
+
+.brand-border-button svg path {
+  transition: stroke 0.5s ease;
+}
+
+.brand-border-button:hover {
+  color: #fff;
+}
+
+.brand-border-button:hover svg path {
+  stroke: #fff;
+}
+
+.span-brand {
+  align-items: center;
+  border-radius: 4rem;
+  display: flex;
+  justify-content: center;
+  background: #fff;
+  color: var(--primary-p400);
+  transition: background 0.5s ease;
+  width: 100%;
+  gap: 5px;
+  margin: 1px;
+  padding-left: 0.75rem;
+  padding-right: 0.4rem;
+}
+
+.brand-border-button:hover span {
+  background: var(--primary-p400);
+  color: #fff;
 }
