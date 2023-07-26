@@ -73,9 +73,25 @@ button:hover {
   margin: 1px;
   padding-left: 0.75rem;
   padding-right: 0.4rem;
+  line-height: 100%;
 }
 
 .brand-border-button:hover span {
   background: var(--primary-p400);
   color: #fff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brand-border-button:hover {
+    color: var(--primary-p400);
+  }
+
+  .brand-border-button:hover svg path {
+    stroke: var(--primary);
+  }
+
+  .brand-border-button:hover span {
+    background: #fff;
+    color: var(--primary-p400);
+  }
 }

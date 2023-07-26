@@ -95,45 +95,7 @@ input:focus::placeholder {
   flex-shrink: 0;
 }
 
-.header-button {
-  background-image: var(--gradient-brand);
-  border-radius: 8rem;
-  box-sizing: border-box;
-  color: var(--primary-p400);
-  display: flex;
+.brand-border-button {
   height: 2.5rem;
-  padding: 1px;
   width: 8.8rem;
-}
-
-.header-button svg path {
-  transition: stroke 0.5s ease;
-}
-
-.header-button:hover {
-  color: #fff;
-}
-
-.header-button:hover svg path {
-  stroke: #fff;
-}
-
-.get-started {
-  align-items: center;
-  border-radius: 4rem;
-  display: flex;
-  justify-content: center;
-  background: #fff;
-  color: var(--primary-p400);
-  transition: background 0.5s ease;
-  width: 100%;
-  gap: 5px;
-  margin: 1px;
-  padding-left: 0.75rem;
-  padding-right: 0.4rem;
-}
-
-.header-button:hover span {
-  background: var(--primary-p400);
-  color: #fff;
 }
