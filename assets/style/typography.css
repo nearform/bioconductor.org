@@ -49,9 +49,10 @@ h6,
   font-size: 1.2rem; /* 18px */
 }
 
-.hero {
+.text-hero {
   font-size: 5rem; /* 80px */
   line-height: 105%;
+  border: none;
 }
 
 @media screen and (width <= 700px) {
