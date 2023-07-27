@@ -38,9 +38,6 @@ nav.subnav a {
   background-image: url("/images/chevron_right.svg");
   background-repeat: no-repeat;
   background-position: right center;
-}
-
-nav.subnav a {
   color: black;
 }
 
