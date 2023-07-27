@@ -21,33 +21,45 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+.text-h1,
+.text-h2,
+.text-h3,
+.text-h4,
+.text-h5,
+.text-h6 {
   line-height: 120%;
   margin-block-end: 0.5rem;
   margin-block-start: 0.5rem;
 }
 
-h1 {
+h1,
+.text-h1 {
   font-size: 2.25rem; /* 36px */
 }
 
-h2 {
+h2,
+.text-h2 {
   font-size: 2rem; /* 32px */
 }
 
-h3 {
+h3,
+.text-h3 {
   font-size: 1.6rem; /* 25px */
 }
 
-h4 {
+h4,
+.text-h4 {
   font-size: 1.5rem; /* 23px */
 }
 
-h5 {
+h5,
+.text-h5 {
   font-size: 1.2rem; /* 19px */
 }
 
-h6 {
+h6,
+.text-h6 {
   font-size: 1.1rem; /* 18px */
 }
 
@@ -62,33 +74,40 @@ h6 {
     font-size: 2.5rem; /* 40px */
   }
 
-  h1 {
+  h1,
+  .text-h1 {
     font-size: 2.1rem; /* 34px */
   }
 
-  h2 {
+  h2,
+  .text-h2 {
     font-size: 1.5rem; /* 24px */
   }
 
-  h3 {
+  h3,
+  .text-h3 {
     font-size: 1.4rem; /* 22px */
   }
 
-  h4 {
+  h4,
+  .text-h4 {
     font-size: 1.25rem; /* 20px */
   }
 
-  h5 {
+  h5,
+  .text-h5 {
     font-size: 1.125rem; /* 18px */
   }
 
-  h6 {
+  h6,
+  .text-h6 {
     font-size: 1.1rem; /* 17px */
   }
 }
 
 p,
-a {
+a,
+.base {
   font-size: 1rem; /* 16px */
   line-height: 130%;
   letter-spacing: 0;
