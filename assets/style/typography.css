@@ -11,7 +11,7 @@ h6 {
 
 h1 {
   font-size: 2.25rem; /* 36px */
-  border-image: var(--gradient-brand) 1;
+  border-image: var(--gradient-brandreverse) 1;
   border-bottom-style: solid;
   border-bottom-width: 4px;
   display: inline-block;

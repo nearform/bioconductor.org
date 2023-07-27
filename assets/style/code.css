@@ -1,12 +1,13 @@
 pre:has(code) {
   border-radius: 5px;
   padding: 2px;
-  background: var(--gradient-brand);
+  background: var(--gradient-brandreverse);
   white-space: normal;
 }
 
 code,
 code.hljs {
+  border-radius: 3px;
   font-family: Courier, monospace;
   background: none;
   background-color: var(--code-blocks-dark);
