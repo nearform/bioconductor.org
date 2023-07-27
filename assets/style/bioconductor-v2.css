@@ -42,6 +42,10 @@ nav.subnav a {
   color: black;
 }
 
+img {
+  max-width: 100%;
+}
+
 @media (width <= 768px) {
   main > .container.main-subnav {
     display: block;
