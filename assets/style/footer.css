@@ -18,6 +18,7 @@ footer a {
   color: #fff;
   text-decoration: none;
 }
+
 .footer-container {
   max-width: 1400px;
   margin: auto;
@@ -39,7 +40,7 @@ footer a {
   flex-direction: column;
   align-items: start;
   gap: 0.625rem;
-  padding-inline-start: 0px;
+  padding-inline-start: 0;
   margin-right: auto;
 }
 
@@ -84,7 +85,7 @@ footer a {
 
   :is(.link-container-inner nav) {
     min-width: 10rem;
-    margin-inline-end: 0px;
+    margin-inline-end: 0;
   }
 
   .list-container-inner {
@@ -107,7 +108,7 @@ footer a {
 
   .socials-logo-container {
     display: block;
-    padding: 1rem 0rem;
+    padding: 1rem 0;
   }
 
   .socials {

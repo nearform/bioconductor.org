@@ -7,7 +7,7 @@ li {
   margin-bottom: 0.5rem;
 }
 
-li:before {
+li::before {
   content: "•";
   color: var(--primary);
   display: inline-block;
