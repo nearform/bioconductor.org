@@ -69,4 +69,5 @@
   --code-light-string: #800;
   --code-light-literal: #008a00;
   --code-dark-literal: #13cd13;
+  --code-dark-operator: #f28282;
 }

@@ -32,8 +32,13 @@ pre code.hljs,
 .hljs-literal {
   color: var(--code-dark-literal);
 }
+
 code.light .hljs-literal {
   color: var(--code-light-literal);
+}
+
+code.dark .hljs-operator {
+  color: var(--code-dark-operator);
 }
 
 code.light {
