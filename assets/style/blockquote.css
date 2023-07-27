@@ -12,6 +12,12 @@ blockquote {
   gap: 1.5rem;
 }
 
+.two-col img {
+  max-width: 100%;
+  max-height: 100%;
+  margin: 1rem 0;
+}
+
 @media (width <= 1250px) {
   .two-col {
     display: block;
