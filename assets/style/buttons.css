@@ -22,8 +22,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .button-hero:hover {
-    background: var(--gradient-brandreverse);
-    box-shadow: none;
+  .button-hero {
+    transition: none;
   }
 }
