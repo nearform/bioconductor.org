@@ -67,4 +67,6 @@
   --code-blocks-dark: #3d4049;
   --code-dark-string: #f1c736;
   --code-light-string: #800;
+  --code-light-literal: #008a00;
+  --code-dark-literal: #13cd13;
 }

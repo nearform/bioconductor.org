@@ -29,6 +29,13 @@ pre code.hljs,
   color: var(--code-dark-string);
 }
 
+.hljs-literal {
+  color: var(--code-dark-literal);
+}
+code.light .hljs-literal {
+  color: var(--code-light-literal);
+}
+
 code.light {
   background-color: white;
 }
