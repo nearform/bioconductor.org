@@ -3,6 +3,7 @@ pre:has(code) {
   padding: 2px;
   background: var(--gradient-brandreverse);
   white-space: normal;
+  margin-bottom: 1rem;
 }
 
 code,
