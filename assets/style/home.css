@@ -4,6 +4,7 @@
   margin-right: 100px;
   margin-bottom: 16px;
 }
+
 .events-header h3 {
   margin-left: 16px;
 }
@@ -16,9 +17,11 @@
   -ms-overflow-style: none; /* disable scrollbar for IE and Edge */
   scrollbar-width: none; /* disable scrollbar for Firefox */
 }
+
 .events::-webkit-scrollbar {
-  display: none; /* disable scrollbar for chrome*/
+  display: none; /* disable scrollbar for chrome */
 }
+
 .event-card-container {
   display: inline-block;
   background-color: white;
@@ -32,6 +35,7 @@
   height: 100%;
   width: 100%;
 }
+
 .event-card .format-bold {
   margin-top: 0;
   margin-bottom: 24px;
@@ -46,6 +50,7 @@
 .events span h3 {
   margin-left: 16px;
 }
+
 .event-date-location {
   padding-top: 1rem;
   border-top: 1px solid;
