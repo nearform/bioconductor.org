@@ -42,7 +42,7 @@ nav.subnav a {
 }
 
 @media (width <= 768px) {
-  main > .container {
+  main > .container.main-subnav {
     display: block;
   }
 
