@@ -1,28 +1,22 @@
-.button {
-  padding: 0.6rem 0.8rem;
-  border-radius: 8rem;
-  background: var(--primary-p400);
-  transition: 0.3s;
-  color: #fff;
-  font-family: inherit;
-  cursor: pointer;
-  display: block;
-  width: fit-content;
-}
-
-.button:hover {
-  background: var(--primary-p500);
-}
-
 .white-button {
   background: var(--neutral-n50);
   color: var(--primary-p400);
   min-height: 20px;
   max-height: 20px;
+  cursor: pointer;
+  display: block;
+  width: fit-content;
+  transition: 0.3s;
+  padding: 0.6rem 0.8rem;
+  border-radius: 8rem;
 }
 
 .white-button:hover {
   background: var(--primary-p50);
+}
+
+.white-button:active {
+  background: var(--primary-p200);
 }
 
 .white-button * {
@@ -36,4 +30,10 @@
 .white-button svg:hover {
   background: var(--primary-p50);
   stroke: black;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .white-button:hover {
+    transition: none;
+  }
 }
