@@ -16,6 +16,7 @@ footer {
 
 footer a {
   color: #fff;
+  text-decoration: none;
 }
 .footer-container {
   max-width: 1400px;

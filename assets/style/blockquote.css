@@ -1,5 +1,5 @@
 blockquote {
-  margin: 0;
+  margin: 1rem 0;
   box-sizing: border-box;
   border-left: 2px solid var(--primary);
   padding: 1.25em 2em;

@@ -1,28 +1,34 @@
 pre:has(code) {
-  background-color: var(--code-blocks-dark);
-  color: white;
-  border: 1px solid var(--primary);
   border-radius: 5px;
+  padding: 2px;
+  background: var(--gradient-brand);
+  white-space: normal;
+}
+
+code,
+code.hljs {
+  font-family: Courier, monospace;
+  background: none;
+  background-color: var(--code-blocks-dark);
   overflow-x: auto;
+  display: block;
   padding: 1rem;
+  white-space: pre;
 }
 
 code,
 pre code.hljs,
 .hljs-punctuation {
-  padding: 0;
-  margin: 0;
-  background: none;
   color: white;
-  display: contents;
   font-size: 1rem;
+  line-height: 1.3rem;
 }
 
 .hljs-string {
   color: var(--code-dark-string);
 }
 
-pre:has(code.light) {
+code.light {
   background-color: white;
 }
 

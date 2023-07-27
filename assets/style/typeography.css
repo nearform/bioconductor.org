@@ -1,20 +1,3 @@
-/* global styles defined at the topmost level.
-   these can be overridden by subsequent selectors. */
-
-/* Downloaded the font format */
-@font-face {
-  font-family: "Atkinson Hyperlegible";
-  src: url("fonts/AtkinsonHyperlegible-Regular.woff") format("woff");
-  src: url("fonts/AtkinsonHyperlegible-Regular.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Atkinson Hyperlegible";
-  src: url("fonts/AtkinsonHyperlegible-Bold.woff") format("woff");
-  src: url("fonts/AtkinsonHyperlegible-Bold.ttf") format("truetype");
-  font-weight: bold;
-}
-
 /* CSS global styles */
 h1,
 h2,
@@ -90,19 +73,6 @@ p {
   margin: 1rem 0;
   font-size: 1rem;
   line-height: 130%;
-}
-
-.code {
-  line-height: 120%;
-  font-family: Courier, monospace;
-}
-
-.code-body {
-  font-size: 1.25rem; /* 20px */
-}
-
-.code-small {
-  font-size: 1rem; /* 16px */
 }
 
 .format-bold {
