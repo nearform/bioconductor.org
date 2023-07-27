@@ -30,6 +30,14 @@
   margin-bottom: 6px;
 }
 
+.info-section-button-padding {
+  width: fit-content;
+}
+
+.info-section-button-padding .brand-border-button {
+  height: 2.5rem;
+}
+
 @media screen and (width <= 700px) {
   .information-container {
     display: flex;
