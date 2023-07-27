@@ -22,7 +22,7 @@
   text-decoration: none;
 }
 
-.breadcrumbs li:before {
+.breadcrumbs li::before {
   content: "";
   width: 0;
   height: 0;

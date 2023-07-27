@@ -24,36 +24,13 @@ main > .container.main-subnav {
   gap: 1rem;
 }
 
-/* TODO: shaded box is a legacy block, and included here for backwards compatibility. once the content is updated this should be removed */
-.shaded_box {
-  padding: 0.5rem;
-}
-
-.shaded_box .box_header {
-  font-size: 1rem;
-  text-decoration: underline;
-  font-weight: 700;
-}
-
-.shaded_box .box_header .olive {
-  display: none;
-}
-
-.shaded_box ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-nav.subnav,
-.shaded_box {
+nav.subnav {
   border-radius: 0.5rem;
   border: 1px solid var(--primary-p75);
   padding: 0.5rem;
 }
 
-nav.subnav a,
-.shaded_box ul li {
+nav.subnav a {
   text-decoration: underline;
   display: block;
   padding: 0.5rem;
@@ -63,8 +40,7 @@ nav.subnav a,
   background-position: right center;
 }
 
-nav.subnav a,
-.shaded_box ul li a {
+nav.subnav a {
   color: black;
 }
 

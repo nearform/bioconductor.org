@@ -3,5 +3,5 @@ document.addEventListener("DOMContentLoaded", () => {
     block.innerHTML = block.innerHTML.trim();
   });
 
-  hljs.highlightAll();
+  window.hljs.highlightAll();
 });
