@@ -18,7 +18,7 @@
   scrollbar-width: none; /* disable scrollbar for Firefox */
 }
 
-.events::-webkit-scrollbar {
+.events-container::-webkit-scrollbar {
   display: none; /* disable scrollbar for chrome */
 }
 
