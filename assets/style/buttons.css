@@ -55,13 +55,6 @@
   box-shadow: 0 5px 4px 0 rgba(0 0 0 / 18%) inset;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .button-hero,
-  .white-button:hover {
-    transition: none;
-  }
-}
-
 .brand-border-button {
   background-image: var(--gradient-brand);
   border-radius: 8rem;
@@ -105,16 +98,11 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .brand-border-button:hover {
-    color: var(--primary-p400);
-  }
-
-  .brand-border-button:hover svg path {
-    stroke: var(--primary);
-  }
-
-  .brand-border-button:hover span {
-    background: #fff;
-    color: var(--primary-p400);
+  .button-hero,
+  .white-button,
+  .brand-border-button,
+  .brand-border-button svg path,
+  .brand-border-button span {
+    transition: none;
   }
 }
