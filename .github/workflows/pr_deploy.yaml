@@ -32,11 +32,6 @@ jobs:
           path: output
           key: ${{ runner.os }}-site-output
 
-      - name: Install dependencies
-        run: |
-          gem install bundler
-          bundle install
-
       - name: build website
         run: rake
       - name: Create Bucket
