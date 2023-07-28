@@ -12,6 +12,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
+      - name: Set up ruby
+        uses: ruby/setup-ruby@ec02537da5712d66d4d50a0f33b7eb52773b5ed1
+        with:
+          ruby-version: "2.6.5"
+
       - name: Restore Nanoc Cache
         id: cache-nanoc-tmp
         uses: actions/cache/restore@v3
@@ -26,14 +31,14 @@ jobs:
           path: output
           key: ${{ runner.os }}-site-output
 
-      - name: Set up ruby
-        uses: ruby/setup-ruby@ec02537da5712d66d4d50a0f33b7eb52773b5ed1
-        with:
-          ruby-version: "2.6.5"
-          bundler-cache: true
+      - name: Install dependencies
+        run: |
+          gem install bundler
+          bundle config path vendor/bundle
+          bundle install --jobs 4 --retry 3
 
       - name: build website
-        run: bundle exec rake
+        run: rake
 
       - name: Create Bucket
         run: |
