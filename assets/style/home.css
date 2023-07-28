@@ -60,20 +60,36 @@
   background: #fff;
   padding: 1rem;
   border-radius: 4px;
+  height: 38rem;
+  width: 49rem;
 }
 
 .green-box {
   background-color: var(--secondary-s50);
+  height: auto;
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.25rem;
 }
 
 .green-box a {
   display: block;
 }
 
+.data-scientist-rest {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+}
+
 .user-quote {
   background: #fff;
   padding: 1rem;
   border-radius: 4px;
+  display: flex;
 }
 .events-header {
   display: flex;
