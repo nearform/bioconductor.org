@@ -12,12 +12,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Set up ruby
-        uses: ruby/setup-ruby@ec02537da5712d66d4d50a0f33b7eb52773b5ed1
-        with:
-          ruby-version: "2.6.5"
-          bundler-cache: true
-
       - name: Restore Nanoc Cache
         id: cache-nanoc-tmp
         uses: actions/cache/restore@v3
@@ -32,8 +26,13 @@ jobs:
           path: output
           key: ${{ runner.os }}-site-output
 
-      - name: build website
-        run: rake
+      - name: Set up ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "2.6.5"
+          bundler-cache: true
+        - run: bundle exec rake
+
       - name: Create Bucket
         run: |
           if aws s3api head-bucket --bucket pr-preview-bioconductor-pr${{github.event.number}} 2>/dev/null; then
