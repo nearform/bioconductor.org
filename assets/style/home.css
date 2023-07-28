@@ -187,11 +187,11 @@ input[type="radio"]:checked::before {
     width: 60%;
   }
 
-  .join-block {
-    padding: 1.5rem !important;
+  .join-content {
+    padding: 1.5rem;
   }
 
-  .join-block h2 {
+  .join-row h2 {
     padding-top: 0;
   }
 
