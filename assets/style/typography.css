@@ -56,11 +56,6 @@ h6,
 }
 
 @media screen and (width <= 700px) {
-  /* 700px */
-  .hero {
-    font-size: 2.5rem; /* 40px */
-  }
-
   h1,
   .text-h1 {
     font-size: 2.1rem; /* 34px */
@@ -89,6 +84,11 @@ h6,
   h6,
   .text-h6 {
     font-size: 1.1rem; /* 17px */
+  }
+
+  /* 700px */
+  .text-hero {
+    font-size: 2.5rem; /* 40px */
   }
 }
 

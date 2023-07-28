@@ -3,14 +3,22 @@
   flex-wrap: wrap;
 }
 
+.tab-radio {
+  display: none;
+}
+
 .tab-label {
   border-radius: 8px;
   padding: 12px 24px;
   background: var(--neutral-n50);
 }
 
-.tab-radio {
-  display: none;
+.data-scientist-radio {
+  margin-left: auto;
+}
+
+.developer-radio {
+  margin-right: auto;
 }
 
 .tab-content {
@@ -30,6 +38,12 @@
 .tab-radio:checked + .tab-label + .tab-content {
   display: flex;
   align-items: center;
+}
+
+.brand-gradient-box {
+  background-image: var(--gradient-brand);
+  border-radius: 4px;
+  padding: 1px;
 }
 
 .events-header {
