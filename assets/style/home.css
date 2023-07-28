@@ -1,3 +1,108 @@
+.events {
+  padding-top: 2rem;
+}
+
+.events-header {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 6.25rem;
+  margin-bottom: 1rem;
+}
+
+.events-header h3 {
+  margin-left: 1rem;
+}
+
+.events-container {
+  display: flex;
+  overflow-x: scroll;
+  gap: 1.56rem;
+  margin-bottom: 1.5rem;
+  -ms-overflow-style: none; /* disable scrollbar for IE and Edge */
+  scrollbar-width: none; /* disable scrollbar for Firefox */
+}
+
+.events-container::-webkit-scrollbar {
+  display: none; /* disable scrollbar for chrome */
+}
+
+.event-card-container {
+  display: inline-block;
+  background-color: white;
+  padding: 0.875rem;
+  min-width: 17.5rem;
+  max-width: 17.5rem;
+  max-height: 12.25rem;
+}
+
+.event-card {
+  height: 100%;
+  width: 100%;
+}
+
+.event-card .format-bold {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  width: 100%;
+  flex: 1 0 0;
+  align-self: stretch;
+  height: 4.75rem;
+  color: var(--primary-p500);
+  max-width: 12.8rem;
+}
+
+.event-date-location {
+  padding-top: 1rem;
+  border-top: 1px solid;
+  border-color: var(--primary-p-50, #ebf4f7);
+}
+
+.event-date-location * {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  color: var(--neutral-n400);
+}
+
+.information-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  background-color: inherit;
+  gap: 2rem;
+}
+
+.news,
+.packages,
+.about-bioconductor {
+  max-width: 24rem;
+  min-width: 24rem;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.information-container section * {
+  text-align: start;
+}
+
+.news p {
+  border-left: 3px solid;
+  border-color: var(--primary);
+  padding-left: 12px;
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+.info-section-button-padding {
+  width: fit-content;
+}
+
+.info-section-button-padding .brand-border-button {
+  height: 2.5rem;
+}
+
 /* components css */
 .gradient-border {
   border-radius: 4px;
@@ -53,6 +158,7 @@
   color: inherit;
   display: flex;
   justify-content: space-between;
+
   /* gradient backgrounds are difficult to add transition */
   transition: background 0.5s ease;
 }
@@ -83,11 +189,13 @@
   height: 2.5rem;
   width: 100%;
 }
+
 /* Join section CSS */
 
 .join {
   background-image: var(--gradient-reversewarmcool);
   border-radius: 8px;
+  margin-bottom: 3rem;
 }
 
 .gradient-border-inner {
@@ -163,13 +271,22 @@ input[type="radio"]:checked::before {
   padding-top: 2rem;
 }
 
+.join-buttons span {
+  padding: 0.5rem 0.4rem 0.5rem 0.75rem;
+}
+
 .join-buttons a {
   width: fit-content;
+  text-decoration: none;
 }
 
 .learn-more {
   padding-left: 1rem;
   color: var(--primary-p400);
+}
+
+hr {
+  border: 1px solid var(--secondary-s75);
 }
 
 @media (width <= 768px) {
@@ -185,6 +302,16 @@ input[type="radio"]:checked::before {
 
   .button-padding {
     width: 60%;
+  }
+
+  .events-header {
+    margin: auto;
+  }
+
+  .information-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .join-content {
