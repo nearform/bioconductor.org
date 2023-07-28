@@ -254,13 +254,14 @@ input[type="radio"]:checked::before {
   padding-top: 4rem;
 }
 
-/* eslint-disable property-no-vendor-prefix */
+/* stylelint-disable property-no-vendor-prefix */
 .text-gradient {
   background: var(--gradient-reversewarmcool);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-/* eslint-enable property-no-vendor-prefix */
+
+/* stylelint-enable property-no-vendor-prefix */
 
 .join-img-div {
   width: 400px;
@@ -279,11 +280,6 @@ input[type="radio"]:checked::before {
 
 .join-buttons span {
   padding: 0.5rem 0.4rem 0.5rem 0.75rem;
-}
-
-.join-buttons a {
-  width: fit-content;
-  text-decoration: none;
 }
 
 .learn-more {
