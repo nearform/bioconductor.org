@@ -4,6 +4,8 @@
   align-items: center;
   justify-content: center;
   gap: 0.25rem;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
   background-color: var(--misc-dark);
   color: #fff;
   stroke: #fff;
