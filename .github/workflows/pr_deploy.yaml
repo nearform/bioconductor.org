@@ -12,11 +12,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Set up ruby
-        uses: ruby/setup-ruby@ec02537da5712d66d4d50a0f33b7eb52773b5ed1
-        with:
-          ruby-version: "2.6.5"
-
       - name: Restore Nanoc Cache
         id: cache-nanoc-tmp
         uses: actions/cache/restore@v3
@@ -35,13 +30,16 @@ jobs:
         id: cache-gems
         uses: actions/cache@v3
         with:
-          path: /opt/hostedtoolcache/Ruby/2.6.5/x64/lib/ruby/gems/2.6.0/gems/
+          path: /opt/hostedtoolcache/Ruby/2.6.5/x64/lib/ruby/gems
           key: ${{ runner.os }}-gems
 
+      - name: Set up ruby
+        uses: ruby/setup-ruby@ec02537da5712d66d4d50a0f33b7eb52773b5ed1
+        with:
+          ruby-version: "2.6.5"
+
       - name: Install dependencies
-        run: |
-          bundle install --jobs 4 --retry 3
-          bundle info nanoc
+        run: bundle install --jobs 4 --retry 3
 
       - name: build website
         run: rake
