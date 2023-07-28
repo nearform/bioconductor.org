@@ -48,6 +48,14 @@
   margin-bottom: 1rem;
 }
 
+.warmcool-gradient-border {
+  background-image: var(--gradient-warmcool);
+  border-radius: 4px;
+  padding: 1px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 .data-scientist-block {
   background: #fff;
   padding: 1rem;
@@ -62,6 +70,11 @@
   display: block;
 }
 
+.user-quote {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 4px;
+}
 .events-header {
   display: flex;
   justify-content: space-between;
