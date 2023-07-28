@@ -160,10 +160,11 @@ input:focus::placeholder {
   }
 
   .header-nav {
-    position: fixed;
+    position: absolute;
     flex-direction: column;
     width: 100vw;
-    top: -100%;
+    top: calc(-100% - 12rem);
+    /* This is a magic number. I couldn't figure out a nice way to get the height of the parent element here */
     left: 0;
     background-color: #fff;
     transition: 0.3s;
@@ -172,7 +173,7 @@ input:focus::placeholder {
   }
 
   .header-nav.active {
-    top: 9rem;
+    top: 100%;
   }
 
   .nav-mobile {
@@ -257,5 +258,11 @@ input:focus::placeholder {
 
   .hamburger.active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .header-nav {
+    transition: none;
   }
 }
