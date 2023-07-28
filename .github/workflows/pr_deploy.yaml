@@ -17,16 +17,16 @@ jobs:
         with:
           ruby-version: "2.6.5"
 
-      - name: Cache Nanoc tmp
+      - name: Restore Nanoc Cache
         id: cache-nanoc-tmp
-        uses: actions/cache@v3
+        uses: actions/cache/restore@v3
         with:
           path: tmp
           key: ${{ runner.os }}-nanoc-tmp
 
-      - name: Cache Site Output
+      - name: Restore Site Output Cache
         id: cache-site-output
-        uses: actions/cache@v3
+        uses: actions/cache/restore@v3
         with:
           path: output
           key: ${{ runner.os }}-site-output

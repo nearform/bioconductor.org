@@ -19,6 +19,20 @@ jobs:
         with:
           ruby-version: "2.6.5"
 
+      - name: Use Nanoc Cache
+        id: cache-nanoc-tmp
+        uses: actions/cache@v3
+        with:
+          path: tmp
+          key: ${{ runner.os }}-nanoc-tmp
+
+      - name: Use Site Output Cache
+        id: cache-site-output
+        uses: actions/cache@v3
+        with:
+          path: output
+          key: ${{ runner.os }}-site-output
+
       - name: Install dependencies
         run: |
           gem install bundler
