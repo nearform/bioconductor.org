@@ -54,6 +54,14 @@
   border-radius: 4px;
 }
 
+.green-box {
+  background-color: var(--secondary-s50);
+}
+
+.green-box a {
+  display: block;
+}
+
 .events-header {
   display: flex;
   justify-content: space-between;
