@@ -32,7 +32,10 @@ jobs:
           ruby-version: "2.6.5"
 
       - name: Install dependencies
-        run: bundle install --jobs 4 --retry 3
+        run: |
+          bundle config set path /vendor/bundle
+          bundle install --jobs 4 --retry 3
+          which nanoc
 
       - name: build website
         run: rake
