@@ -4,9 +4,9 @@
 }
 
 .tab-label {
-  padding: 10px 16px;
-  cursor: pointer;
-  border: solid 1px;
+  border-radius: 8px;
+  padding: 12px 24px;
+  background: var(--neutral-n50);
 }
 
 .tab-radio {
@@ -17,13 +17,14 @@
   order: 1;
   width: 100%;
   display: none;
+  transition: 0.3s;
 }
 
 /* checked tab */
 .tab-radio:checked + .tab-label {
-  font-weight: bold;
-  color: red;
-  background-color: aqua;
+  border: 1px solid;
+  border-color: var(--secondary-s75);
+  background: var(--secondary-s50);
 }
 
 .tab-radio:checked + .tab-label + .tab-content {
