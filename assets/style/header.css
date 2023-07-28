@@ -164,8 +164,6 @@ input:focus::placeholder {
     position: absolute;
     flex-direction: column;
     width: 100vw;
-
-    /* This is a magic number. I couldn't figure out a nice way to get the height of the parent element here */
     top: calc(-100% - 12rem);
     left: 0;
     background-color: #fff;
