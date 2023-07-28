@@ -26,6 +26,13 @@ jobs:
           path: output
           key: ${{ runner.os }}-site-output
 
+      - name: Restore Dependency Cache
+        id: cache-gems
+        uses: actions/cache@v3
+        with:
+          path: vendor
+          key: ${{ runner.os }}-site-gems
+
       - name: Set up ruby
         uses: ruby/setup-ruby@ec02537da5712d66d4d50a0f33b7eb52773b5ed1
         with:
@@ -33,9 +40,8 @@ jobs:
 
       - name: Install dependencies
         run: |
-          bundle config set path /vendor/bundle
-          bundle install --jobs 4 --retry 3
-          which nanoc
+          bundle install --jobs 4 --retry 3 --path vendor/
+          echo "vendor/ruby/2.6.0/bin/" >> $GITHUB_PATH
 
       - name: build website
         run: rake
