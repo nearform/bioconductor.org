@@ -14,3 +14,16 @@
   src: url("fonts/AtkinsonHyperlegible-Bold.ttf") format("truetype");
   font-weight: bold;
 }
+
+@font-face {
+  font-family: "Caveat";
+  src: url("fonts/Caveat-Regular.woff") format("woff");
+  src: url("fonts/Caveat-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Caveat";
+  src: url("fonts/Caveat-Bold.woff") format("woff");
+  src: url("fonts/Caveat-Bold.ttf") format("truetype");
+  font-weight: bold;
+}

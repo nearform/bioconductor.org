@@ -40,10 +40,18 @@
   align-items: center;
 }
 
-.brand-gradient-box {
+.brand-gradient-border {
   background-image: var(--gradient-brand);
   border-radius: 4px;
   padding: 1px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.data-scientist-block {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 4px;
 }
 
 .events-header {
