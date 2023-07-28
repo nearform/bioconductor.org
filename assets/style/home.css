@@ -23,9 +23,10 @@
 
 .tab-content {
   order: 1;
-  width: 100%;
   display: none;
   transition: 0.3s;
+  margin-top: 12px;
+  width: 100%;
 }
 
 /* checked tab */
@@ -36,16 +37,19 @@
 }
 
 .tab-radio:checked + .tab-label + .tab-content {
+  display: block;
+}
+
+.doodle-data-scientist-container {
   display: flex;
-  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .brand-gradient-border {
   background-image: var(--gradient-brand);
   border-radius: 4px;
   padding: 1px;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
 }
 
 .warmcool-gradient-border {
@@ -56,12 +60,33 @@
   margin-bottom: 1rem;
 }
 
-.data-scientist-block {
+.data-scientist-container h2 {
+  text-align: center;
+  margin-top: 24px;
+}
+
+.data-scientist-content {
   background: #fff;
   padding: 1rem;
   border-radius: 4px;
   height: 38rem;
   width: 49rem;
+}
+
+.left-doodle {
+  margin-left: auto;
+  margin-right: 18px;
+  display: flex;
+  align-items: flex-start;
+  height: 100%;
+}
+
+.right-doodle {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  margin-left: 18px;
+  height: 100%;
 }
 
 .green-box {
@@ -90,6 +115,7 @@
   padding: 1rem;
   border-radius: 4px;
   display: flex;
+  gap: 24px;
 }
 .events-header {
   display: flex;
