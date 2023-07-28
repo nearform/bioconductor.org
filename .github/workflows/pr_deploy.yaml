@@ -26,13 +26,6 @@ jobs:
           path: output
           key: ${{ runner.os }}-site-output
 
-      - name: Restore Dependency Cache
-        id: cache-gems
-        uses: actions/cache@v3
-        with:
-          path: /opt/hostedtoolcache/Ruby/2.6.5/x64/lib/ruby/gems
-          key: ${{ runner.os }}-gems
-
       - name: Set up ruby
         uses: ruby/setup-ruby@ec02537da5712d66d4d50a0f33b7eb52773b5ed1
         with:
