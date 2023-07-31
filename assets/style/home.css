@@ -394,6 +394,10 @@
     flex-direction: column;
   }
 
+  .dev-quote p {
+    font-size: 0.8125rem;
+  }
+
   .dev-slack {
     display: none;
   }
