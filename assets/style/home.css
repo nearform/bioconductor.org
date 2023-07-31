@@ -29,8 +29,9 @@
   order: 1;
   display: none;
   transition: 0.3s;
-  margin-top: 12px;
+  margin-top: 0.75rem;
   width: 100%;
+  margin-bottom: 1rem;
 }
 
 /* checked tab */
@@ -64,7 +65,8 @@
   margin-bottom: 1rem;
 }
 
-.data-scientist-container h2 {
+.data-scientist-container h2,
+.developer-container h2 {
   text-align: center;
   margin-top: 24px;
 }
@@ -135,20 +137,17 @@
     0px 1px 5px 0px rgba(0 23 74/ 0.14);
 }
 
-.data-scientist-chip {
-  color: white;
-  display: block;
-  padding-right: 1rem;
-  padding-left: 1rem;
-  padding-top: 0.8rem;
-  padding-bottom: 0.8rem;
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: 16px;
-  width: fit-content;
+.data-dev-chip {
   background: var(--gradient-purpleblue);
-  border-radius: 8rem;
+  color: white;
+  padding: 0.75rem 1rem;
+  border-radius: 4rem;
+  max-width: 51.5rem;
+  margin: 1rem auto;
   text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .data-scientist-chip * {
@@ -157,6 +156,101 @@
 
 .data-scientist-chip svg {
   margin-bottom: 3px;
+}
+
+.developer-container {
+  margin-bottom: 2rem;
+}
+
+.doodle-developer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.doodle-developer-container img {
+  max-width: 15%;
+  height: 30%;
+}
+
+.warmcool-gradient-border {
+  background-image: var(--gradient-warmcool);
+  border-radius: 4px;
+  padding: 1px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.developer-content {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 4px;
+  background: var(--code-blocks-dark);
+  padding: 2rem 2rem 1.5rem 2rem;
+  height: 24rem;
+  width: 53rem;
+}
+
+.dev-navs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.dev-nav {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.dev-nav p a {
+  text-decoration: underline;
+  color: #fff;
+}
+
+.dev-nav p {
+  color: var(--error-e100);
+}
+
+.dev-quote {
+  background: var(--misc-dark);
+  padding: 1rem;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 1.3rem;
+}
+
+.dev-quote p {
+  color: #fff;
+}
+
+.dev-quote p:first-child {
+  line-height: 150%;
+}
+
+.dev-quote:last-child {
+  font-size: 0.8125rem;
+  line-height: 120%;
+}
+
+.user-quote img {
+  margin-right: 1.5rem;
+}
+
+.dev-slack {
+  margin: auto;
+  max-width: 55rem;
+}
+
+.dev-logo {
+  display: inherit;
+  gap: 0.62rem;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 130%;
 }
 
 .events-header {
@@ -341,6 +435,33 @@
 }
 
 @media (width <= 768px) {
+  .doodle-developer-container img,
+  .doodle-data-scientist-container img {
+    display: none;
+  }
+
+  .data-scientist-content,
+  .developer-content {
+    width: fit-content;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .dev-navs {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .dev-quote p {
+    font-size: 0.8125rem;
+  }
+
+  .data-dev-chip {
+    display: none;
+  }
+
   .learn-block {
     display: flex;
     flex-direction: column;
