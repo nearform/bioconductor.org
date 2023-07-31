@@ -26,6 +26,16 @@
   width: 100%;
   display: none;
   transition: 0.3s;
+  margin: 1rem;
+  padding-top: 1rem;
+}
+
+.tab-content h2 {
+  text-align: center;
+}
+
+.tab-content img {
+  max-height: 30%;
 }
 
 /* checked tab */
@@ -38,6 +48,7 @@
 .tab-radio:checked + .tab-label + .tab-content {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .brand-gradient-border {
@@ -56,12 +67,66 @@
   margin-bottom: 1rem;
 }
 
-.data-scientist-block {
+.dev-data-block {
   background: #fff;
   padding: 1rem;
   border-radius: 4px;
+}
+.data-block {
+  background: #fff;
   height: 38rem;
   width: 49rem;
+}
+
+.dev-block {
+  background: var(--code-blocks-dark);
+  padding: 2rem 2rem 1.5rem 2rem;
+  height: 24rem;
+  width: 53rem;
+}
+
+.dev-navs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.dev-nav {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.dev-nav p a {
+  text-decoration: underline;
+  color: #fff;
+}
+
+.dev-nav p {
+  color: var(--error-e100);
+}
+
+.dev-avatar-block {
+  display: flex;
+  flex-direction: row;
+  border-radius: 0.5rem;
+  background: var(--misc-dark);
+  padding: 1.5rem;
+  align-items: center;
+}
+
+.dev-avatar-border {
+  width: 5.25rem;
+  height: 5.25rem;
+  border-radius: 50%;
+  padding: 1px;
+}
+
+.dev-avatar-inner {
+  display: inline-block;
+  background: url("../images/profiles/charlie.jpeg");
+  background-position: 50% 50%;
+  background-size: cover;
 }
 
 .green-box {
@@ -91,6 +156,46 @@
   border-radius: 4px;
   display: flex;
 }
+
+.dev-quote {
+  background: var(--misc-dark);
+}
+
+.dev-quote p {
+  color: #fff;
+}
+
+.dev-quote p:first-child {
+  line-height: 150%;
+}
+
+.dev-quote:last-child {
+  font-size: 0.8125rem;
+  line-height: 120%;
+}
+
+.user-quote img {
+  margin-right: 1.5rem;
+}
+
+.dev-slack {
+  background-image: var(--gradient-purpleblue);
+  border-radius: 4rem;
+  padding: 0.75rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dev-logo {
+  display: inherit;
+  gap: 0.62rem;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 130%;
+}
+
 .events-header {
   display: flex;
   justify-content: space-between;
@@ -273,6 +378,26 @@
 }
 
 @media (width <= 768px) {
+  .tab-content img {
+    display: none;
+  }
+  .dev-data-block {
+    width: fit-content;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .dev-navs {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .dev-slack {
+    display: none;
+  }
+
   .learn-block {
     display: flex;
     flex-direction: column;
