@@ -68,9 +68,8 @@
 
 .data-scientist-content {
   background: #fff;
-  padding: 1rem;
+  padding: 2rem;
   border-radius: 4px;
-  height: 38rem;
   width: 49rem;
 }
 
@@ -97,8 +96,10 @@
   flex-direction: column;
   display: flex;
   justify-content: space-between;
-  gap: 1rem;
   padding: 1.25rem;
+  padding-bottom: 0.3rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
 }
 
 .green-box p img {
@@ -113,7 +114,6 @@
 .data-scientist-rest {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
   padding: 1rem;
 }
 
