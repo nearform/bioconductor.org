@@ -41,6 +41,9 @@
   display: block;
 }
 
+.data-scientist-container {
+}
+
 .doodle-data-scientist-container {
   display: flex;
   margin-top: 1rem;
@@ -129,10 +132,23 @@
 
 .data-scientist-chip {
   color: white;
+  display: block;
   padding: 1rem;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 16px;
+  width: fit-content;
   background: var(--gradient-purpleblue);
-  text-shadow: 0px -0.5px 0px 0px rgba(0, 23, 74, 0.02),
-    0px 1px 5px 0px rgba(0, 23, 74, 0.14);
+  border-radius: 8rem;
+  text-decoration: none;
+}
+
+.data-scientist-chip * {
+  vertical-align: middle;
+}
+
+.data-scientist-chip svg {
+  margin-bottom: 3px;
 }
 
 .events-header {
