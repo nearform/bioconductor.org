@@ -101,8 +101,13 @@
   padding: 1.25rem;
 }
 
-.green-box a {
-  display: block;
+.green-box p img {
+  vertical-align: middle;
+  margin-bottom: 2px;
+}
+
+.green-box p a {
+  vertical-align: middle;
 }
 
 .data-scientist-rest {
