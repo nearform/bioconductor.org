@@ -111,9 +111,37 @@
   padding-left: 1rem;
 }
 
+.doodle-developer-container img {
+  max-width: 15%;
+  height: 30%;
+}
+
+.user-quote img {
+  margin-right: 1.5rem;
+}
+
 .green-box p img {
   vertical-align: middle;
   margin-bottom: 2px;
+}
+
+.learn-nav a {
+  border: 1px solid var(--primary-p75);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  align-items: center;
+  text-decoration: underline;
+  color: inherit;
+  display: flex;
+  justify-content: space-between;
+
+  /* gradient backgrounds are difficult to add transition */
+  transition: background 0.5s ease;
+}
+
+.join-buttons a {
+  width: fit-content;
+  text-decoration: none;
 }
 
 .green-box p a {
@@ -133,8 +161,8 @@
   border-radius: 4px;
   display: flex;
   gap: 24px;
-  box-shadow: 0px -0.5px 0px 0px rgba(0 23 74/ 0.02),
-    0px 1px 5px 0px rgba(0 23 74/ 0.14);
+  /* box-shadow: 0px -0.5px 0px 0px rgba(0 23 74/ 0.02),
+    0px 1px 5px 0px rgba(0 23 74/ 0.14); */
 }
 
 .data-dev-chip {
@@ -169,25 +197,18 @@
   align-items: center;
 }
 
-.doodle-developer-container img {
-  max-width: 15%;
-  height: 30%;
-}
-
-.warmcool-gradient-border {
+/* .warmcool-gradient-border {
   background-image: var(--gradient-warmcool);
   border-radius: 4px;
   padding: 1px;
   margin-top: 1rem;
   margin-bottom: 1rem;
-}
+} */
 
 .developer-content {
-  background: #fff;
   padding: 1rem;
   border-radius: 4px;
   background: var(--code-blocks-dark);
-  padding: 2rem 2rem 1.5rem 2rem;
   height: 24rem;
   width: 53rem;
 }
@@ -224,6 +245,18 @@
 
 .dev-quote p {
   color: #fff;
+}
+
+.news p {
+  border-left: 3px solid;
+  border-color: var(--primary);
+  padding-left: 12px;
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+.info p {
+  padding-bottom: 1rem;
 }
 
 .dev-quote p:first-child {
@@ -402,20 +435,6 @@
   flex-direction: column;
   gap: 0.625rem;
   flex: 1;
-}
-
-.learn-nav a {
-  border: 1px solid var(--primary-p75);
-  border-radius: 0.5rem;
-  padding: 1rem;
-  align-items: center;
-  text-decoration: underline;
-  color: inherit;
-  display: flex;
-  justify-content: space-between;
-
-  /* gradient backgrounds are difficult to add transition */
-  transition: background 0.5s ease;
 }
 
 .join-buttons a {
