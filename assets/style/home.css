@@ -251,7 +251,8 @@
   font-size: 1.1rem;
   font-weight: 700;
   line-height: 130%;
-  
+}
+
 .events {
   padding-top: 2rem;
 }
@@ -449,7 +450,7 @@
   width: 100%;
 }
 
-/* Join section CSS */ 
+/* Join section CSS */
 
 .join {
   background-image: var(--gradient-reversewarmcool);
