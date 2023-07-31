@@ -44,9 +44,6 @@
   display: block;
 }
 
-.data-scientist-container {
-}
-
 .doodle-data-scientist-container {
   display: flex;
   margin-top: 1rem;
@@ -77,6 +74,10 @@
   padding: 2rem;
   border-radius: 4px;
   width: 49rem;
+}
+
+.data-scientist-content a {
+  color: black;
 }
 
 .left-doodle {
@@ -115,6 +116,7 @@
 
 .green-box p a {
   vertical-align: middle;
+  cursor: pointer;
 }
 
 .data-scientist-rest {
