@@ -35,7 +35,7 @@
           <% end %>
 
           <section class="content">
-            <% if (@item.identifier != '/') %>
+            <% if (@item.identifier != '/' && !@item[:hero]) %>
               <%= render("/components/breadcrumbs/") %>
             <% end %>
   
