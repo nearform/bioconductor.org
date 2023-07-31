@@ -258,10 +258,6 @@
   line-height: 120%;
 }
 
-.user-quote img {
-  margin-right: 1.5rem;
-}
-
 .dev-slack {
   margin: auto;
   max-width: 53rem;
@@ -365,14 +361,6 @@
   text-align: start;
 }
 
-.news p {
-  border-left: 3px solid;
-  border-color: var(--primary);
-  padding-left: 12px;
-  margin-top: 6px;
-  margin-bottom: 6px;
-}
-
 .info-section-button-padding {
   width: fit-content;
 }
@@ -416,20 +404,11 @@
   gap: 0.5rem;
 }
 
-.info p {
-  padding-bottom: 1rem;
-}
-
 .learn-nav {
   display: flex;
   flex-direction: column;
   gap: 0.625rem;
   flex: 1;
-}
-
-.join-buttons a {
-  width: fit-content;
-  text-decoration: none;
 }
 
 .learn-nav a:hover {
