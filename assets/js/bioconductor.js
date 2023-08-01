@@ -200,8 +200,8 @@ var getHrefForSymlinks = function (href) {
 };
 
 var handleCitations = function () {
-  if (jQuery("#bioc_citation").length) {
-    jQuery("#bioc_citation_outer").hide();
+  if (jQuery("#bioc-citation").length) {
+    jQuery("#bioc-citation-outer").hide();
     var url = window.location.href;
     url = url.replace("html", "citations");
     var segs = url.split("/");
@@ -220,8 +220,8 @@ var handleCitations = function () {
         data = data.replace(/}."/g, '"'); // ' to pacify my editor
 
         data = data.replace(" (????)", "");
-        jQuery("#bioc_citation").html(data);
-        jQuery("#bioc_citation_outer").show();
+        jQuery("#bioc-citation").html(data);
+        jQuery("#bioc-citation-outer").show();
       },
       error: function (data, textStatus, jqXHR) {
         //console.log("error!");

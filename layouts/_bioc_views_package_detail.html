@@ -22,9 +22,9 @@
     <%= @package[:Description] %><br />
     <strong>Author:</strong> <%= filter_emails(@package[:Author])%><br />
     <strong>Maintainer:</strong> <%= filter_emails(@package[:Maintainer])%><br />
-    <div id="bioc_citation_outer">
+    <div id="bioc-citation-outer">
       <strong>Citation (from within R, enter <code>citation("<%=@package[:Package]%>")</code>):</strong>
-      <div id="bioc_citation" class="bioc-citation"></div>
+      <div id="bioc-citation" class="bioc-citation"></div>
     </div>
   </p>
 

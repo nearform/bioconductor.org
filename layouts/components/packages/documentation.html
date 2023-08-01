@@ -14,12 +14,12 @@
     <% if !item[:file].strip! then next end %>
       <tr>
         <td><%= item[:title]%></td>
-        <td class="docFixedWidth">
+        <td>
           <% if item[:file] and item[:file] != "" %>
           <a href="../vignettes/<%=@package[:Package]%>/inst/doc/<%=item[:file]%>"><%=item[:type]%></a>
           <% end %>
         </td>
-        <td class="docFixedWidth">
+        <td>
           <% if item[:script] and item[:script] != "" %>
           <a href="../vignettes/<%=@package[:Package]%>/inst/doc/<%=item[:script]%>">R Script</a>
           <% end %>
@@ -31,20 +31,20 @@
   <% if @package[:repo] != "workflows/" %>
     <tr>
       <td>Reference Manual</td>
-      <td class="docFixedWidth">
+      <td>
         <a href="../manuals/<%=@package[:Package]%>/man/<%=@package[:Package]%>.pdf">PDF</a>
       </td>
-      <td class="docFixedWidth">&nbsp;</td>
+      <td>&nbsp;</td>
     </tr>
   <% end %>
 
   <% if @package.has_key? :hasREADME and @package[:hasREADME] == true%>
     <tr>
       <td>README</td>
-      <td class="docFixedWidth">
+      <td>
         <a href="../readmes/<%=@package[:Package]%>/README">Text</a>
       </td>
-      <td class="docFixedWidth">&nbsp;</td>
+      <td>&nbsp;</td>
     </tr>
   <% end %>
 
@@ -52,10 +52,10 @@
   <% if @package.has_key? :hasNEWS and @package[:hasNEWS] == true%>
     <tr>
       <td>NEWS</td>
-      <td class="docFixedWidth">
+      <td>
         <a href="../news/<%=@package[:Package]%>/NEWS">Text</a>
       </td>
-      <td class="docFixedWidth">&nbsp;</td>
+      <td>&nbsp;</td>
     </tr>
   <% end %>
 
@@ -63,10 +63,10 @@
   <% if @package.has_key? :hasINSTALL and @package[:hasINSTALL] == true%>
     <tr>
       <td>INSTALL</td>
-      <td class="docFixedWidth">
+      <td>
         <a href="../install/<%=@package[:Package]%>/INSTALL">Text</a>
       </td>
-      <td class="docFixedWidth">&nbsp;</td>
+      <td>&nbsp;</td>
     </tr>
   <% end %>
 
@@ -74,10 +74,10 @@
   <% if @package.has_key? :hasLICENSE and @package[:hasLICENSE] == true%>
     <tr>
       <td>LICENSE</td>
-      <td class="docFixedWidth">
+      <td>
         <a href="../licenses/<%=@package[:Package]%>/LICENSE">Text</a>
       </td>
-      <td class="docFixedWidth">&nbsp;</td>
+      <td>&nbsp;</td>
     </tr>
   <% end %>
 
@@ -86,10 +86,10 @@
     <% for video in videos %>
       <tr>
         <td><%=get_video_title(video)%></td>
-        <td class="docFixedWidth">
+        <td>
           <a href="<%=video%>">Video</a>
         </td>
-        <td class="docFixedWidth">&nbsp;</td>
+        <td>&nbsp;</td>
       </tr>
     <% end %>
   <% end %>
