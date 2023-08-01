@@ -1,3 +1,10 @@
+.left-col-inner {
+  max-width: 284px;
+  min-width: 284px;
+}
+.left-col-inner > {
+  width: 100%;
+}
 .internal-nav {
   min-width: 284px;
   display: flex;
@@ -48,8 +55,35 @@
   border-radius: 8px;
   padding: 8px;
 }
+
 .sidebar-box-header {
+  display: flex;
+  padding: 8px 8px 16px 8px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
+  border-bottom: 1px solid var(--primary-p-50, #ebf4f7);
 }
 
-.symlink {
+.sidebar-box * {
+  color: #070707;
+}
+
+.sidebar-box nav div {
+  border-radius: 4px;
+  display: flex;
+  padding: 8px 8px 8px 12px;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+}
+
+.bottom-note {
+  border-left: 3px solid var(--primary-p-300, #3792ad);
+  display: flex;
+  align-items: flex-start;
+  align-self: stretch;
+
+  padding: 20px 8px 16px 12px;
 }

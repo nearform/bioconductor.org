@@ -1,20 +1,17 @@
-const topOffsetToRemove = 150;
-
+const addedTopBounding = 80;
 document.addEventListener("DOMContentLoaded", function () {
-  const internalNavLinks = document.querySelectorAll(".internal-nav a");
+  const sidebarContentLinks = document.querySelectorAll(".internal-nav a");
   const headings = document.querySelectorAll("h1, h2, h3, h4, h5, h6");
+  const header = document.querySelector("header");
+  const headerHeight = header.offsetHeight;
 
-  internalNavLinks.forEach((link) => {
+  sidebarContentLinks.forEach((link) => {
     link.addEventListener("click", function (event) {
       event.preventDefault();
 
-      internalNavLinks.forEach((link) => link.classList.remove("selected-nav"));
-
-      this.classList.add("selected-nav");
-
       const target = document.querySelector(this.getAttribute("href"));
       if (target) {
-        const offsetTop = target.offsetTop - topOffsetToRemove;
+        const offsetTop = target.offsetTop - headerHeight;
         window.scrollTo({
           top: offsetTop,
           behavior: "smooth",
@@ -24,34 +21,38 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   window.addEventListener("scroll", () => {
-    setCurrentHeading(internalNavLinks, findCurrentHeadingId(headings));
+    setCurrentHeading(sidebarContentLinks, findCurrentHeadingId(headings));
     checkScrollPosition();
   });
 });
 
 function checkScrollPosition() {
-  const internalNav = document.querySelector(".internal-nav");
-  const sidebarBox = document.querySelector(".sidebar-box");
+  const leftCol = document.querySelector(".left-col");
+  const sidebarContent = document.querySelector(".left-col-inner");
+  const footer = document.querySelector("footer");
+  const header = document.querySelector("header");
+  const headerHeight = header.offsetHeight;
+  const footerOffsetTop = footer.offsetTop;
+  const footerHeight = footer.offsetHeight;
+  const windowHeight = window.innerHeight;
   const scrollPosition = window.scrollY;
 
   if (
-    scrollPosition >=
-      document.querySelector(".left-col").offsetTop - topOffsetToRemove &&
-    scrollPosition <=
-      document.querySelector(".left-col").offsetHeight -
-        document.querySelector("footer").offsetHeight -
-        320
+    scrollPosition >= leftCol.offsetTop - headerHeight &&
+    scrollPosition <= leftCol.offsetHeight - footerHeight
   ) {
-    internalNav.style.position = "fixed";
+    sidebarContent.style.position = "fixed";
 
-    sidebarBox.style.position = "fixed";
-    sidebarBox.style.top = "558px"; // Adjust this value as needed
+    if (scrollPosition + windowHeight >= footerOffsetTop) {
+      leftCol.style.justifyContent = "flex-end";
+      sidebarContent.style.position = "static";
+      sidebarContent.style.top = "auto";
+    } else {
+      leftCol.style.justifyContent = "flex-start";
+    }
   } else {
-    internalNav.style.position = "static";
-    internalNav.style.top = "auto";
-
-    sidebarBox.style.position = "static";
-    sidebarBox.style.top = "auto";
+    sidebarContent.style.position = "static";
+    sidebarContent.style.top = "auto";
   }
 }
 
@@ -60,20 +61,18 @@ function findCurrentHeadingId(headings) {
     const bounding = heading.getBoundingClientRect();
     if (heading.id) {
       if (
-        bounding.top > 27 &&
-        bounding.top < 180 &&
+        bounding.top >= addedTopBounding &&
         bounding.bottom <= window.innerHeight
       ) {
-        console.log(bounding.top, heading.id);
-        console.log("bottom", bounding.bottom, heading.id);
+        console.log(heading.id, bounding.top);
         return heading.id;
       }
     }
   }
 }
 
-function setCurrentHeading(internalNavlinks, activeHeading) {
-  internalNavlinks.forEach((link) => {
+function setCurrentHeading(sidebarContentlinks, activeHeading) {
+  sidebarContentlinks.forEach((link) => {
     const linkHeading = link.getAttribute("href").slice(1);
     activeHeading === linkHeading
       ? link.classList.add("selected-nav")

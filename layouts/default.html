@@ -3,8 +3,7 @@
   xmlns="http://www.w3.org/1999/xhtml"
   dir="ltr"
   lang="en-US"
-  prefix="og: http://ogp.me/ns#"
->
+  prefix="og: http://ogp.me/ns#">
   <%= render("/_sitehead/") %>
   <body>
     <%= render("/components/header/") %> <%= render("/_nav/",
@@ -24,21 +23,22 @@
           render("/_bioc_views_package_detail/", :package => @item.attributes)
           %> <% end %> <% if has_subnav?(@item) %>
           <section class="left-col">
-            <%= render("/components/subnav/", :pages => subnav_items(@item)) %>
+            <div class="left-col-inner">
+              <%= render("/components/subnav/", :pages => subnav_items(@item))
+              %>
+            </div>
           </section>
           <% end %>
 
           <section class="content">
-            <% if (@item.identifier != '/') %>
-              <%= render("/components/breadcrumbs/") %>
-            <% end %>
-  
-            <%= yield if block_given? %>
+            <% if (@item.identifier != '/') %> <%=
+            render("/components/breadcrumbs/") %> <% end %> <%= yield if
+            block_given? %>
           </section>
         </div>
       </div>
     </main>
-      <%= render("/components/footer/") %>
-      <%= render("/components/sitescripts/") %>
+    <%= render("/components/footer/") %> <%= render("/components/sitescripts/")
+    %>
   </body>
 </html>
