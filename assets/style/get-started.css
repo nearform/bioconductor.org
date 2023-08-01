@@ -49,7 +49,7 @@
   display: flex;
   flex-direction: column;
   flex: 1;
-  padding: 1.5rem 1.5rem 0;
+  padding: 0.9rem 1.5rem;
   border-radius: 0.5rem;
 }
 
@@ -82,6 +82,11 @@
 }
 
 /* stylelint-enable color-function-notation, alpha-value-notation */
+
+.code-install code {
+  font-size: 1.25rem;
+  text-align: start;
+}
 
 .step-1 {
   padding-bottom: 0.5rem;
