@@ -24,6 +24,8 @@ main > .container.main-subnav {
 }
 
 .left-col {
+  height: 100%;
+  position: relative;
   grid-area: left-col;
   display: flex;
   flex-direction: column;
