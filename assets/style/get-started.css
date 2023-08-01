@@ -27,6 +27,7 @@
   color: var(--misc-dark);
 }
 
+/* stylelint-disable color-function-notation, alpha-value-notation */
 .warmcool-gradient {
   background-image: var(--gradient-reversewarmcool);
   border-radius: 0.5rem;
@@ -78,6 +79,8 @@
     0 10px 10px 0 rgba(0, 0, 0, 0.05), 0 22px 13px 0 rgba(0, 0, 0, 0.03),
     0 39px 16px 0 rgba(0, 0, 0, 0.01), 0 61px 17px 0 rgba(0, 0, 0, 0);
 }
+
+/* stylelint-enable color-function-notation, alpha-value-notation */
 
 .step-1 {
   padding-bottom: 0.5rem;
