@@ -1,6 +1,8 @@
 <div class="sidebar-box">
-  <p class="format-bold">Development Version</p>
-  <p>Bioconductor packages under development:</p>
+  <div class="sidebar-box-header">
+    <p class="format-bold">Development Version</p>
+    <p>Bioconductor packages under development:</p>
+  </div>
   <ul>
     <% devel_repos = config[:devel_repos] %> <% if devel_repos.include? "bioc"
     %>

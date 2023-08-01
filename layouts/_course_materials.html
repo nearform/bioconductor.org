@@ -1,12 +1,14 @@
 <div class="sidebar-box">
-  <p class="format-bold">
-    <a href="/help/course-materials/">Courses &amp; Conferences</a>
-  </p>
-  <p>
-    Bioconductor courses and conferences explore R programming and the analysis
-    of genomic data. View catalog of a
-    <a href="/help/course-materials/">recent course material</a>.
-  </p>
+  <div class="sidebar-box-header">
+    <p class="format-bold">
+      <a href="/help/course-materials/">Courses &amp; Conferences</a>
+    </p>
+    <p>
+      Bioconductor courses and conferences explore R programming and the
+      analysis of genomic data. View catalog of a
+      <a href="/help/course-materials/">recent course material</a>.
+    </p>
+  </div>
   <ul class="inline_list">
     <% course_materials.each do |item| %>
     <li><a href="<%= item.identifier %>"><%= item[:title] %></a></li>
