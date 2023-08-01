@@ -1,5 +1,5 @@
 .hero {
-  max-width: 100%;
+  width: 100%;
   margin: 0 auto;
   text-align: center;
   background-color: white;
@@ -13,6 +13,8 @@
 .homepage-hero {
   padding-top: 2rem;
 }
+
+/* disabled here due to a linting error, but we need the webkit marker for this to work */
 
 /* stylelint-disable */
 .hero mark {
