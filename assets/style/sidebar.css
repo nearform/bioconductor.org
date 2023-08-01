@@ -1,9 +1,8 @@
 .left-col-inner {
-  margin-top: 20px;
   max-width: 284px;
   min-width: 284px;
   position: sticky;
-  top: 2rem;
+  top: 10rem;
   display: flex;
   flex-direction: column;
   align-items: center;
