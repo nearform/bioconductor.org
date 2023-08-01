@@ -1,9 +1,17 @@
 const addedTopBounding = 80;
 document.addEventListener("DOMContentLoaded", function () {
+  const sidebarContent = document.querySelector(".internal-nav");
+  const sidebarToggle = document.querySelector(".sidebar-nav");
+
   const sidebarContentLinks = document.querySelectorAll(".internal-nav a");
   const headings = document.querySelectorAll("h1, h2, h3, h4, h5, h6");
   const header = document.querySelector("header");
   const headerHeight = header.offsetHeight;
+
+  sidebarToggle.addEventListener("click", () => {
+    console.log(sidebarContent);
+    toggleNavMenu(sidebarContent);
+  });
 
   sidebarContentLinks.forEach((link) => {
     link.addEventListener("click", function (event) {
@@ -46,4 +54,10 @@ function setCurrentHeading(sidebarContentlinks, activeHeading) {
       ? link.classList.add("selected-nav")
       : link.classList.remove("selected-nav");
   });
+}
+
+function toggleNavMenu(sidebarContent) {
+  sidebarContent.classList.contains("open")
+    ? sidebarContent.classList.remove("open")
+    : sidebarContent.classList.add("open");
 }

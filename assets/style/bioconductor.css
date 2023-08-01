@@ -58,11 +58,11 @@ img {
     display: block;
   }
 
-  .left-col {
+  /* .left-col {
     display: none;
-  }
+  } */
 
-  .site-container {
+  .left-col > .site-container {
     margin: 0 auto; /* floats the design center */
     max-width: 1400px; /* change the site design width here */
   }

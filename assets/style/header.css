@@ -178,6 +178,7 @@ input:focus::placeholder {
 
   .header-nav.active {
     top: 100%;
+    z-index: 1;
   }
 
   .nav-mobile {
