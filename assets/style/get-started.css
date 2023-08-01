@@ -37,7 +37,6 @@
 }
 
 .install-row {
-  background: #fff;
   border-radius: 0.5rem;
   display: flex;
   flex-direction: row;
@@ -46,10 +45,12 @@
 }
 
 .install-content {
+  background: #fff;
   display: flex;
   flex-direction: column;
   flex: 1;
   padding: 1.5rem 1.5rem 0;
+  border-radius: 0.5rem;
 }
 
 .install-blockquote {
