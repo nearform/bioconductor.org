@@ -6,12 +6,13 @@
   padding-top: 2rem;
 }
 
-.hero h1 {
-  color: var(--primary-p500);
+.homepage-container {
+  padding-top: 2rem;
+  padding-bottom: 4rem;
 }
 
-.homepage-hero {
-  padding-top: 2rem;
+.hero h1 {
+  color: var(--primary-p500);
 }
 
 /* disabled here due to a linting error, but we need the webkit marker for this to work */
