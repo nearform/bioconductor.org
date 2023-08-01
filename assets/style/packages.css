@@ -1,0 +1,20 @@
+details {
+  margin: 1rem 0;
+}
+
+summary.package-details {
+  display: block;
+  margin: 1rem 0;
+  font-weight: 700;
+  background-image: url('/images/icons/svgs/chevron-down.svg');
+  background-repeat: no-repeat;
+  background-position: center right;
+  cursor: pointer;
+}
+
+
+.badges {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
