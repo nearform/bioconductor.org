@@ -6,7 +6,7 @@
       name="homepage-tab"
       id="data-scientist-tab"
       checked />
-    <label for="data-scientist-tab" class="tab-label data-scientist-radio">
+    <label for="data-scientist-tab" class="tab-label data-scientist-radio format-bold">
       For Data scientists
     </label>
     <section class="tab-content">
@@ -21,7 +21,7 @@
           <div class="brand-gradient-border">
             <div class="data-scientist-content">
               <div class="green-box">
-                <p>
+                <p class="text-large">
                   <img src="images/icons/svgs/arrow-circle-right.svg" alt=""/>
                   <a
                     class="format-underline"
@@ -41,7 +41,7 @@
                   >
                   packages
                 </p>
-                <p>
+                <p class="text-large">
                   <img src="images/icons/svgs/arrow-circle-right.svg" alt="" />
                   <a class="format-underline" href="/help/docker/"
                     >Docker containers for Bioconductor</a
@@ -49,8 +49,8 @@
                 </p>
               </div>
               <div class="data-scientist-rest">
-                <p>
-                  📖 Bioconductor Books:
+                <p class="text-large">
+                  📖 &nbsp;Bioconductor Books:
                   <a class="format-underline" href="/books/release/csawBook"
                     >csawBook</a
                   >,
@@ -62,23 +62,20 @@
                     >SingleRBook</a
                   >
                 </p>
-                <p>
-                  📣
-                  <!-- htmlhint ignore:start -->
-                  <a class="format-underline" href="/news/bioc_<%= config[:release_version].sub(".", "_") %>_release/"> Latest release announcement</a>
-                  <!-- htmlhint ignore:end -->
+                <p class="text-large">
+                  📣 &nbsp;<a class="format-underline" href="/news/bioc_<%= config[:release_version].sub(".", "_") %>_release/">Latest release announcement</a>
                 </p>
-                <p>
-                  🛠️
+                <p class="text-large">
+                  🛠️&nbsp;
                   <a class="format-underline" href="https://anvilproject.org" >Use Bioconductor in the AnVIL</a>.
                   See our
                   <a class="format-underline" href="https://anvil.bioconductor.org" >project updates</a>
                 </p>
-                <p>
-                  💬 <a class="format-underline" href="https://slack.bioconductor.org/" > Community Slack sign-up</a>
+                <p class="text-large">
+                  💬 &nbsp;<a class="format-underline" href="https://slack.bioconductor.org/" >Community Slack sign-up</a>
                 </p>
-                <p>💡 <a class="format-underline" href="/help/support/" >Support site</a></p>
-                <p>🗓️ <a class="format-underline" href="http://bioconductor.org/help/events/" >Events calendar</a></p>
+                <p class="text-large">💡 &nbsp;<a class="format-underline" href="/help/support/" >Support site</a></p>
+                <p class="text-large">🗓️ &nbsp;<a class="format-underline" href="http://bioconductor.org/help/events/" >Events calendar</a></p>
               </div>
               <div class="warmcool-gradient-border">
                 <div class="user-quote">
@@ -103,11 +100,15 @@
               alt="learn more about bioconductor" />
           </div>
         </div>
-        <a class="data-dev-chip text-large format-bold" href="/help/support/">
-          <img
+        <a class="data-dev-chip data-chip" href="/help/support/">
+          <div class="data-dev-logo">
+            <img
             src="images/icons/svgs/question-mark-circle.svg"
-            alt="question mark circle" />
-          Need some help? Ask our community on the Bioconductor Support site!
+            alt="question mark circle" 
+            width="28"
+            height="28" />
+            <p>Need some help? Ask our community on the Bioconductor Support site!</p>
+          </div>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -130,7 +131,7 @@
       class="tab-radio developer-radio"
       name="homepage-tab"
       id="developer-tab" />
-    <label for="developer-tab" class="tab-label developer-radio">
+    <label for="developer-tab" class="tab-label developer-radio format-bold">
       For Developers
     </label>
     <section class="tab-content">
@@ -220,8 +221,8 @@
           </div>
           <img src="images/Doodles/code-right.png" alt="right-side code block" />
         </div>
-        <a class="data-dev-chip dev-slack" href="https://slack.bioconductor.org/">
-          <div class="dev-logo">
+        <a class="data-dev-chip dev-chip" href="https://slack.bioconductor.org/">
+          <div class="data-dev-logo">
             <img src="images/icons/slack.png" alt="slack logo" />
             Join Bioconductor on Slack, and meet hundreds of other developers!
           </div>
@@ -247,11 +248,11 @@
 
   <div class="gradient-border learn">
     <div class="section-block learn-block">
-      <h4>Learn</h4>
+      <h2>Learn</h2>
       <div class="learn-content">
         <div class="info">
-          <p>Resources to maximize the potential of Bioconductor.</p>
-          <p>
+          <p class="text-large">Resources to maximize the potential of Bioconductor.</p>
+          <p class="text-large">
             From basic functionalities to advanced features, our tutorials,
             guides, and documentation have you covered.
           </p>
@@ -277,7 +278,7 @@
           </div>
         </div>
         <nav class="learn-nav">
-          <a href="/help/course-materials/">
+          <a href="/help/course-materials/" class="text-large">
             Courses
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -293,7 +294,7 @@
                 stroke-linejoin="round" />
             </svg>
           </a>
-          <a href="/help/education-training/"
+          <a href="/help/education-training/" class="text-large"
             >Education and Training<svg
               xmlns="http://www.w3.org/2000/svg"
               width="25"
@@ -308,7 +309,7 @@
                 stroke-linejoin="round" />
             </svg>
           </a>
-          <a href="https://support.bioconductor.org"
+          <a href="https://support.bioconductor.org" class="text-large"
             >Support site<svg
               xmlns="http://www.w3.org/2000/svg"
               width="25"
@@ -323,7 +324,7 @@
                 stroke-linejoin="round" />
             </svg>
           </a>
-          <a href="/help/package-vignettes/"
+          <a href="/help/package-vignettes/" class="text-large"
             >Package vignettes<svg
               xmlns="http://www.w3.org/2000/svg"
               width="25"
@@ -338,7 +339,7 @@
                 stroke-linejoin="round" />
             </svg>
           </a>
-          <a href="/help/publications"
+          <a href="/help/publications" class="text-large"
             >Literature citations<svg
               xmlns="http://www.w3.org/2000/svg"
               width="25"
@@ -355,7 +356,7 @@
           </a>
         </nav>
         <nav class="learn-nav">
-          <a href="/packages/release/BiocViews.html#___Workflow"
+          <a href="/packages/release/BiocViews.html#___Workflow" class="text-large"
             >Common workflows<svg
               xmlns="http://www.w3.org/2000/svg"
               width="25"
@@ -370,7 +371,7 @@
                 stroke-linejoin="round" />
             </svg>
           </a>
-          <a href="/help/faq"
+          <a href="/help/faq" class="text-large"
             >FAQ<svg
               xmlns="http://www.w3.org/2000/svg"
               width="25"
@@ -385,7 +386,7 @@
                 stroke-linejoin="round" />
             </svg>
           </a>
-          <a href="/help/community/"
+          <a href="/help/community/" class="text-large"
             >Community resources<svg
               xmlns="http://www.w3.org/2000/svg"
               width="25"
@@ -400,7 +401,7 @@
                 stroke-linejoin="round" />
             </svg>
           </a>
-          <a href="https://www.youtube.com/user/bioconductor"
+          <a href="https://www.youtube.com/user/bioconductor" class="text-large"
             >Videos<svg
               xmlns="http://www.w3.org/2000/svg"
               width="25"
@@ -415,7 +416,7 @@
                 stroke-linejoin="round" />
             </svg>
           </a>
-          <a href="https://bioconductor.github.io/biocblog/"
+          <a href="https://bioconductor.github.io/biocblog/" class="text-large"
             >Bioconductor Community Blog<svg
               xmlns="http://www.w3.org/2000/svg"
               width="25"
@@ -561,7 +562,7 @@
                     <div class="join-buttons">
                       <a class="brand-border-button" href="/install/">
                         <span class="span-brand format-bold">
-                          See all Resources
+                          Get started
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="14"
@@ -727,6 +728,109 @@
             </div>
           </div>
         </div>
+
+        <div class="event-card-container">
+          <div class="event-card">
+            <p class="format-bold">
+              ISMB/ECCB 2023 tutorial: Orchestrating Large-Scale Single-Cell
+              Analysis with Bioconductor
+            </p>
+            <div class="event-date-location">
+              <span>
+                <time class="text-small" datetime="2023-07-23"
+                  >23 July 2023</time
+                >
+              </span>
+              <p class="text-small">Lyon, France</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="event-card-container">
+          <div class="event-card">
+            <p class="format-bold">
+              ISMB/ECCB 2023 tutorial: Orchestrating Large-Scale Single-Cell
+              Analysis with Bioconductor
+            </p>
+            <div class="event-date-location">
+              <span>
+                <time class="text-small" datetime="2023-07-23"
+                  >23 July 2023</time
+                >
+              </span>
+              <p class="text-small">Lyon, France</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="event-card-container">
+          <div class="event-card">
+            <p class="format-bold">
+              ISMB/ECCB 2023 tutorial: Orchestrating Large-Scale Single-Cell
+              Analysis with Bioconductor
+            </p>
+            <div class="event-date-location">
+              <span>
+                <time class="text-small" datetime="2023-07-23"
+                  >23 July 2023</time
+                >
+              </span>
+              <p class="text-small">Lyon, France</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="event-card-container">
+          <div class="event-card">
+            <p class="format-bold">
+              ISMB/ECCB 2023 tutorial: Orchestrating Large-Scale Single-Cell
+              Analysis with Bioconductor
+            </p>
+            <div class="event-date-location">
+              <span>
+                <time class="text-small" datetime="2023-07-23"
+                  >23 July 2023</time
+                >
+              </span>
+              <p class="text-small">Lyon, France</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="event-card-container">
+          <div class="event-card">
+            <p class="format-bold">
+              ISMB/ECCB 2023 tutorial: Orchestrating Large-Scale Single-Cell
+              Analysis with Bioconductor
+            </p>
+            <div class="event-date-location">
+              <span>
+                <time class="text-small" datetime="2023-07-23"
+                  >23 July 2023</time
+                >
+              </span>
+              <p class="text-small">Lyon, France</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="event-card-container">
+          <div class="event-card">
+            <p class="format-bold">
+              ISMB/ECCB 2023 tutorial: Orchestrating Large-Scale Single-Cell
+              Analysis with Bioconductor
+            </p>
+            <div class="event-date-location">
+              <span>
+                <time class="text-small" datetime="2023-07-23"
+                  >23 July 2023</time
+                >
+              </span>
+              <p class="text-small">Lyon, France</p>
+            </div>
+          </div>
+        </div>
+        
       </div>
     </section>
 

@@ -8,7 +8,7 @@ footer {
   border-width: 0.625rem 0 0; /* 10px */
   border-image: var(--gradient-brandreverse) 1;
   color: #fff;
-  font-size: 0.7rem;
+  font-size: 1rem;
   height: auto;
   box-sizing: border-box;
 }
@@ -26,6 +26,7 @@ footer * {
 .link-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  margin-bottom: 4.5rem;
 }
 
 .link-container-inner {

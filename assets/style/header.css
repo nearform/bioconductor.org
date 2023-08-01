@@ -70,7 +70,7 @@ header {
   outline: none;
   background-color: transparent;
   padding-left: 0.25rem;
-  padding-top: 3px;
+  padding-top: 5px;
 }
 
 input::placeholder {
