@@ -22,39 +22,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   window.addEventListener("scroll", () => {
     setCurrentHeading(sidebarContentLinks, findCurrentHeadingId(headings));
-    checkScrollPosition();
   });
 });
-
-function checkScrollPosition() {
-  const leftCol = document.querySelector(".left-col");
-  const sidebarContent = document.querySelector(".left-col-inner");
-  const footer = document.querySelector("footer");
-  const header = document.querySelector("header");
-  const headerHeight = header.offsetHeight;
-  const footerOffsetTop = footer.offsetTop;
-  const footerHeight = footer.offsetHeight;
-  const windowHeight = window.innerHeight;
-  const scrollPosition = window.scrollY;
-
-  if (
-    scrollPosition >= leftCol.offsetTop - headerHeight &&
-    scrollPosition <= leftCol.offsetHeight - footerHeight
-  ) {
-    sidebarContent.style.position = "fixed";
-
-    if (scrollPosition + windowHeight >= footerOffsetTop) {
-      leftCol.style.justifyContent = "flex-end";
-      sidebarContent.style.position = "static";
-      sidebarContent.style.top = "auto";
-    } else {
-      leftCol.style.justifyContent = "flex-start";
-    }
-  } else {
-    sidebarContent.style.position = "static";
-    sidebarContent.style.top = "auto";
-  }
-}
 
 function findCurrentHeadingId(headings) {
   for (const heading of headings) {
@@ -64,7 +33,6 @@ function findCurrentHeadingId(headings) {
         bounding.top >= addedTopBounding &&
         bounding.bottom <= window.innerHeight
       ) {
-        console.log(heading.id, bounding.top);
         return heading.id;
       }
     }

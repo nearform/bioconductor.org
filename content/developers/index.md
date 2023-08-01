@@ -6,7 +6,7 @@ at different stages of their package.
 <div style="width:100%;float:left;">
   <div class="sidebar-box">
     <img src="/images/inv.gif" align="right" height="200" width="1" alt=""/>
-    <p class="sidebar-box-header">Contributing Packages</p>
+    <p class="format-bold">Contributing Packages</p>
 
     <p>Design and Submission</p>
 
@@ -37,7 +37,7 @@ at different stages of their package.
   
   <div class="sidebar-box">
     <img src="/images/inv.gif" align="right" height="20" width="1" alt=""/>
-    <p class="sidebar-box-header">Community</p>
+    <p class="format-bold">Community</p>
     
     <ul>
       <li><a class="symlink" href="/developers/developers-forum/">Developers' Forum</a></li>
