@@ -572,7 +572,7 @@ hr {
     height: auto;
     display: flex;
     flex-direction: column;
-    padding: 2rem 2rem 1.3rem 2rem;
+    padding: 2rem 2rem 1.3rem;
   }
 
   .tab-label {
