@@ -110,6 +110,10 @@
 
     /* stylelint-disable-next-line value-no-vendor-prefix */
     width: -webkit-fill-available;
-    gap: 1rem;
+    gap: 1.5rem;
+  }
+
+  .code-install {
+    margin-top: 0;
   }
 }
