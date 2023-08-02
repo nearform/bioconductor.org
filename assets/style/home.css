@@ -35,13 +35,13 @@
 }
 
 /* checked tab */
-.tab-radio:checked+.tab-label {
+.tab-radio:checked + .tab-label {
   border: 1px solid;
   border-color: var(--secondary-s75);
   background: var(--secondary-s50);
 }
 
-.tab-radio:checked+.tab-label+.tab-content {
+.tab-radio:checked + .tab-label + .tab-content {
   display: block;
 }
 
@@ -479,7 +479,7 @@
   transition: 0.3s;
 }
 
-.tabs-join-radio:checked+.join-row {
+.tabs-join-radio:checked + .join-row {
   display: flex;
   justify-content: space-between;
 }
@@ -569,6 +569,10 @@ hr {
     display: flex;
     flex-direction: column;
     padding: 1rem;
+  }
+
+  .tab-label {
+    padding: 0.75rem 0.8rem;
   }
 
   .dev-navs {
