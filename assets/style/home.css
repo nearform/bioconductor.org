@@ -308,14 +308,13 @@
   margin-bottom: 1.5rem;
   width: 100vw;
   -ms-overflow-style: none;
+
   /* disable scrollbar for IE and Edge */
   scrollbar-width: none;
-  /* disable scrollbar for Firefox */
 }
 
 .events-container::-webkit-scrollbar {
   display: none;
-  /* disable scrollbar for chrome */
 }
 
 .event-card-container {
@@ -558,7 +557,6 @@ hr {
 }
 
 @media (width <=768px) {
-
   .doodle-developer-container img,
   .doodle-data-scientist-container img {
     display: none;
