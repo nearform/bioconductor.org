@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const headerHeight = header.offsetHeight;
 
   sidebarToggle.addEventListener("click", () => {
-    console.log(sidebarContent);
     toggleNavMenu(sidebarContent);
   });
 
