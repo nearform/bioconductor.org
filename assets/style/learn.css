@@ -141,6 +141,18 @@
 }
 
 @media (width <= 768px) {
+  .learn-container {
+    padding: 1rem;
+  }
+
+  .learn-container * {
+    font-size: 1rem;
+  }
+
+  .learn-container * a {
+    max-width: 16rem;
+  }
+
   .learn-content-upper,
   .publications-releases-faq {
     flex-direction: column;
@@ -148,5 +160,18 @@
 
   .learn-intro {
     width: 100%;
+  }
+
+  .learn-content-upper,
+  .publications-releases-faq {
+    gap: 0;
+  }
+
+  .learn-chip {
+    border-radius: 4px;
+  }
+
+  .learn-chevron {
+    display: none;
   }
 }
