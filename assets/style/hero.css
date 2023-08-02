@@ -35,8 +35,21 @@ a.button-hero {
   text-decoration: none;
 }
 
+.mobile-break {
+  display: none;
+}
+
 @media screen and (width <= 768px) {
+  .homepage-container {
+    padding: 1rem 0.5rem;
+  }
+
+  .mobile-break {
+    display: block;
+  }
+
   .hero p {
-    font-size: 1rem;
+    margin: 0;
+    margin-bottom: 1rem;
   }
 }
