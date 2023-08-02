@@ -6,6 +6,7 @@
   prefix="og: http://ogp.me/ns#"
 >
   <%= render("/_sitehead/") %>
+  <%= render("/components/sitescripts/") %>
   <body>
     <%= render("/components/header/") %>
     <%= render("/_nav/", :section_navigation => has_subnav?(@item) && subnav_items(@item).length > 0) %>
@@ -51,6 +52,5 @@
     </main>
 
     <%= render("/components/footer/") %>
-    <%= render("/components/sitescripts/") %>
   </body>
 </html>
