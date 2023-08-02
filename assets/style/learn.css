@@ -50,10 +50,16 @@
   width: 100%;
 }
 
+.learn-links > section > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
 .learn-links > section li {
   border-radius: 8px;
   border: 1px solid;
   border-color: var(--primary-p75);
-  width: 100%;
   padding: 1rem;
+  margin-bottom: 0;
 }
