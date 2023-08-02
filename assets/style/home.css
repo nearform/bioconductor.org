@@ -83,6 +83,13 @@
   color: black;
 }
 
+.data-scientist-rest-row {
+  display: flex;
+  flex-direction: row;
+  gap: 0.7rem;
+  align-items: center;
+}
+
 .left-doodle {
   margin-left: auto;
   margin-right: 18px;
@@ -153,7 +160,7 @@
 .data-scientist-rest {
   display: flex;
   flex-direction: column;
-  padding: 1rem 1rem 0.6rem;
+  padding: 1rem 0.7rem 0.6rem;
 }
 
 .user-quote {
@@ -286,6 +293,10 @@
   font-size: 1.1rem;
   font-weight: 700;
   line-height: 130%;
+}
+
+.mobile-text-block {
+  display: none;
 }
 
 .events {
@@ -572,18 +583,15 @@ hr {
     height: auto;
     display: flex;
     flex-direction: column;
-    padding: 2rem 2rem 1.3rem 2rem;
+    padding: 1rem;
+  }
+
+  .tab-content {
+    margin-bottom: 0;
   }
 
   .tab-label {
     padding: 0.75rem 0.8rem;
-  }
-
-  .data-scientist-rest-row {
-    display: flex;
-    flex-direction: row;
-    gap: 0.7rem;
-    align-items: center;
   }
 
   .data-scientist-content p {
@@ -616,9 +624,30 @@ hr {
     display: none;
   }
 
+  .mobile-text-block {
+    background-image: var(--gradient-purpleblue);
+    width: calc(100% - 4rem);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 0.63rem;
+    border-radius: 0.25rem;
+  }
+
+  .mobile-text-block p {
+    text-align: left;
+  }
+
+  .mobile-text-block .data-dev-logo {
+    display: flex;
+    align-items: center;
+  }
+
   .learn-block {
     display: flex;
     flex-direction: column;
+    padding: 1.5rem;
   }
 
   .learn-content {
@@ -626,8 +655,14 @@ hr {
     flex-direction: column;
   }
 
+  .info p {
+    padding-bottom: 0;
+  }
+
   .button-padding {
     width: 60%;
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
   }
 
   .events-header {
