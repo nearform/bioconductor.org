@@ -20,6 +20,8 @@
   padding-bottom: 0.62rem;
 }
 
+/* disabled here due to a linting error, but we need the webkit marker for this to work */
+
 /* stylelint-disable */
 .about-join .text-gradient {
   background: var(--misc-pink);
