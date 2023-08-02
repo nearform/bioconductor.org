@@ -1,6 +1,7 @@
 .data-scientist-and-developer-info {
   display: flex;
   flex-wrap: wrap;
+  width: fit-content;
 }
 
 .tab-radio {
@@ -47,8 +48,7 @@
 
 .doodle-data-scientist-container {
   display: flex;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin: 1rem 0.2rem 1rem 0.4rem;
 }
 
 .brand-gradient-border {
@@ -202,6 +202,8 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  margin-left: 1.4rem;
+  margin-right: 1.4rem;
 }
 
 .developer-content {
@@ -558,7 +560,9 @@ hr {
 
 @media (width <=768px) {
   .doodle-developer-container img,
-  .doodle-data-scientist-container img {
+  .left-doodle img,
+  .right-doodle img,
+  .user-quote img {
     display: none;
   }
 
@@ -568,11 +572,22 @@ hr {
     height: auto;
     display: flex;
     flex-direction: column;
-    padding: 1rem;
+    padding: 2rem 2rem 1.3rem 2rem;
   }
 
   .tab-label {
     padding: 0.75rem 0.8rem;
+  }
+
+  .data-scientist-rest-row {
+    display: flex;
+    flex-direction: row;
+    gap: 0.7rem;
+    align-items: center;
+  }
+
+  .data-scientist-content p {
+    font-size: 1rem;
   }
 
   .dev-navs {
@@ -580,8 +595,21 @@ hr {
     flex-direction: column;
   }
 
-  .dev-quote p {
+  .dev-quote p,
+  .user-quote p {
     font-size: 0.8125rem;
+  }
+
+  .user-quote p {
+    margin-top: 0;
+  }
+
+  .user-quote p:last-child {
+    margin-top: 0.5rem;
+  }
+
+  .dev-quote p:last-child {
+    font-weight: 400;
   }
 
   .data-dev-chip {
@@ -625,8 +653,8 @@ hr {
   }
 
   .join-buttons {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 }
 

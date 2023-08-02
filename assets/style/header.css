@@ -224,6 +224,7 @@ input:focus::placeholder {
     width: 100%;
     border-radius: 0%;
     align-items: center;
+    padding: 1.5rem 0;
   }
 
   .get-started {
