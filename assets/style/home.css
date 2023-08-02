@@ -35,13 +35,13 @@
 }
 
 /* checked tab */
-.tab-radio:checked + .tab-label {
+.tab-radio:checked+.tab-label {
   border: 1px solid;
   border-color: var(--secondary-s75);
   background: var(--secondary-s50);
 }
 
-.tab-radio:checked + .tab-label + .tab-content {
+.tab-radio:checked+.tab-label+.tab-content {
   display: block;
 }
 
@@ -294,7 +294,6 @@
   display: flex;
   width: 100%;
   justify-content: space-between;
-  margin-right: 6.25rem;
   margin-bottom: 1rem;
 }
 
@@ -308,12 +307,15 @@
   gap: 1.56rem;
   margin-bottom: 1.5rem;
   width: 100vw;
-  -ms-overflow-style: none; /* disable scrollbar for IE and Edge */
-  scrollbar-width: none; /* disable scrollbar for Firefox */
+  -ms-overflow-style: none;
+  /* disable scrollbar for IE and Edge */
+  scrollbar-width: none;
+  /* disable scrollbar for Firefox */
 }
 
 .events-container::-webkit-scrollbar {
-  display: none; /* disable scrollbar for chrome */
+  display: none;
+  /* disable scrollbar for chrome */
 }
 
 .event-card-container {
@@ -478,7 +480,7 @@
   transition: 0.3s;
 }
 
-.tabs-join-radio:checked + .join-row {
+.tabs-join-radio:checked+.join-row {
   display: flex;
   justify-content: space-between;
 }
@@ -555,7 +557,8 @@ hr {
   border-top: 0.13rem solid var(--secondary-s75);
 }
 
-@media (width <= 768px) {
+@media (width <=768px) {
+
   .doodle-developer-container img,
   .doodle-data-scientist-container img {
     display: none;
