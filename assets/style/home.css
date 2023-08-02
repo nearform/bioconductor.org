@@ -612,6 +612,14 @@ hr {
     margin-top: 0;
   }
 
+  .mobile-text-block p {
+    text-align: left;
+  }
+
+  .info p {
+    padding-bottom: 0;
+  }
+
   .user-quote p:last-child {
     margin-top: 0.5rem;
   }
@@ -635,10 +643,6 @@ hr {
     border-radius: 0.25rem;
   }
 
-  .mobile-text-block p {
-    text-align: left;
-  }
-
   .mobile-text-block .data-dev-logo {
     display: flex;
     align-items: center;
@@ -653,10 +657,6 @@ hr {
   .learn-content {
     display: flex;
     flex-direction: column;
-  }
-
-  .info p {
-    padding-bottom: 0;
   }
 
   .button-padding {
