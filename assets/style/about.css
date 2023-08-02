@@ -20,8 +20,10 @@
   padding-bottom: 0.62rem;
 }
 
+/* stylelint-disable */
 .about-join .text-gradient {
   background: var(--misc-pink);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+/* stylelint-enable */
