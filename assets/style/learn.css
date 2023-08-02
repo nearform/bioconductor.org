@@ -1,0 +1,59 @@
+.learn-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+  border: 1px solid #0000;
+  border-radius: 4px;
+  background: linear-gradient(white, white) padding-box,
+    var(--gradient-brand) border-box;
+}
+
+.learn-container > div {
+  display: flex;
+}
+
+.learn-content-upper {
+  padding: 0;
+  gap: 56px;
+}
+
+.learn-content-lower {
+  padding: 8px 0px 24px 0px;
+}
+
+.learn-container hr {
+  width: 100%;
+  height: 1px;
+  background: var(--primary-p75);
+  border: none;
+}
+
+.learn-container li::before {
+  all: unset;
+}
+
+.learn-intro {
+  width: 24.188rem;
+  height: 100%;
+}
+
+.learn-links {
+  padding: 8px 0px 24px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1 0 0;
+}
+
+.learn-links > section {
+  width: 100%;
+}
+
+.learn-links > section li {
+  border-radius: 8px;
+  border: 1px solid;
+  border-color: var(--primary-p75);
+  width: 100%;
+  padding: 1rem;
+}
