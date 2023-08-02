@@ -19,6 +19,7 @@
 }
 
 .learn-container hr {
+  position: static;
   width: 100%;
   height: 1px;
   background: var(--primary-p75);
