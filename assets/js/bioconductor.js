@@ -79,33 +79,37 @@ changeBackgroundColors();
 window.addEventListener("hashchange", changeBackgroundColors);
 
 //Allow the cursor to drag and scroll the events
-const slider = document.querySelector(".events-container");
-let isDown = false;
-let startX;
-let scrollLeft;
+function enableDragScroll() {
+  const slider = document.querySelector(".events-container");
+  let isDown = false;
+  let startX;
+  let scrollLeft;
 
-slider.addEventListener("mousedown", (e) => {
-  isDown = true;
-  slider.classList.add("active");
-  startX = e.pageX - slider.offsetLeft;
-  scrollLeft = slider.scrollLeft;
-});
+  slider.addEventListener("mousedown", (e) => {
+    isDown = true;
+    slider.classList.add("active");
+    startX = e.pageX - slider.offsetLeft;
+    scrollLeft = slider.scrollLeft;
+  });
 
-function handleMouseUpAndLeave() {
-  isDown = false;
-  slider.classList.remove("active");
+  function handleMouseUpAndLeave() {
+    isDown = false;
+    slider.classList.remove("active");
+  }
+
+  slider.addEventListener("mouseup", handleMouseUpAndLeave);
+  slider.addEventListener("mouseleave", handleMouseUpAndLeave);
+
+  slider.addEventListener("mousemove", (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - slider.offsetLeft;
+    const scrollSpeed = x - startX;
+    slider.scrollLeft = scrollLeft - scrollSpeed;
+  });
 }
 
-slider.addEventListener("mouseup", handleMouseUpAndLeave);
-slider.addEventListener("mouseleave", handleMouseUpAndLeave);
-
-slider.addEventListener("mousemove", (e) => {
-  if (!isDown) return;
-  e.preventDefault();
-  const x = e.pageX - slider.offsetLeft;
-  const scrollSpeed = x - startX;
-  slider.scrollLeft = scrollLeft - scrollSpeed;
-});
+window.addEventListener("load", enableDragScroll);
 
 function log(message) {
   if (fb_lite) {
