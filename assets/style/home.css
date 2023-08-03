@@ -377,8 +377,6 @@
 .news,
 .packages,
 .about-bioconductor {
-  max-width: 24rem;
-  min-width: 24rem;
   padding: 2rem;
   border-radius: 0.5rem;
   background-color: white;
