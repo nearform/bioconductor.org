@@ -16,7 +16,7 @@ main {
   max-width: 1400px;
 }
 
-main>.container.main-subnav {
+main > .container.main-subnav {
   display: grid;
   gap: 2rem;
   grid-template-columns: 300px 1fr;
@@ -28,8 +28,14 @@ img {
 }
 
 @media (width <=768px) {
-  main>.container.main-subnav {
+  main > .container.main-subnav {
     display: block;
+  }
+
+  main > .container.main-subnav > .content {
+    position: relative;
+    top: 4rem;
+    z-index: -1;
   }
 }
 

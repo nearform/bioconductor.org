@@ -6,7 +6,9 @@
   flex-direction: column;
   gap: 1rem;
 }
-
+.mobile-chevron {
+  display: none;
+}
 nav.subnav {
   border-radius: 0.5rem;
   border: 1px solid var(--primary-p75);
@@ -144,16 +146,34 @@ nav.subnav a {
   .left-col {
     display: block;
     position: fixed;
-    top: 11rem;
-    height: 2rem;
+    top: 12rem;
+    height: 3rem;
     overflow: hidden;
     transition: 0.3s;
-    border: 2px solid #0000;
+    border: 1.5px solid #0000;
     border-radius: 8px;
     background: linear-gradient(white, white) padding-box,
       var(--gradient-brand) border-box;
-    width: calc(100vw - 3rem);
-    padding: 8px;
+    width: calc(100vw - 4rem);
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .mobile-chevron {
+    display: block;
+    width: 24px;
+    height: 24px;
+  }
+
+  .sidebar-header {
+    display: flex;
+    padding: 0.5rem;
+    padding-top: 0.3rem;
+    justify-content: space-between;
+  }
+
+  .sidebar-header p {
+    margin: 0 0 0;
   }
 
   .left-col-inner {
