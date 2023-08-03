@@ -5,6 +5,7 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  z-index: 1;
 }
 .mobile-chevron {
   display: none;
@@ -111,6 +112,12 @@ nav.subnav a {
   color: #070707;
 }
 
+.sidebar-box nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
 .sidebar-box nav div {
   border-radius: 4px;
   display: flex;
@@ -134,6 +141,10 @@ nav.subnav a {
 }
 
 @media (width <=768px) {
+  .left-col {
+    margin-top: 4rem;
+  }
+
   .sidebar-nav {
     border: none;
     background: none;
@@ -141,22 +152,6 @@ nav.subnav a {
 
   .sidebar-nav p {
     margin-bottom: 0px;
-  }
-
-  .left-col {
-    display: block;
-    position: fixed;
-    top: 12rem;
-    height: 3rem;
-    overflow: hidden;
-    transition: 0.3s;
-    border: 1.5px solid #0000;
-    border-radius: 8px;
-    background: linear-gradient(white, white) padding-box,
-      var(--gradient-brand) border-box;
-    width: calc(100vw - 4rem);
-    padding-left: 8px;
-    padding-right: 8px;
   }
 
   .mobile-chevron {
@@ -176,11 +171,23 @@ nav.subnav a {
     margin: 0 0 0;
   }
 
-  .left-col-inner {
-    background-color: white;
+  .sidebar-nav {
+    display: block;
+    position: fixed;
+    top: calc(100vw - 14rem);
+    height: 1.7rem;
+    overflow: hidden;
+    transition: 0.3s;
+    border: 1.5px solid #0000;
+    border-radius: 8px;
+    width: calc(100vw - 4rem);
+    padding-left: 8px;
+    padding-right: 8px;
+    background: linear-gradient(white, white) padding-box,
+      var(--gradient-brand) border-box;
   }
 
-  .left-col.open {
-    height: calc(100% - 11rem);
+  .sidebar-nav.open {
+    height: calc(100% - 36.5rem);
   }
 }

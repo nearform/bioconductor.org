@@ -28,7 +28,8 @@ img {
 
 @media (width <=768px) {
   main > .container.main-subnav {
-    display: block;
+    display: flex;
+    flex-direction: column-reverse;
   }
 
   main > .container.main-subnav > .content {

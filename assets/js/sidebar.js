@@ -1,7 +1,6 @@
 const addedTopBounding = 80;
 document.addEventListener("DOMContentLoaded", function () {
-  const sidebarContent = document.querySelector(".internal-nav");
-  const sidebarToggle = document.querySelector(".left-col");
+  const sidebarToggle = document.querySelector(".sidebar-nav");
 
   const sidebarContentLinks = document.querySelectorAll(".internal-nav a");
   const headings = document.querySelectorAll("h1, h2, h3, h4, h5, h6");
