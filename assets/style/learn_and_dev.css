@@ -49,19 +49,31 @@
   gap: 1rem;
 }
 
-.bottom-chip * {
-  color: white;
+.bottom-chip {
+  background-image: url("/images/icons/svgs/chevron-right-purple-chip.svg"),
+    var(--gradient-purpleblue);
+  background-repeat: no-repeat, no-repeat;
+  background-position: 99% 50%, 0 0;
+  padding: 0.75rem 1rem;
+  border-radius: 4rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  text-align: start;
+  color: #fff;
 }
 
-.bottom-chip-logo a {
-  text-align: center;
-  margin-bottom: 2px;
-  padding-top: 0.25rem;
-}
-.bottom-chip-logo {
-  text-align: center;
+.bottom-chip p {
   margin-bottom: 0;
-  padding-top: 0.25rem;
+}
+
+.bottom-chip mark {
+  background-color: inherit;
+  color: #fff;
+}
+
+.bottom-chip-logo {
+  margin-right: 10px;
 }
 
 .upper-content > section,
@@ -118,17 +130,6 @@
   display: block;
 }
 
-.bottom-chip {
-  background: var(--gradient-purpleblue);
-  padding: 0.75rem 1rem;
-  border-radius: 4rem;
-  text-decoration: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: auto;
-}
-
 .learn-chevron {
   width: 1.5rem;
   height: 1.5rem;
@@ -182,6 +183,7 @@
 
   .bottom-chip {
     border-radius: 4px;
+    background-image: var(--gradient-purpleblue);
   }
 
   .learn-chevron {
