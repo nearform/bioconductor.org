@@ -24,8 +24,6 @@ nav.subnav a {
 }
 
 .left-col-inner {
-  max-width: 284px;
-  min-width: 284px;
   position: sticky;
   top: 10rem;
   display: flex;
@@ -61,6 +59,7 @@ nav.subnav a {
   padding-bottom: 1rem;
   margin-bottom: 0;
   border-bottom: 1px solid var(--primary-p50);
+
 }
 
 .sidebar-nav-button {
@@ -134,33 +133,33 @@ nav.subnav a {
 }
 
 @media (width <=768px) {
-  .left-col-inner {
-    position: fixed;
-    top: 11rem;
+  .sidebar-nav {
+    border: none;
+    background: none;
   }
 
   .sidebar-nav p {
     margin-bottom: 0px;
   }
 
-  .internal-nav {
-    display: none;
-  }
-
-  .open {
-    transition: 0.3s;
-    display: block;
-  }
-
   .left-col {
     display: block;
     position: fixed;
     top: 11rem;
-    background-color: white;
-    height: auto;
+    height: 2rem;
+    overflow: hidden;
+    transition: 0.3s;
+    background: var(--gradient-brandreverse);
+    width: calc(100vw - 3rem);
+    padding: 1px;
+    border-radius: 3px;
   }
 
   .left-col-inner {
-    display: block;
+    background-color: white;
+  }
+
+  .left-col.open {
+    height: calc(100% - 11rem);
   }
 }

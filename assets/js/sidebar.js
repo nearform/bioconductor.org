@@ -1,7 +1,7 @@
 const addedTopBounding = 80;
 document.addEventListener("DOMContentLoaded", function () {
   const sidebarContent = document.querySelector(".internal-nav");
-  const sidebarToggle = document.querySelector(".sidebar-nav");
+  const sidebarToggle = document.querySelector(".left-col");
 
   const sidebarContentLinks = document.querySelectorAll(".internal-nav a");
   const headings = document.querySelectorAll("h1, h2, h3, h4, h5, h6");
@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const headerHeight = header.offsetHeight;
 
   sidebarToggle.addEventListener("click", () => {
-    toggleNavMenu(sidebarContent);
+    toggleNavMenu(sidebarToggle);
   });
 
   sidebarContentLinks.forEach((link) => {
