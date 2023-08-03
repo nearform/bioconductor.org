@@ -157,8 +157,8 @@ nav.subnav a {
 
   .mobile-chevron {
     display: block;
-    width: 1.5px;
-    height: 1.5px;
+    width: 1.5rem;
+    height: 1.5rem;
   }
 
   .sidebar-header {
