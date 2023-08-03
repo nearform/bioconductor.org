@@ -36,6 +36,12 @@ nav.subnav a {
   gap: 1rem;
 }
 
+.sidebar-nav-container {
+  width: 100%;
+  padding: 8px;
+  background-color: white;
+}
+
 .sidebar-nav {
   transition: 0.3s;
   width: 100%;
@@ -145,19 +151,14 @@ nav.subnav a {
     margin-top: 4rem;
   }
 
-  .sidebar-nav {
-    border: none;
-    background: none;
-  }
-
   .sidebar-nav p {
     margin-bottom: 0px;
   }
 
   .mobile-chevron {
     display: block;
-    width: 24px;
-    height: 24px;
+    width: 1.5px;
+    height: 1.5px;
   }
 
   .sidebar-header {
@@ -171,10 +172,17 @@ nav.subnav a {
     margin: 0 0 0;
   }
 
-  .sidebar-nav {
+  .sidebar-nav-container {
     display: block;
     position: fixed;
-    top: calc(100vw - 14rem);
+    top: 10rem;
+    height: 9rem;
+    width: -webkit-fill-available;
+  }
+
+  .sidebar-nav {
+    margin-top: 1rem;
+    margin-left: 0.5rem;
     height: 1.7rem;
     overflow: hidden;
     transition: 0.3s;
@@ -188,6 +196,6 @@ nav.subnav a {
   }
 
   .sidebar-nav.open {
-    height: calc(100% - 36.5rem);
+    height: calc(100% + 19rem);
   }
 }
