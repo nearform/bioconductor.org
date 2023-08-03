@@ -16,49 +16,20 @@ main {
   max-width: 1400px;
 }
 
-main > .container.main-subnav {
+main>.container.main-subnav {
   display: grid;
   gap: 2rem;
   grid-template-columns: 300px 1fr;
   grid-template-areas: "left-col .";
 }
 
-.left-col {
-  height: 100%;
-  position: relative;
-  grid-area: left-col;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-nav.subnav {
-  border-radius: 0.5rem;
-  border: 1px solid var(--primary-p75);
-  padding: 0.5rem;
-}
-
-nav.subnav a {
-  text-decoration: underline;
-  display: block;
-  padding: 0.75rem 2rem 0.75rem 0.75rem;
-  background-image: url("/images/icons/svgs/chevron-right-n400.svg");
-  background-repeat: no-repeat;
-  background-position: right center;
-  color: black;
-}
-
 img {
   max-width: 100%;
 }
 
-@media (width <= 768px) {
-  main > .container.main-subnav {
+@media (width <=768px) {
+  main>.container.main-subnav {
     display: block;
-  }
-
-  .left-col {
-    display: none;
   }
 }
 

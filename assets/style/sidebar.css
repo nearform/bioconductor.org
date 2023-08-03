@@ -1,3 +1,28 @@
+.left-col {
+  height: 100%;
+  position: relative;
+  grid-area: left-col;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+nav.subnav {
+  border-radius: 0.5rem;
+  border: 1px solid var(--primary-p75);
+  padding: 0.5rem;
+}
+
+nav.subnav a {
+  text-decoration: underline;
+  display: block;
+  padding: 0.75rem 2rem 0.75rem 0.75rem;
+  background-image: url("/images/icons/svgs/chevron-right-n400.svg");
+  background-repeat: no-repeat;
+  background-position: right center;
+  color: black;
+}
+
 .left-col-inner {
   max-width: 284px;
   min-width: 284px;
@@ -102,13 +127,13 @@
   padding: 1.25rem 0.5rem 1rem 0.75rem;
 }
 
-.bottom-note > p {
+.bottom-note>p {
   border-left: 0.1875rem solid var(--primary-p-300, #3792ad);
   padding-left: 0.75rem;
   padding-right: 0.75rem;
 }
 
-@media (width <= 768px) {
+@media (width <=768px) {
   .left-col-inner {
     position: fixed;
     top: 11rem;
@@ -124,6 +149,18 @@
 
   .open {
     transition: 0.3s;
+    display: block;
+  }
+
+  .left-col {
+    display: block;
+    position: fixed;
+    top: 11rem;
+    background-color: white;
+    height: auto;
+  }
+
+  .left-col-inner {
     display: block;
   }
 }
