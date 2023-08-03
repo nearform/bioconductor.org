@@ -59,7 +59,6 @@ nav.subnav a {
   padding-bottom: 1rem;
   margin-bottom: 0;
   border-bottom: 1px solid var(--primary-p50);
-
 }
 
 .sidebar-nav-button {
@@ -126,7 +125,7 @@ nav.subnav a {
   padding: 1.25rem 0.5rem 1rem 0.75rem;
 }
 
-.bottom-note>p {
+.bottom-note > p {
   border-left: 0.1875rem solid var(--primary-p-300, #3792ad);
   padding-left: 0.75rem;
   padding-right: 0.75rem;
@@ -149,10 +148,12 @@ nav.subnav a {
     height: 2rem;
     overflow: hidden;
     transition: 0.3s;
-    background: var(--gradient-brandreverse);
+    border: 2px solid #0000;
+    border-radius: 8px;
+    background: linear-gradient(white, white) padding-box,
+      var(--gradient-brand) border-box;
     width: calc(100vw - 3rem);
-    padding: 1px;
-    border-radius: 3px;
+    padding: 8px;
   }
 
   .left-col-inner {
