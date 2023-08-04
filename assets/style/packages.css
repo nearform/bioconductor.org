@@ -77,3 +77,13 @@ summary.package-details {
   border: 2px solid var(--neutral-n50);
   border-radius: 0.5rem;
 }
+
+#badges-box section, #badges-box p {
+  margin-left: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+#badges-box p {
+  border-left: 0.19rem solid var(--primary);
+  padding-left: 0.75rem;
+}
