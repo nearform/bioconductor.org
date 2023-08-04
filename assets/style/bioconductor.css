@@ -16,7 +16,7 @@ main > .container.main-subnav {
   gap: 2rem;
   grid-template-columns: 300px 1fr;
   grid-template-areas: "left-col .";
-  margin: 2rem 0;
+  margin-top: 2rem;
 }
 
 img {
