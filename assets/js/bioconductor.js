@@ -63,13 +63,15 @@ function changeBackgroundColors() {
   const heroElement = document.querySelector(".hero");
   const installPageRegex = /\/install\//;
   const aboutPageRegex = /\/about\//;
+  const packagePageRegex = /\/packages\/release\//;
 
   if (installPageRegex.test(window.location.href)) {
     document.body.style.backgroundColor = "#fff";
     heroElement.style.backgroundColor = "var(--neutral-n50)";
-  }
-
-  if (aboutPageRegex.test(window.location.href)) {
+  } else if (
+    aboutPageRegex.test(window.location.href) ||
+    packagePageRegex.test(window.location.href)
+  ) {
     document.body.style.backgroundColor = "#fff";
   }
 }
@@ -85,31 +87,30 @@ function enableDragScroll() {
   let startX;
   let scrollLeft;
 
-  if(slider){
+  if (slider) {
+    slider.addEventListener("mousedown", (e) => {
+      isDown = true;
+      slider.classList.add("active");
+      startX = e.pageX - slider.offsetLeft;
+      scrollLeft = slider.scrollLeft;
+    });
 
-  slider.addEventListener("mousedown", (e) => {
-    isDown = true;
-    slider.classList.add("active");
-    startX = e.pageX - slider.offsetLeft;
-    scrollLeft = slider.scrollLeft;
-  });
+    function handleMouseUpAndLeave() {
+      isDown = false;
+      slider.classList.remove("active");
+    }
 
-  function handleMouseUpAndLeave() {
-    isDown = false;
-    slider.classList.remove("active");
+    slider.addEventListener("mouseup", handleMouseUpAndLeave);
+    slider.addEventListener("mouseleave", handleMouseUpAndLeave);
+
+    slider.addEventListener("mousemove", (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - slider.offsetLeft;
+      const scrollSpeed = x - startX;
+      slider.scrollLeft = scrollLeft - scrollSpeed;
+    });
   }
-
-  slider.addEventListener("mouseup", handleMouseUpAndLeave);
-  slider.addEventListener("mouseleave", handleMouseUpAndLeave);
-
-  slider.addEventListener("mousemove", (e) => {
-    if (!isDown) return;
-    e.preventDefault();
-    const x = e.pageX - slider.offsetLeft;
-    const scrollSpeed = x - startX;
-    slider.scrollLeft = scrollLeft - scrollSpeed;
-  });
-}
 }
 
 window.addEventListener("load", enableDragScroll);

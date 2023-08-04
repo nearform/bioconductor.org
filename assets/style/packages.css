@@ -70,8 +70,10 @@ summary.package-details {
   align-items: center;
 }
 
-#biocViews_package_table select {
+#biocViews_package_table_length select {
   background: linear-gradient(white, white) padding-box,
     var(--neutral-n50) border-box;
   padding: 0.5rem 0.65rem 0.5rem 0.5rem;
+  border: 2px solid var(--neutral-n50);
+  border-radius: 0.5rem;
 }
