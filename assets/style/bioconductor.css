@@ -27,6 +27,8 @@ img {
   main > .container.main-subnav {
     display: flex;
     flex-direction: column-reverse;
+    margin-right: auto;
+    margin-left: auto;
   }
 
   main > .container.main-subnav > .content {
