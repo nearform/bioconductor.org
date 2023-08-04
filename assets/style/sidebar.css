@@ -154,6 +154,9 @@ nav.subnav a {
     margin-top: 4rem;
   }
 
+  .left-col-inner {
+    margin-left: 0;
+  }
   .sidebar-nav p {
     margin-bottom: 0px;
   }
