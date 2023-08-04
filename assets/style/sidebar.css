@@ -11,22 +11,6 @@
 .mobile-chevron {
   display: none;
 }
-/* 
-nav.subnav {
-  border-radius: 0.5rem;
-  border: 1px solid var(--primary-p75);
-  padding: 0.5rem;
-}
-
-nav.subnav a {
-  text-decoration: underline;
-  display: block;
-  padding: 0.75rem 2rem 0.75rem 0.75rem;
-  background-image: url("/images/icons/svgs/chevron-right-n400.svg");
-  background-repeat: no-repeat;
-  background-position: right center;
-  color: black;
-} */
 
 .left-col-inner {
   position: sticky;
@@ -150,7 +134,6 @@ nav.subnav a {
 }
 
 @media (width <=768px) {
-
   .left-col-inner {
     margin-left: 0;
   }
