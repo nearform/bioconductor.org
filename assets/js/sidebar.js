@@ -15,7 +15,8 @@ document.addEventListener("DOMContentLoaded", function () {
     );
     contentElement.style.top = "4rem";
   }
-  sidebarToggle.addEventListener("click", () => {
+  
+  sidebarToggle?.addEventListener("click", () => {
     toggleNavMenu(sidebarToggle);
   });
 
