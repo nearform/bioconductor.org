@@ -58,6 +58,26 @@ document.addEventListener("DOMContentLoaded", function () {
   navLink.forEach((n) => n.addEventListener("click", closeMenu));
 });
 
+//package page
+function wrapChildDivs() {
+  const parentElement = document.getElementById(
+    "biocViews_package_table_wrapper"
+  );
+
+  const childDiv1 = document.getElementById("biocViews_package_table_length");
+  const childDiv2 = document.getElementById("biocViews_package_table_filter");
+
+  const newWrapperDiv = document.createElement("div");
+  newWrapperDiv.id = "package-entries-wrapper";
+
+  newWrapperDiv.appendChild(childDiv1);
+  newWrapperDiv.appendChild(childDiv2);
+
+  parentElement.insertBefore(newWrapperDiv, parentElement.firstChild);
+}
+
+window.onload = wrapChildDivs;
+
 function log(message) {
   if (fb_lite) {
     //console.log(message);

@@ -6,15 +6,72 @@ summary.package-details {
   display: block;
   margin: 1rem 0;
   font-weight: 700;
-  background-image: url('/images/icons/svgs/chevron-down.svg');
+  background-image: url("/images/icons/svgs/chevron-down.svg");
   background-repeat: no-repeat;
   background-position: center right;
   cursor: pointer;
 }
 
-
 .badges {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+}
+
+.biocViewsTreeContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.biocViewsPackages {
+  display: flex;
+  flex-direction: column;
+}
+
+.packages-subnav,
+#biocViews_package_table select {
+  padding: 1rem;
+  border: 1px solid #0000;
+  border-radius: 0.5rem;
+}
+
+.packages-subnav {
+  background: linear-gradient(white, white) padding-box,
+    var(--gradient-purpleblue) border-box;
+}
+
+.package-input,
+#biocViews_package_table_filter input {
+  border-radius: 0.25rem;
+  border: 1px solid var(--neutral-n-75, #e7e8ea);
+  margin-top: 0.63rem;
+  height: 2rem;
+  padding: 0 0.5rem;
+}
+
+#biocViews_package_table_info {
+  margin-top: 1rem;
+}
+
+#biocViews_package_table_paginate,
+#package-entries-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+#biocViews_package_table_paginate {
+  margin: 1rem 0 2rem;
+}
+
+#package-entries-wrapper {
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
+#biocViews_package_table select {
+  background: linear-gradient(white, white) padding-box,
+    var(--neutral-n50) border-box;
+  padding: 0.5rem 0.65rem 0.5rem 0.5rem;
 }
