@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
     );
     contentElement.style.top = "4rem";
   }
-  
+
   sidebarToggle?.addEventListener("click", () => {
     toggleNavMenu(sidebarToggle);
   });
@@ -75,6 +75,8 @@ function findSideBarTop() {
   if (window.innerWidth <= 768) {
     const headerHeight = document.querySelector("header").offsetHeight;
     const sidebarContainer = document.querySelector(".sidebar-nav-container");
-    sidebarContainer.style.top = headerHeight + "px";
+    if(sidebarContainer){
+      sidebarContainer.style.top = headerHeight + "px";
+    }
   }
 }
