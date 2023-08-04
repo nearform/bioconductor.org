@@ -109,7 +109,7 @@ nav.subnav a {
 
 .sidebar-box-header {
   display: flex;
-  padding: 8px 8px 16px 8px;
+  padding: 8px 8px 16px;
   flex-direction: column;
   align-items: flex-start;
   gap: 8px;
@@ -157,8 +157,9 @@ nav.subnav a {
   .left-col-inner {
     margin-left: 0;
   }
+
   .sidebar-nav p {
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
 
   .mobile-chevron {
@@ -175,7 +176,7 @@ nav.subnav a {
   }
 
   .sidebar-header p {
-    margin: 0 0 0;
+    margin: 0;
   }
 
   .sidebar-nav-container {
