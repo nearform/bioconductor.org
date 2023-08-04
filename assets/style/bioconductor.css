@@ -31,7 +31,6 @@ img {
 
   main > .container.main-subnav > .content {
     position: relative;
-    top: 4rem;
     z-index: -1;
   }
 }

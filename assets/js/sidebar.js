@@ -8,7 +8,14 @@ document.addEventListener("DOMContentLoaded", function () {
   const headings = document.querySelectorAll("h1, h2, h3, h4, h5, h6");
   const header = document.querySelector("header");
   const headerHeight = header.offsetHeight;
+  const sidebarContainer = document.querySelector(".sidebar-nav-container");
 
+  if (sidebarContainer) {
+    const contentElement = document.querySelector(
+      "main > .container.main-subnav > .content"
+    );
+    contentElement.style.top = "4rem";
+  }
   sidebarToggle.addEventListener("click", () => {
     toggleNavMenu(sidebarToggle);
   });
