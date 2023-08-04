@@ -1,7 +1,9 @@
 const addedTopBounding = 80;
 document.addEventListener("DOMContentLoaded", function () {
+  if (window.innerWidth <= 768) {
+    findSideBarTop();
+  }
   const sidebarToggle = document.querySelector(".sidebar-nav");
-
   const sidebarContentLinks = document.querySelectorAll(".internal-nav a");
   const headings = document.querySelectorAll("h1, h2, h3, h4, h5, h6");
   const header = document.querySelector("header");
@@ -31,6 +33,8 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+window.addEventListener("resize", findSideBarTop);
+
 function findCurrentHeadingId(headings) {
   for (const heading of headings) {
     const bounding = heading.getBoundingClientRect();
@@ -58,4 +62,10 @@ function toggleNavMenu(sidebarContent) {
   sidebarContent.classList.contains("open")
     ? sidebarContent.classList.remove("open")
     : sidebarContent.classList.add("open");
+}
+
+function findSideBarTop() {
+  const headerHeight = document.querySelector("header").offsetHeight;
+  const sidebarContainer = document.querySelector(".sidebar-nav-container");
+  sidebarContainer.style.top = headerHeight + "px";
 }

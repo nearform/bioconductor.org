@@ -5,10 +5,6 @@ body {
   background: var(--neutral-n50);
 }
 
-main {
-  margin: 2rem 0;
-}
-
 .container {
   margin: 0 auto;
   width: calc(100% - 3rem);
@@ -20,6 +16,7 @@ main > .container.main-subnav {
   gap: 2rem;
   grid-template-columns: 300px 1fr;
   grid-template-areas: "left-col .";
+  margin: 2rem 0;
 }
 
 img {

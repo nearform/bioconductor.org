@@ -40,8 +40,8 @@ nav.subnav a {
 
 .sidebar-nav-container {
   width: 100%;
-  padding: 8px;
-  background-color: white;
+  background-color: inherit;
+  margin-right: 1rem;
 }
 
 .sidebar-nav {
@@ -175,24 +175,23 @@ nav.subnav a {
   }
 
   .sidebar-nav-container {
+    margin-right: -2px;
     display: block;
     position: fixed;
-    top: 10rem;
     height: 4.5rem;
-    width: -webkit-fill-available;
+    width: calc(100% + 1.3rem);
+    background-color: #fff;
   }
 
   .sidebar-nav {
     margin-top: 1rem;
-    margin-left: 1rem;
     height: 1.7rem;
     overflow: hidden;
     transition: 0.3s;
+    margin-left: 4.5rem;
     border: 1.5px solid #0000;
     border-radius: 8px;
-    width: calc(100vw - 4rem);
-    padding-left: 8px;
-    padding-right: 8px;
+    width: calc(100vw - 5rem);
     background: linear-gradient(white, white) padding-box,
       var(--gradient-brand) border-box;
   }
