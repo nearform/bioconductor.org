@@ -23,7 +23,7 @@ img {
   max-width: 100%;
 }
 
-@media (width <=768px) {
+@media (max-device-width: 768px) {
   main > .container.main-subnav {
     display: flex;
     flex-direction: column-reverse;
