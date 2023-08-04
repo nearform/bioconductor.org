@@ -5,15 +5,14 @@ body {
   background: var(--neutral-n50);
 }
 
-main {
-  background: var(--neutral-n50);
-  margin: 1rem 0;
-}
-
 .container {
   margin: 0 auto;
   width: calc(100% - 3rem);
   max-width: 1400px;
+}
+
+main > .container {
+  margin-top: 2rem;
 }
 
 main > .container.main-subnav {
@@ -23,46 +22,21 @@ main > .container.main-subnav {
   grid-template-areas: "left-col .";
 }
 
-.left-col {
-  grid-area: left-col;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-nav.subnav {
-  border-radius: 0.5rem;
-  border: 1px solid var(--primary-p75);
-  padding: 0.5rem;
-}
-
-nav.subnav a {
-  text-decoration: underline;
-  display: block;
-  padding: 0.5rem;
-  padding-bottom: 0.75rem;
-  background-image: url("/images/chevron_right.svg");
-  background-repeat: no-repeat;
-  background-position: right center;
-  color: black;
-}
-
 img {
   max-width: 100%;
 }
 
-@media (width <= 768px) {
+@media (max-device-width: 768px) {
   main > .container.main-subnav {
-    display: block;
+    display: flex;
+    flex-direction: column-reverse;
+    margin-right: auto;
+    margin-left: auto;
   }
 
-  .left-col {
-    display: none;
-  }
-
-  .site-container {
-    margin: 0 auto; /* floats the design center */
-    max-width: 1400px; /* change the site design width here */
+  main > .container.main-subnav > .content {
+    position: relative;
+    z-index: -1;
   }
 }
 

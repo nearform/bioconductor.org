@@ -3,33 +3,37 @@
   xmlns="http://www.w3.org/1999/xhtml"
   dir="ltr"
   lang="en-US"
-  prefix="og: http://ogp.me/ns#"
->
+  prefix="og: http://ogp.me/ns#">
   <%= render("/_sitehead/") %>
-  <%= render("/components/sitescripts/") %>
   <body>
+    <%= render("/components/sitescripts/") %>
     <%= render("/components/header/") %>
-    <%= render("/_nav/", :section_navigation => has_subnav?(@item) && subnav_items(@item).length > 0) %>
 
     <% if @item[:hero] %>
+
     <section class="hero">
+      <div class="container">
       <% if (@item.identifier != '/') %>
         <%= render("/components/breadcrumbs/") %>
       <% end %>
       <%= render(@item[:hero]) %>
+    </div>
     </section>
     <%end%>
 
     <main>
       <% if has_subnav?(@item) %>
-      <div class="container main-subnav">
-      <% else %>
-      <div class="container">
+        <div class="container main-subnav">
+      <% elsif !@item[:fullwidth] %>
+        <div class="container">
       <% end %>
-        
+
         <% if has_subnav?(@item) %>
           <section class="left-col">
-          <%= render("/components/subnav/", :pages => subnav_items(@item)) %>
+            <div class="left-col-inner">
+              <%= render("/components/subnav/", :pages => subnav_items(@item))
+              %>
+            </div>
           </section>
         <% end %>
 
@@ -48,7 +52,9 @@
 
           <%= yield if block_given? %>
         </section>
-      </div>
+      <% if (!has_subnav?(@item) && !@item[:fullwidth]) %>
+        </div>
+      <% end %>
     </main>
 
     <%= render("/components/footer/") %>

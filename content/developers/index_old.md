@@ -4,14 +4,14 @@ software. Listed below are helpful links which will guide developers
 at different stages of their package.
 
 <div style="width:100%;float:left;">
-  <div class="shaded_box">
+  <div class="sidebar-box">
     <img src="/images/inv.gif" align="right" height="200" width="1" alt=""/>
-    <p class="box_header">Contributing Packages</p>
+    <p class="format-bold">Contributing Packages</p>
 
     <p>Design and Submission</p>
 
     <ul>
-      <li><a class="symlink" href="https://contributions.bioconductor.org/">Bioconductor Packages Guidelines for Development, Maintenance, and Peer Review</a></li> 
+      <li><a class="symlink" href="https://contributions.bioconductor.org/">Bioconductor Packages Guidelines for Development, Maintenance, and Peer Review</a></li>
       <li><a class="symlink" href="https://contributions.bioconductor.org/submission-overview.html">Package Submission</a></li>
       <li><a class="symlink" href="https://contributions.bioconductor.org/develop-overview.html">Package Development Guidelines</a></li>
       <li><a class="symlink" href="https://contributions.bioconductor.org/package-maintenance.html">Package Maintenance Tips</a></li>
@@ -27,6 +27,7 @@ at different stages of their package.
       <li><a class="symlink" href="https://git.bioconductor.org/BiocCredentials/">Git Credentials App</a></li>
       <li><a class="symlink" href="/checkResults/">Build Reports</a></li>
       <li><a class="symlink" href="https://contributions.bioconductor.org/troubleshooting-build-report.html">Troubleshooting Build Report</a></li>
+
       <li><em>Bioconductor</em> <a href="https://code.bioconductor.org/">browsable code base</a></li>
       <li><a class="symlink" href="/developers/release-schedule/">Release Schedule</a></li>
       <li><a class="symlink" href="https://stat.ethz.ch/mailman/listinfo/bioc-devel">Developer Mailing List</a></li>
@@ -35,9 +36,9 @@ at different stages of their package.
 
   </div>
   
-  <div class="shaded_box">
+  <div class="sidebar-box">
     <img src="/images/inv.gif" align="right" height="20" width="1" alt=""/>
-    <p class="box_header">Community</p>
+    <p class="format-bold">Community</p>
     
     <ul>
       <li><a class="symlink" href="/developers/developers-forum/">Developers' Forum</a></li>

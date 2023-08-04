@@ -58,6 +58,62 @@ document.addEventListener("DOMContentLoaded", function () {
   navLink.forEach((n) => n.addEventListener("click", closeMenu));
 });
 
+//Changes body and hero background color once clicked on certain links
+function changeBackgroundColors() {
+  const heroElement = document.querySelector(".hero");
+  const installPageRegex = /\/install\//;
+  const aboutPageRegex = /\/about\//;
+
+  if (installPageRegex.test(window.location.href)) {
+    document.body.style.backgroundColor = "#fff";
+    heroElement.style.backgroundColor = "var(--neutral-n50)";
+  }
+
+  if (aboutPageRegex.test(window.location.href)) {
+    document.body.style.backgroundColor = "#fff";
+  }
+}
+
+changeBackgroundColors();
+
+window.addEventListener("hashchange", changeBackgroundColors);
+
+//Allow the cursor to drag and scroll the events
+function enableDragScroll() {
+  const slider = document.querySelector(".events-container");
+  let isDown = false;
+  let startX;
+  let scrollLeft;
+
+  if(slider){
+
+  slider.addEventListener("mousedown", (e) => {
+    isDown = true;
+    slider.classList.add("active");
+    startX = e.pageX - slider.offsetLeft;
+    scrollLeft = slider.scrollLeft;
+  });
+
+  function handleMouseUpAndLeave() {
+    isDown = false;
+    slider.classList.remove("active");
+  }
+
+  slider.addEventListener("mouseup", handleMouseUpAndLeave);
+  slider.addEventListener("mouseleave", handleMouseUpAndLeave);
+
+  slider.addEventListener("mousemove", (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - slider.offsetLeft;
+    const scrollSpeed = x - startX;
+    slider.scrollLeft = scrollLeft - scrollSpeed;
+  });
+}
+}
+
+window.addEventListener("load", enableDragScroll);
+
 //package page
 function wrapChildDivs() {
   const parentElement = document.getElementById(
