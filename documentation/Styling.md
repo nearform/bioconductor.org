@@ -72,12 +72,12 @@ In order to use these include the typography CSS sheet in your web page.
 
 ### Layout
 
-The layout of the site is set to be a fixed width on screens wider than 1400px, and scale down on screens that are smaller. This is set in the [bioconductor.css](/assets/style/bioconductor.css) file.
+The layout of the site is set to be a fixed width on screens wider than 1400px, and scale down on screens that are smaller. This is set in the [layout.css](/assets/style/layout.css) file.
 
 In order to apply this layout you will need to firstly include the layout CSS.
 
 ```html
-<link rel="stylesheet" href="/styles/bioconductor.css" />
+<link rel="stylesheet" href="/styles/layout.css />
 ```
 
 To apply the layout constraints there is a utility class called `container`. Applying this class is done as in the following example.
