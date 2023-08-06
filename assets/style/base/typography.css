@@ -60,7 +60,6 @@ a {
 }
 
 @media (max-device-width: 768px) {
-
   h1,
   .text-h1 {
     font-size: 2.1rem;
