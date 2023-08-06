@@ -3,27 +3,38 @@
 The styling for bioconductor.org is built to be reused in other places. It comprises of several different aspects
 
 * [Base styling](#base-styling)
-  * [Fonts](#fonts)
-  * [Colors](#colors)
-  * [Typography](#typography)
-  * [Layout](#layout)
+    * [Fonts](#fonts)
+    * [Colors](#colors)
+    * [Typography](#typography)
+    * [Layout](#layout)
 
 * [Component styling](#component-styling)
-  * [Block Quotes](#block-quotes)
-  * [Breadcrumbs](#breadcrumbs)
-  * [Buttons](#buttons)
-  * [Code Blocks](#code-blocks)
-  * [Gallery](#gallery)
-  * [Lists](#lists)
+    * [Block Quotes](#block-quotes)
+    * [Breadcrumbs](#breadcrumbs)
+    * [Buttons](#buttons)
+    * [Code Blocks](#code-blocks)
+    * [Gallery](#gallery)
+* [Lists](#lists)
 
-* Section styling
-* Page styling
+* [Section styling](#section-styling)
+    * [Announcement](#announcement)
+    * [Footer](#footer)
+    * [Header](#header)
+    * [Hero](#hero)
+    * [Sidebar](#sidebar)
+
+* [Page styling](#page-styling)
+    * [About](#about)
+    * [Get Started](#get-started)
+    * [Home](#home)
+    * [Learn and Developers](#learn-and-developers)
+
 
 ## Base styling
 
-The base styles comprise of [fonts](#fonts), [colors](colors) and [typography](typography) and can be easily reused across different websites. In addition there is the [layout](layout) styling which helps to set the structure of the page. All other styling options rely on these being in place.
+The base styles comprise of [fonts](#fonts), [colors](#colors) and [typography](#typography) and can be easily reused across different websites. In addition there is the [layout](#layout) styling which helps to set the structure of the page. All other styling options rely on these being in place.
 
-All of the base styling can be found in [assets/style/base](/assets/style/base)
+All of the base styling can be found in [assets/style/base/](/assets/style/base/)
 
 ### Fonts
 
@@ -35,7 +46,7 @@ In order to use the fonts simply include the font CSS sheet in your web page.
 <link rel="stylesheet" href="/style/font.css" />
 ```
 
-You will also need to include the font files. These can be found in [assets/style/fonts](/assets/style/fonts). 
+You will also need to include the font files. These can be found in [assets/style/fonts/](/assets/style/fonts/). 
 
 
 ### Colors
@@ -88,7 +99,7 @@ Components are styled up in their own stylesheets, and examples of them can be s
 * [Gallery](#gallery)
 * [Lists](#lists)
 
-All of the base styling can be found in [assets/style/components](/assets/style/components)
+All of the base styling can be found in [assets/style/components/](/assets/style/components/)
 
 ### Block quotes
 
@@ -102,4 +113,43 @@ All of the base styling can be found in [assets/style/components](/assets/style/
 
 ### Lists
 
+## Section styling
 
+Different sections of the page may also have specific styling. These are less likely to be reused in other places. The following sections have specific styling associated with them:
+
+* [Announcement](#announcement)
+* [Footer](#footer)
+* [Header](#header)
+* [Hero](#hero)
+* [Sidebar](#sidebar)
+
+All of the section styling can be found in [assets/style/sections/](/assets/style/sections/)
+
+### Announcement
+
+### Footer
+
+### Header
+
+### Hero
+
+### Sidebar
+
+## Page styling
+
+As part of the new styling for bioconductor.org some pages also require specific styling applied. These are not likely to be reused. The following pages have specific styles attached:
+
+* [About](#about)
+* [Get Started](#get-started)
+* [Home](#home)
+* [Learn and Developers](#learn-and-developers)
+
+All the stylings for specific pages can be found in [assets/style/pages/](/assets/style/pages/)
+
+### About
+
+### Get Started
+
+### Home
+
+### Learn and Developers
