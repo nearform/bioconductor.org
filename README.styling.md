@@ -23,6 +23,8 @@ The styling for bioconductor.org is built to be reused in other places. It compr
 
 The base styles comprise of [fonts](#fonts), [colors](colors) and [typography](typography) and can be easily reused across different websites. In addition there is the [layout](layout) styling which helps to set the structure of the page. All other styling options rely on these being in place.
 
+All of the base styling can be found in [assets/style/base](/assets/style/base)
+
 ### Fonts
 
 These set the default font for the entire site. The default font is [Atkinson Hyperlegible](https://fonts.google.com/specimen/Atkinson+Hyperlegible). The font file is hosted locally on the website due to some [GDPR concerns relating to Google Fonts](https://www.cookieyes.com/documentation/features/google-fonts-and-gdpr/#How_do_Goo_0).
@@ -85,6 +87,8 @@ Components are styled up in their own stylesheets, and examples of them can be s
 * [Code blocks](#code-blocks)
 * [Gallery](#gallery)
 * [Lists](#lists)
+
+All of the base styling can be found in [assets/style/components](/assets/style/components)
 
 ### Block quotes
 

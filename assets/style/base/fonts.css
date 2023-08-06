@@ -4,14 +4,14 @@
 /* Downloaded the font format */
 @font-face {
   font-family: "Atkinson Hyperlegible";
-  src: url("fonts/AtkinsonHyperlegible-Regular.woff") format("woff");
-  src: url("fonts/AtkinsonHyperlegible-Regular.ttf") format("truetype");
+  src: url("../fonts/AtkinsonHyperlegible-Regular.woff") format("woff");
+  src: url("../fonts/AtkinsonHyperlegible-Regular.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Atkinson Hyperlegible";
-  src: url("fonts/AtkinsonHyperlegible-Bold.woff") format("woff");
-  src: url("fonts/AtkinsonHyperlegible-Bold.ttf") format("truetype");
+  src: url("../fonts/AtkinsonHyperlegible-Bold.woff") format("woff");
+  src: url("../fonts/AtkinsonHyperlegible-Bold.ttf") format("truetype");
   font-weight: bold;
 }
 
