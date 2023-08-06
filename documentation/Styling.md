@@ -43,7 +43,7 @@ These set the default font for the entire site. The default font is [Atkinson Hy
 In order to use the fonts simply include the font CSS sheet in your web page.
 
 ```html
-<link rel="stylesheet" href="/style/font.css" />
+<link rel="stylesheet" href="/style/fonts.css" />
 ```
 
 You will also need to include the font files. These can be found in [assets/style/fonts/](/assets/style/fonts/). 
