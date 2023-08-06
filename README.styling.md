@@ -2,26 +2,26 @@
 
 The styling for bioconductor.org is built to be reused in other places. It comprises of several different aspects
 
-* [Base styling](Base styling)
-  * [Fonts](Fonts)
-  * [Colors](Colors)
-  * [Typography](Typography)
-  * [Layout](Layout)
+* [Base styling](#base-styling)
+  * [Fonts](#fonts)
+  * [Colors](#colors)
+  * [Typography](#typography)
+  * [Layout](#layout)
 
-* [Component styling](Component styling)
-  * [Block Quotes](Block quotes)
-  * [Breadcrumbs](Breadcrumbs)
-  * [Buttons](Buttons)
-  * [Code Blocks](Code blocks)
-  * [Gallery](Gallery)
-  * [Lists](Lists)
+* [Component styling](#component-styling)
+  * [Block Quotes](#block-quotes)
+  * [Breadcrumbs](#breadcrumbs)
+  * [Buttons](#buttons)
+  * [Code Blocks](#code-blocks)
+  * [Gallery](#gallery)
+  * [Lists](#lists)
 
 * Section styling
 * Page styling
 
 ## Base styling
 
-The base styles comprise of [fonts](Fonts), [colors](Colors) and [typography](Typography) and can be easily reused across different websites. In addition there is the [layout](Layout) styling which helps to set the structure of the page. All other styling options rely on these being in place.
+The base styles comprise of [fonts](#fonts), [colors](colors) and [typography](typography) and can be easily reused across different websites. In addition there is the [layout](layout) styling which helps to set the structure of the page. All other styling options rely on these being in place.
 
 ### Fonts
 
@@ -33,7 +33,7 @@ In order to use the fonts simply include the font CSS sheet in your web page.
 <link rel="stylesheet" href="/style/font.css" />
 ```
 
-You will also need to include the font files. These can be found in [assets/style/fonts](assets/style/fonts). 
+You will also need to include the font files. These can be found in [assets/style/fonts](/assets/style/fonts). 
 
 
 ### Colors
@@ -59,7 +59,7 @@ In order to use these include the typography CSS sheet in your web page.
 
 ### Layout
 
-The layout of the site is set to be a fixed width on screens wider than 1400px, and scale down on screens that are smaller. This is set in the [bioconductor.css](assets/style/bioconductor.css) file.
+The layout of the site is set to be a fixed width on screens wider than 1400px, and scale down on screens that are smaller. This is set in the [bioconductor.css](/assets/style/bioconductor.css) file.
 
 In order to apply this layout you will need to firstly include the layout CSS.
 
@@ -77,14 +77,14 @@ To apply the layout constraints there is a utility class called `container`. App
 
 ## Component styling
 
-Components are styled up in their own stylesheets, and examples of them can be seen on the [examples](content/examples) pages. In order to use the components you will need to apply the Fonts, Colors and Typography stylesheets. The following components have been set up:
+Components are styled up in their own stylesheets, and examples of them can be seen on the [examples](/content/examples) pages. In order to use the components you will need to apply the Fonts, Colors and Typography stylesheets. The following components have been set up:
 
-* Block quotes
-* Breadcrumbs
-* Buttons
-* Code blocks
-* Gallery
-* Lists
+* [Block quotes](#block-quotes)
+* [Breadcrumbs](#breadcrumbs)
+* [Buttons](#buttons)
+* [Code blocks](#code-blocks)
+* [Gallery](#gallery)
+* [Lists](#lists)
 
 ### Block quotes
 
