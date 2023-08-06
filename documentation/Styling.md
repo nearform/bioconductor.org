@@ -148,8 +148,16 @@ All the stylings for specific pages can be found in [assets/style/pages/](/asset
 
 ### About
 
+The styling for the about page is available in [assets/style/pages/about.css](/assets/style/pages/about.css)
+
 ### Get Started
+
+The styling for the Get Started page is available in [assets/style/pages/get-started.css](/assets/style/pages/get-started.css)
 
 ### Home
 
+The styling for the home page is available in [assets/style/pages/home.css](/assets/style/pages/home.css)
+
 ### Learn and Developers
+
+The learn and developers pages use the same styling. This is available in [assets/style/pages/learn-and-dev.css](/assets/style/pages/learn-and-dev.css)
