@@ -48,7 +48,7 @@ summary.package-details {
 .package-input,
 #biocViews_package_table_filter input {
   border-radius: 0.25rem;
-  border: 1px solid var(--neutral-n-75, #e7e8ea);
+  border: 1px solid var(--neutral-n75);
   height: 2rem;
   padding: 0 0.5rem;
 }
@@ -92,10 +92,8 @@ summary.package-details {
 }
 
 #biocViews_package_table_length select {
-  background: linear-gradient(white, white) padding-box,
-    var(--neutral-n50) border-box;
   padding: 0.5rem 0.65rem 0.5rem 0.5rem;
-  border: 2px solid var(--neutral-n50);
+  border: 2px solid var(--neutral-n75);
   border-radius: 0.5rem;
 }
 
