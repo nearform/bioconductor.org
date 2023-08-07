@@ -68,13 +68,13 @@ summary.package-details {
   display: inherit;
   margin: 1rem 0 2rem;
   font-weight: 700;
-  cursor: pointer;
   gap: 1rem;
 }
 
 #biocViews_package_table_previous,
 #biocViews_package_table_next {
   color: var(--neutral-n200);
+  cursor: pointer;
 }
 
 #package-entries-wrapper {
