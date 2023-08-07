@@ -80,7 +80,7 @@ summary.package-details {
   cursor: pointer;
 }
 
-#biocViews_package_table_filter {
+#biocViews_package_table_filter label {
   gap: 24px;
   display: flex;
   align-items: center;
