@@ -301,7 +301,120 @@ All of the section styling can be found in [assets/style/sections/](/assets/styl
 
 ### Announcement
 
+The announcement section is used to display important information to the user when they join. Styling for this can be found in [announcement.css](/assets/style/sections/announcement.css)
+
+Prerequisites:
+
+* [Colors](#colors)
+* [Fonts](#fonts)
+* [Typography](#typography)
+
+#### Default
+
+Usage:
+
+```html
+<link rel="stylesheet" href="/style/sections/announcement.css" />
+
+<div class="announcement">
+    <svg xmlns="http://www.w3.org/2000/svg" width="19" height="18" viewBox="0 0 19 18" fill="none">
+      <path d="M9.50003 6.75V8.25M9.50003 11.25H9.50753M4.30387 14.25H14.6962C15.8509 14.25 16.5726 13 15.9952 12L10.7991 3C10.2217 2 8.77834 2 8.20099 3L3.00484 12C2.42749 13 3.14917 14.25 4.30387 14.25Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    </svg>
+
+    <p>Example Content</p>
+</div>
+```
+
+Example Output:
+
+![Default announement](images/announcement-default.png)
+
+
+#### Branded Variation
+
+Usage:
+
+```html
+<link rel="stylesheet" href="/style/sections/announcement.css" />
+
+<div class="announcement announcement-brand">
+  <svg xmlns="http://www.w3.org/2000/svg" width="19" height="18" viewBox="0 0 19 18" fill="none">
+    <path d="M9.50003 6.75V8.25M9.50003 11.25H9.50753M4.30387 14.25H14.6962C15.8509 14.25 16.5726 13 15.9952 12L10.7991 3C10.2217 2 8.77834 2 8.20099 3L3.00484 12C2.42749 13 3.14917 14.25 4.30387 14.25Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+  </svg>
+
+  <p>Example Content</p>
+</div>
+```
+
+Example Output:
+
+![Branded announement](images/announcement-brand.png)
+
+#### Alert Variation
+
+Usage:
+
+```html
+<link rel="stylesheet" href="/style/sections/announcement.css" />
+
+<div class="announcement announcement-error">
+  <svg xmlns="http://www.w3.org/2000/svg" width="19" height="18" viewBox="0 0 19 18" fill="none">
+    <path d="M9.50003 6.75V8.25M9.50003 11.25H9.50753M4.30387 14.25H14.6962C15.8509 14.25 16.5726 13 15.9952 12L10.7991 3C10.2217 2 8.77834 2 8.20099 3L3.00484 12C2.42749 13 3.14917 14.25 4.30387 14.25Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+  </svg>
+
+  <p>Example Content</p>
+</div>
+```
+
+Example Output:
+
+![Error announement](images/announcement-error.png)
+
+#### Warning Variation
+
+Usage:
+
+```html
+<link rel="stylesheet" href="/style/sections/announcement.css" />
+
+<div class="announcement announcement-warning">
+  <svg xmlns="http://www.w3.org/2000/svg" width="19" height="18" viewBox="0 0 19 18" fill="none">
+    <path d="M9.50003 6.75V8.25M9.50003 11.25H9.50753M4.30387 14.25H14.6962C15.8509 14.25 16.5726 13 15.9952 12L10.7991 3C10.2217 2 8.77834 2 8.20099 3L3.00484 12C2.42749 13 3.14917 14.25 4.30387 14.25Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+  </svg>
+
+  <p>Example Content</p>
+</div>
+```
+
+Example Output:
+
+![Warning announement](images/announcement-warning.png)
+
 ### Footer
+
+This displays the footer on the page. The styling for this can be located in [footer.css](/assets/style/sections/footer.css)
+
+Prerequisites:
+
+* [Colors](#colors)
+* [Fonts](#fonts)
+* [Typography](#typography)
+
+Usage:
+
+```html
+<link rel="stylesheet" href="/style/sections/footer.css" />
+
+<footer>
+    <div class="footer-container">
+        ... Footer content
+    </div>
+</footer>
+```
+
+Example Output:
+
+![Example footer](images/footer.png)
 
 ### Header
 
