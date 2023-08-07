@@ -1,3 +1,5 @@
+/* stylelint-disable selector-class-pattern, selector-id-pattern */
+
 details {
   margin: 1rem 0;
 }
