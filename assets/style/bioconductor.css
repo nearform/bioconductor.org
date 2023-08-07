@@ -26,22 +26,7 @@ img {
   max-width: 100%;
 }
 
-@media (max-device-width: 768px)  {
-  main > .container.main-subnav {
-    display: flex;
-    flex-direction: column-reverse;
-    margin-right: auto;
-    margin-left: auto;
-  }
-
-  main > .container.main-subnav > .content {
-    position: relative;
-    z-index: -1;
-  }
-}
-
-
-@media (width <= 768px)  {
+@media (max-device-width: 768px), (width <= 768px)  {
   main > .container.main-subnav {
     display: flex;
     flex-direction: column-reverse;

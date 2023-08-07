@@ -159,7 +159,7 @@
   transform: translateX(3px);
 }
 
-@media (max-device-width: 768px)  {
+@media (max-device-width: 768px), (width <= 768px)  {
   .page-container {
     padding: 1rem;
   }
@@ -192,36 +192,3 @@
   }
 }
 
-
-@media (width <= 768px)  {
-  .page-container {
-    padding: 1rem;
-  }
-
-  .page-container * {
-    font-size: 1rem;
-  }
-
-  .page-container * a {
-    max-width: 16rem;
-  }
-
-  .upper-container,
-  .lower-content {
-    flex-direction: column;
-    gap: 0;
-  }
-
-  .page-intro {
-    width: 100%;
-  }
-
-  .bottom-chip {
-    border-radius: 4px;
-    background-image: var(--gradient-purpleblue);
-  }
-
-  .learn-chevron {
-    display: none;
-  }
-}

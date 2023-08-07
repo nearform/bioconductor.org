@@ -73,55 +73,7 @@ footer * {
   padding-top: 1rem;
 }
 
-@media (max-device-width: 768px) {
-  footer {
-    display: flex;
-    padding: 2rem;
-    justify-content: center;
-  }
-
-  .link-container {
-    display: block;
-    margin-bottom: 0;
-  }
-
-  :is(.link-container-inner nav) {
-    min-width: 10rem;
-    margin-inline-end: 0;
-  }
-
-  .list-container-inner {
-    margin-bottom: 1.25rem;
-  }
-
-  .logo-contact-container {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-
-  .copyright {
-    margin-top: 2rem;
-  }
-
-  .footer-logo {
-    width: 12rem;
-    height: 3.5rem;
-  }
-
-  .socials-logo-container {
-    display: block;
-    padding: 1rem 0;
-  }
-
-  .socials {
-    margin: auto;
-    padding-right: 1rem;
-    padding-left: 1rem;
-  }
-}
-
-
-@media (width <= 768px) {
+@media (max-device-width: 768px), (width <= 768px) {
   footer {
     display: flex;
     padding: 2rem;
