@@ -4,6 +4,8 @@
  * Supported plugins: ui (hovered, clicked), checkbox, contextmenu, search
  */
 
+/* stylelint-disable property-no-vendor-prefix */
+
 .jstree-apple > ul {
   background: none;
   padding: 0.5rem;
@@ -139,6 +141,7 @@
 .jstree-apple a.jstree-search {
   color: aqua;
 }
+
 .jstree-apple .jstree-locked a {
   color: silver;
   cursor: default;
@@ -151,9 +154,6 @@
   -moz-box-shadow: 1px 1px 2px #999;
   -webkit-box-shadow: 1px 1px 2px #999;
   box-shadow: 1px 1px 2px #999;
-}
-
-#vakata-contextmenu.jstree-apple-context li {
 }
 
 #vakata-contextmenu.jstree-apple-context a {
