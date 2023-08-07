@@ -159,7 +159,7 @@
   transform: translateX(3px);
 }
 
-@media (max-device-width: 768px) {
+@media (max-device-width: 768px) and (max-width: 768px) {
   .page-container {
     padding: 1rem;
   }
