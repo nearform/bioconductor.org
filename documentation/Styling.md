@@ -109,7 +109,7 @@ All of the base styling can be found in [assets/style/components/](/assets/style
 
 ### Block quotes
 
-Block quotes are a way of highlighting different pieces of text.
+Block quotes are a way of highlighting different pieces of text. The styling for the block quotes is available in [blockquote.css](/assets/style/components/blockquote.css)
 
 Prerequisites:
 
@@ -120,6 +120,8 @@ Prerequisites:
 Usage:
 
 ```html
+<link rel="stylesheet" href="/styles/components/blockquote.css" />
+
 <blockquote>Some text to highlight</blockquote>
 ```
 
@@ -128,6 +130,30 @@ Example output:
 ![Blockquote Example](images/blockquote.png)
 
 ### Breadcrumbs
+
+Breadcrumbs are used to denote where the user is within the site hierarchy. Items further up the hierarchy of pages are clickable by the user in order to navigate to those pages. Styling for the breadcrumbs is available in [breadcrumbs.css](/assets/style/components/breadcrumbs.css)
+
+In addition to the CSS you will also need the chevron image found at [/assets/images/icons/svgs/chevron-right-n400.svg](/assets/images/icons/svgs/chevron-right-n400.svg)
+
+Prerequisites:
+
+* [colors.css](#colors)
+* [fonts.css](#fonts)
+
+Usage:
+
+```html
+<link rel="stylesheet" href="/styles/components/breadcrumbs.css" />
+
+<ul class="breadcrumbs">
+    <li><a href="/">Homepage</a></li>
+    <li>Current Page</li>
+</ul>
+```
+
+Example output:
+
+![Breadcrumbs Example](images/breadcrumbs.png)
 
 ### Buttons
 
@@ -144,7 +170,7 @@ Prerequisites:
 Usage:
 
 ```html
-<link rel="stylesheet" href="/styles/code.css" />
+<link rel="stylesheet" href="/styles/components/code.css" />
 
 <pre><code>Display some code here</code></pre>
 ```
@@ -158,7 +184,7 @@ Example output:
 Usage:
 
 ```html
-<link rel="stylesheet" href="/style/code.css" />
+<link rel="stylesheet" href="/style/components/code.css" />
 
 <pre><code class="light">Display some code here</code></pre>
 ```
@@ -174,7 +200,7 @@ In order to add the highlighting effect for the code you will need to add [highl
 Usage:
 
 ```html
-<link rel="stylesheet" href="/style/code.css" />
+<link rel="stylesheet" href="/style/components/code.css" />
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
 
 <pre><code class="language-r">Some code here</code></pre>
