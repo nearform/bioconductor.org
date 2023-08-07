@@ -97,8 +97,7 @@
 }
 
 
-@media (max-device-width: 1250px), (width <= 1250px) {
-
+@media (device-width <= 1250px), (width <= 1250px) {
   .instructions-install img {
     display: none;
   }
@@ -124,7 +123,7 @@
   }
 }
 
-@media (max-device-width: 768px), (width <= 768px) {
+@media (device-width <= 768px), (width <= 768px) {
   .install-section {
     width: initial;
   }
