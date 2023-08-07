@@ -109,6 +109,24 @@ All of the base styling can be found in [assets/style/components/](/assets/style
 
 ### Block quotes
 
+Block quotes are a way of highlighting different pieces of text.
+
+Prerequisites:
+
+* [colors.css](#colors)
+* [fonts.css](#fonts)
+* [typography.css](#typography)
+
+Usage:
+
+```html
+<blockquote>Some text to highlight</blockquote>
+```
+
+Example output:
+
+![Blockquote Example](images/blockquote.png)
+
 ### Breadcrumbs
 
 ### Buttons
