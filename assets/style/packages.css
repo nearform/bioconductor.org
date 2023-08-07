@@ -40,6 +40,7 @@ summary.package-details {
 .packages-subnav {
   background: linear-gradient(white, white) padding-box,
     var(--gradient-purpleblue) border-box;
+  margin-top: 8px;
 }
 
 .package-input,
@@ -55,14 +56,23 @@ summary.package-details {
   margin-top: 1rem;
 }
 
-#biocViews_package_table_paginate,
+#package-info-wrapper,
 #package-entries-wrapper {
   display: flex;
   justify-content: space-between;
 }
 
 #biocViews_package_table_paginate {
+  display: inherit;
   margin: 1rem 0 2rem;
+  font-weight: 700;
+  cursor: pointer;
+  gap: 1rem;
+}
+
+#biocViews_package_table_previous,
+#biocViews_package_table_next {
+  color: var(--neutral-n200);
 }
 
 #package-entries-wrapper {
@@ -78,7 +88,8 @@ summary.package-details {
   border-radius: 0.5rem;
 }
 
-#badges-box section, #badges-box p {
+#badges-box section,
+#badges-box p {
   margin-left: 0.5rem;
   margin-top: 0.5rem;
 }

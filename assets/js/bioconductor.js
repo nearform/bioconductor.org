@@ -121,16 +121,28 @@ function wrapChildDivs() {
     "biocViews_package_table_wrapper"
   );
 
-  const childDiv1 = document.getElementById("biocViews_package_table_length");
-  const childDiv2 = document.getElementById("biocViews_package_table_filter");
+  const lengthDiv = document.getElementById("biocViews_package_table_length");
+  const searchDiv = document.getElementById("biocViews_package_table_filter");
 
-  const newWrapperDiv = document.createElement("div");
-  newWrapperDiv.id = "package-entries-wrapper";
+  const tableInfo = document.getElementById("biocViews_package_table_info");
+  const pagePagination = document.getElementById("biocViews_package_table_paginate")
 
-  newWrapperDiv.appendChild(childDiv1);
-  newWrapperDiv.appendChild(childDiv2);
+  const newUpperWrapperDiv = document.createElement("div");
+  newUpperWrapperDiv.id = "package-entries-wrapper";
 
-  parentElement.insertBefore(newWrapperDiv, parentElement.firstChild);
+  const newLowerWrapperDiv = document.createElement("div");
+  newLowerWrapperDiv.id = "package-info-wrapper"
+
+  newUpperWrapperDiv.appendChild(lengthDiv);
+  newUpperWrapperDiv.appendChild(searchDiv);
+
+  newLowerWrapperDiv.appendChild(tableInfo);
+  newLowerWrapperDiv.appendChild(pagePagination);
+
+  parentElement.insertBefore(newUpperWrapperDiv, parentElement.firstChild);
+
+  parentElement.appendChild(newLowerWrapperDiv);
+
 }
 
 window.onload = wrapChildDivs;
