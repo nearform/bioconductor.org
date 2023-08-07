@@ -39,7 +39,23 @@ a.button-hero {
   display: none;
 }
 
-@media (max-device-width: 768px) and (max-width: 768px) {
+@media (max-device-width: 768px)  {
+  .homepage-container {
+    padding: 1rem 0.5rem;
+  }
+
+  .mobile-break {
+    display: block;
+  }
+
+  .hero p {
+    margin: 0;
+    margin-bottom: 1rem;
+  }
+}
+
+
+@media (width <= 768px)  {
   .homepage-container {
     padding: 1rem 0.5rem;
   }

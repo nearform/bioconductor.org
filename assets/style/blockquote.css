@@ -22,3 +22,9 @@ blockquote {
     display: block;
   }
 }
+
+@media (width <= 1250px) {
+  .two-col {
+    display: block;
+  }
+}

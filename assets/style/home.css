@@ -573,7 +573,135 @@ hr {
   border-top: 0.13rem solid var(--secondary-s75);
 }
 
-@media (max-device-width: 768px) and (max-width: 768px) {
+@media (max-device-width: 768px)  {
+  .doodle-developer-container img,
+  .left-doodle img,
+  .right-doodle img,
+  .user-quote img {
+    display: none;
+  }
+
+  .data-scientist-content,
+  .developer-content {
+    width: fit-content;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .tab-content {
+    margin-bottom: 0;
+  }
+
+  .tab-label {
+    padding: 0.75rem 0.8rem;
+  }
+
+  .data-scientist-content p {
+    font-size: 1rem;
+  }
+
+  .dev-navs {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .dev-quote p,
+  .user-quote p {
+    font-size: 0.8125rem;
+  }
+
+  .user-quote p {
+    margin-top: 0;
+  }
+
+  .mobile-text-block p {
+    text-align: left;
+  }
+
+  .info p {
+    padding-bottom: 0;
+  }
+
+  .user-quote p:last-child {
+    margin-top: 0.5rem;
+  }
+
+  .dev-quote p:last-child {
+    font-weight: 400;
+  }
+
+  .data-dev-chip {
+    display: none;
+  }
+
+  .mobile-text-block {
+    background-image: var(--gradient-purpleblue);
+    width: calc(100% - 4rem);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 0.63rem;
+    border-radius: 0.25rem;
+  }
+
+  .mobile-text-block .data-dev-logo {
+    display: flex;
+    align-items: center;
+  }
+
+  .learn-block {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+
+  .learn-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .button-padding {
+    width: 60%;
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+  }
+
+  .events-header {
+    margin: auto;
+  }
+
+  .information-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .join-content {
+    padding: 1.5rem;
+  }
+
+  .join-row h2 {
+    padding-top: 0;
+  }
+
+  .join-img-div {
+    display: none;
+  }
+
+  .join-buttons {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .homepage-block .text-large {
+    font-size: 1rem;
+  }
+}
+
+@media (width <= 768px)  {
   .doodle-developer-container img,
   .left-doodle img,
   .right-doodle img,

@@ -96,7 +96,29 @@
   align-self: end;
 }
 
-@media (max-device-width: 768px) and (max-width: 768px) {
+@media (max-device-width: 768px)  {
+  .instructions-install img {
+    display: none;
+  }
+
+  .instructions-install {
+    padding-bottom: 0;
+  }
+
+  .install-row {
+    flex-direction: column;
+
+    /* stylelint-disable-next-line value-no-vendor-prefix */
+    width: -webkit-fill-available;
+    gap: 1.5rem;
+  }
+
+  .code-install {
+    margin-top: 0;
+  }
+}
+
+@media (width <= 768px)  {
   .instructions-install img {
     display: none;
   }
