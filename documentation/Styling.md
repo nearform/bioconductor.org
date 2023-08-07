@@ -11,7 +11,6 @@ The styling for bioconductor.org is built to be reused in other places. It compr
 * [Component styling](#component-styling)
     * [Block Quotes](#block-quotes)
     * [Breadcrumbs](#breadcrumbs)
-    * [Buttons](#buttons)
     * [Code Blocks](#code-blocks)
       * [Default Usage](#default-usage)
       * [Light Theme](#light-theme-variation)
@@ -97,7 +96,6 @@ Components are styled up in their own stylesheets, and examples of them can be s
 
 * [Block quotes](#block-quotes)
 * [Breadcrumbs](#breadcrumbs)
-* [Buttons](#buttons)
 * [Code blocks](#code-blocks)
   * [Default Usage](#default-usage)
   * [Light Theme](#light-theme-variation)
@@ -155,8 +153,6 @@ Example output:
 
 ![Breadcrumbs Example](images/breadcrumbs.png)
 
-### Buttons
-
 ### Code blocks
 
 In order to display example code you should use the `pre` and `code` blocks. Styling for code blocks are available in [code.css](/assets/style/components/code.css)
@@ -212,7 +208,84 @@ Exmaple output:
 
 ### Gallery
 
+The gallery component is used to create a set of dynamically sizing tiles, for example when displaying images or information about people. The styling is available in [gallery.css](/assets/style/components/gallery.css)
+
+Prerequisites:
+
+* [Fonts](#fonts)
+* [Typography](#typography)
+
+Usage:
+
+```html
+<link rel="stylesheet" href="/style/components/gallery.css" />
+
+<div class="gallery">
+  <div class="gallery-card">
+    <img src="/images/examples/gallery-1.png" alt="Gallery image 1" />
+    <a href="#">Name (With link)</a>, Organisation, Title
+  </div>
+  <div class="gallery-card">
+    <img src="/images/examples/gallery-2.png" alt="Gallery image 2" />
+    <a href="#">Name (With link)</a>, Organisation, Title
+  </div>
+  <div class="gallery-card">
+    <img src="/images/examples/gallery-3.png" alt="Gallery image 3" />
+    <a href="#">Name (With link)</a>, Organisation, Title
+  </div>
+  <div class="gallery-card">
+    <img src="/images/examples/gallery-4.png" alt="Gallery image 4" />
+    <a href="#">Name (With link)</a>, Organisation, Title
+  </div>
+  <div class="gallery-card">
+    <img src="/images/examples/gallery-5.png" alt="Gallery image 5" />
+    <a href="#">Name (With link)</a>, Organisation, Title
+  </div>
+  <div class="gallery-card">
+    <img src="/images/examples/gallery-6.png" alt="Gallery image 6" />
+    <a href="#">Name (With link)</a>, Organisation, Title
+  </div>
+  <div class="gallery-card">
+    <img src="/images/examples/gallery-7.png" alt="Gallery image 7" />
+    <a href="#">Name (With link)</a>, Organisation, Title
+  </div>
+  <div class="gallery-card">
+    <img src="/images/examples/gallery-8.png" alt="Gallery image 8" />
+    <a href="#">Name (With link)</a>, Organisation, Title
+  </div>
+  <div class="gallery-card">
+    <img src="/images/examples/gallery-9.png" alt="Gallery image 9" />
+    <a href="#">Name (With link)</a>, Organisation, Title
+  </div>
+</div>
+```
+
+Example output:
+
+![Gallery Example](images/gallery.png)
+
 ### Lists
+
+Lists are used to display a list of related information. The styling currently only applies to Unordered Lists (UL), and can be found in [lists.css](/assets/style/components/lists.css)
+
+Prerequisites:
+
+* [Fonts](#fonts)
+
+Usage:
+
+```html
+<link rel="stylesheet" href="/style/components/lists.css" />
+
+<ul>
+    <li>First list item</li>
+    <li>Second list item</li>
+</ul>
+```
+
+Example output:
+
+![List Example](images/lists.png)
 
 ## Section styling
 
