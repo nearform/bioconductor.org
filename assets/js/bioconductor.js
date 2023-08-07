@@ -63,7 +63,7 @@ function changeBackgroundColors() {
   const heroElement = document.querySelector(".hero");
   const installPageRegex = /\/install\//;
   const aboutPageRegex = /\/about\//;
-  const packagePageRegex = /\/packages\/release\//;
+  const packagePageRegex = /\/packages\//;
 
   if (installPageRegex.test(window.location.href)) {
     document.body.style.backgroundColor = "#fff";
@@ -125,13 +125,15 @@ function wrapChildDivs() {
   const searchDiv = document.getElementById("biocViews_package_table_filter");
 
   const tableInfo = document.getElementById("biocViews_package_table_info");
-  const pagePagination = document.getElementById("biocViews_package_table_paginate")
+  const pagePagination = document.getElementById(
+    "biocViews_package_table_paginate"
+  );
 
   const newUpperWrapperDiv = document.createElement("div");
   newUpperWrapperDiv.id = "package-entries-wrapper";
 
   const newLowerWrapperDiv = document.createElement("div");
-  newLowerWrapperDiv.id = "package-info-wrapper"
+  newLowerWrapperDiv.id = "package-info-wrapper";
 
   newUpperWrapperDiv.appendChild(lengthDiv);
   newUpperWrapperDiv.appendChild(searchDiv);
@@ -142,7 +144,6 @@ function wrapChildDivs() {
   parentElement.insertBefore(newUpperWrapperDiv, parentElement.firstChild);
 
   parentElement.appendChild(newLowerWrapperDiv);
-
 }
 
 window.onload = wrapChildDivs;
