@@ -22,7 +22,6 @@ The styling for bioconductor.org is built to be reused in other places. It compr
     * [Announcement](#announcement)
     * [Footer](#footer)
     * [Header](#header)
-    * [Hero](#hero)
     * [Sidebar](#sidebar)
 
 * [Page styling](#page-styling)
@@ -294,7 +293,6 @@ Different sections of the page may also have specific styling. These are less li
 * [Announcement](#announcement)
 * [Footer](#footer)
 * [Header](#header)
-* [Hero](#hero)
 * [Sidebar](#sidebar)
 
 All of the section styling can be found in [assets/style/sections/](/assets/style/sections/)
@@ -412,15 +410,137 @@ Usage:
 </footer>
 ```
 
+The footer used on bioconductor.org can be found at [layouts/components/footer.html](/layouts/components/footer.html)
+
 Example Output:
 
 ![Example footer](images/footer.png)
 
 ### Header
 
-### Hero
+The header contains the top navigation bar of the site. The styling can be found in [header.css](/assets/style/sectons/header.css)
+
+Prerequisites:
+
+* [Colors](#colors)
+* [Fonts](#fonts)
+* [Typography](#typography)
+* [Layout](#layout)
+
+Usage:
+
+```html
+<header id="site-masthead" class="site-masthead">
+  <div class="header-size">
+    <div class="header-logo">
+      <a href="/">
+        <img src="/images/logo/svg/Logo.svg" class="masthead-logo" alt="Bioconductor home">
+      </a>
+    </div>
+
+    <nav class="header-nav">
+      <div class="nav-links">
+        <a class="format-bold mobile-link" href="/about/">About</a>
+        <a class="format-bold mobile-link" href="/developers/">Developers</a>
+        <a class="format-bold mobile-link" href="/help/">Learn</a>
+      </div>
+      <div class="search-container">
+        <form class="site-search" id="search-form" method="GET" action="/help/search/index.html">
+          <label for="search-bar" class="sr-only">Search</label>
+          <img src="/images/icons/search-icon.svg" class="search-icon" alt="Search icon" aria-hidden="true">
+          <input class="search-bar" name="search-bar" placeholder="Search" id="search-bar">
+        </form>
+      </div>
+
+      <a class="header-button format-bold mobile-link" href="/install/">
+        <span class="get-started format-bold">
+          Get Started
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="15" viewBox="0 0 14 15" fill="none">
+            <path d="M5.25 3.66665L9.33333 7.74998L5.25 11.8333" stroke="#3792AD" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </span>
+      </a>
+    </nav>
+
+    <div class="nav-mobile">
+      <h6>Menu</h6>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+  </div>
+</header>
+```
+
+The header used on bioconductor.org can be found at [layouts/components/header.html](/layouts/components/header.html)
+
+Example Output:
+
+![Example header](images/header.png)
 
 ### Sidebar
+
+The sidebar of the site is for section navigation or in-page navigation. Styling for these can be found at [layouts/components/sidebar.css](/layouts/components/sidebar.css).
+
+Prerequisites:
+
+* [Colors](#colors)
+* [Fonts](#fonts)
+* [Typography](#typography)
+* [Layout](#layout)
+
+Usage:
+
+```html
+<link rel="stylesheet" href="/layouts/components/sidebar.css" />
+
+<div class="container main-subnav">
+    <section class="left-col">
+        Sidebar content
+    </section>
+    <section class="content">
+        Main content
+    </section>
+</div>
+```
+
+In-page navigation:
+
+```html
+<link rel="stylesheet" href="/layouts/components/sidebar.css" />
+
+<div class="container main-subnav">
+    <section class="left-col">
+        <div class="sidebar-nav">
+            <span class="sidebar-header">
+              <p class="format-bold">Jump to:</p>
+              <img class="mobile-chevron" src="/images/icons/chevron-down.jpg" alt="collapse-chevron">
+            </span>
+
+            <nav class="internal-nav" aria-label="Page navigation">
+              <a class="sidebar-nav-button selected-nav" href="#heading-text-1">Heading text 1</a>
+              <a class="sidebar-nav-button" href="#heading-text-2">Heading text 2</a>
+              <a class="sidebar-nav-button" href="#heading-text-3">Heading text 3</a>
+              <a class="sidebar-nav-button" href="#heading-text-4">Heading text 4</a>
+              <a class="sidebar-nav-button" href="#code-blocks">Code blocks</a>
+              <a class="sidebar-nav-button" href="#heading-text-5">Heading text 5</a>
+              <a class="sidebar-nav-button" href="#heading-text-6">Heading text 6</a>
+            </nav>
+        </div>
+    </section>
+    <section class="content">
+        Main content
+    </section>
+</div>
+```
+
+Example output:
+
+Full examples can be found in the [examples](/layouts/examples/) folder
+
+![Sidebar example](images/sidebar.png)
 
 ## Page styling
 
