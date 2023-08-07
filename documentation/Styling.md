@@ -13,6 +13,9 @@ The styling for bioconductor.org is built to be reused in other places. It compr
     * [Breadcrumbs](#breadcrumbs)
     * [Buttons](#buttons)
     * [Code Blocks](#code-blocks)
+      * [Default Usage](#default-usage)
+      * [Light Theme](#light-theme-variation)
+      * [Code Highlighting](#code-highlighting)
     * [Gallery](#gallery)
 * [Lists](#lists)
 
@@ -56,7 +59,7 @@ The colors used across the site are defined in the colors CSS file. These are as
 In order to use the colours include the colour CSS sheet in your web page.
 
 ```html
-<link rel="stylesheet" href="/style/colors.css" />
+<link rel="stylesheet" href="/style/base/colors.css" />
 ```
 
 
@@ -67,17 +70,17 @@ There are multiple differences throughout the styles for Bioconductor from the d
 In order to use these include the typography CSS sheet in your web page.
 
 ```html
-<link rel="stylesheet" href="/styles/typography.css" />
+<link rel="stylesheet" href="/styles/base/typography.css" />
 ```
 
 ### Layout
 
-The layout of the site is set to be a fixed width on screens wider than 1400px, and scale down on screens that are smaller. This is set in the [layout.css](/assets/style/layout.css) file.
+The layout of the site is set to be a fixed width on screens wider than 1400px, and scale down on screens that are smaller. This is set in the [layout.css](/assets/style/base/layout.css) file.
 
 In order to apply this layout you will need to firstly include the layout CSS.
 
 ```html
-<link rel="stylesheet" href="/styles/layout.css />
+<link rel="stylesheet" href="/styles/base/layout.css />
 ```
 
 To apply the layout constraints there is a utility class called `container`. Applying this class is done as in the following example.
@@ -96,6 +99,9 @@ Components are styled up in their own stylesheets, and examples of them can be s
 * [Breadcrumbs](#breadcrumbs)
 * [Buttons](#buttons)
 * [Code blocks](#code-blocks)
+  * [Default Usage](#default-usage)
+  * [Light Theme](#light-theme-variation)
+  * [Code Highlighting](#code-highlighting)
 * [Gallery](#gallery)
 * [Lists](#lists)
 
@@ -108,6 +114,57 @@ All of the base styling can be found in [assets/style/components/](/assets/style
 ### Buttons
 
 ### Code blocks
+
+In order to display example code you should use the `pre` and `code` blocks. Styling for code blocks are available in [code.css](/assets/style/components/code.css)
+
+Prerequisites:
+
+* [colors.css](#colors)
+
+##### Default Usage
+
+Usage:
+
+```html
+<link rel="stylesheet" href="/styles/code.css" />
+
+<pre><code>Display some code here</code></pre>
+```
+
+Example output:
+
+![Default Codeblock](images/code-block-default.png)
+
+##### Light Theme Variation
+
+Usage:
+
+```html
+<link rel="stylesheet" href="/style/code.css" />
+
+<pre><code class="light">Display some code here</code></pre>
+```
+
+Example output:
+
+![Light Codeblock](images/code-block-light.png)
+
+##### Code Highlighting
+
+In order to add the highlighting effect for the code you will need to add [highlight.js](https://highlight.js), an additional javascript file, and set the language in the class. The full list of languages supported can be found [here](https://highlightjs.readthedocs.io/en/latest/supported-languages.html).
+
+Usage:
+
+```html
+<link rel="stylesheet" href="/style/code.css" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+
+<pre><code class="language-r">Some code here</code></pre>
+```
+
+Exmaple output:
+
+![Highlighted Code Block](images/code-block-highlighted.png)
 
 ### Gallery
 
