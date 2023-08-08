@@ -124,6 +124,8 @@
   height: 30%;
 }
 
+.user-quote
+
 .user-quote img {
   margin-right: 1.5rem;
 }
@@ -250,6 +252,7 @@
   display: flex;
   align-items: center;
   gap: 1.3rem;
+  margin: 2rem 2rem 0;
 }
 
 .dev-quote p {
