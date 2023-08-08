@@ -170,7 +170,7 @@ input:focus::placeholder {
     background-color: #fff;
     transition: 0.3s;
     gap: 0;
-    top: 100%;
+    top: 60%;
     height: 2px;
     overflow: hidden;
     opacity: 0;
