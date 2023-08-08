@@ -1,20 +1,13 @@
 const addedTopBounding = 80;
 document.addEventListener("DOMContentLoaded", function () {
-  findSideBarTop();
+  copySidebar()
 
   const sidebarToggle = document.querySelector(".sidebar-nav");
   const sidebarContentLinks = document.querySelectorAll(".internal-nav a");
   const headings = document.querySelectorAll("h1, h2, h3, h4, h5, h6");
   const header = document.querySelector("header");
   const headerHeight = header.offsetHeight;
-  const sidebarContainer = document.querySelector(".sidebar-nav-container");
 
-  if (sidebarContainer) {
-    const contentElement = document.querySelector(
-      "main > .container.main-subnav > .content"
-    );
-    contentElement.style.top = "4rem";
-  }
 
   sidebarToggle?.addEventListener("click", () => {
     toggleNavMenu(sidebarToggle);
@@ -40,7 +33,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-window.addEventListener("resize", findSideBarTop);
 
 function findCurrentHeadingId(headings) {
   for (const heading of headings) {
@@ -71,12 +63,17 @@ function toggleNavMenu(sidebarContent) {
     : sidebarContent.classList.add("open");
 }
 
-function findSideBarTop() {
-  if (window.innerWidth <= 768) {
-    const headerHeight = document.querySelector("header").offsetHeight;
-    const sidebarContainer = document.querySelector(".sidebar-nav-container");
-    if(sidebarContainer){
-      sidebarContainer.style.top = headerHeight + "px";
-    }
+function copySidebar() {
+
+  const header = document.querySelector("header")
+  const sidebarContainer = document.querySelector(".sidebar-nav-container");
+  
+  if(sidebarContainer){
+    const sidebarCopy = sidebarContainer.cloneNode(true);
+    sidebarCopy.id = "header-sidebar-container";
+
+    console.log(sidebarCopy);
+    header.appendChild(sidebarCopy);
   }
+  
 }
