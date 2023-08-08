@@ -73,7 +73,6 @@ function copySidebar() {
     const sidebarCopy = sidebarContainer.cloneNode(true);
     sidebarCopy.id = "header-sidebar-container";
 
-    console.log(sidebarCopy);
     header.appendChild(sidebarCopy);
   }
   
