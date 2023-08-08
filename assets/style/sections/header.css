@@ -177,7 +177,6 @@ input:focus::placeholder {
   }
 
   .header-nav.active {
-    top: 100%;
     opacity: 1;
     height: 19rem;
   }
