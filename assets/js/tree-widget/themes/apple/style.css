@@ -21,7 +21,7 @@
   background-image: url("d.png");
   background-repeat: no-repeat;
   background-color: transparent;
-  margin-right: 1rem;
+  margin-right: 0.3rem;
 }
 
 .jstree-apple li {
@@ -42,6 +42,27 @@
 }
 
 .jstree-open > ul > li > ul > li > a {
+  margin-left: 1rem;
+}
+
+#ShinyApps > ins,
+#WorkflowManagement > ins,
+#CustomArray > ins,
+#FunctionalAnnotation > ins,
+#ReproducibleResearch > ins,
+#Workflow > ul > li > ins {
+  display: none;
+}
+
+#ShinyApps > a,
+#WorkflowManagement > a,
+#CustomArray > a,
+#FunctionalAnnotation > a,
+#ReproducibleResearch > a {
+  margin-left: 2rem;
+}
+
+#Workflow > ul > li > a {
   margin-left: 1rem;
 }
 
