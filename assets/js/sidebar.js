@@ -2,7 +2,7 @@ const addedTopBounding = 80;
 const headerOffSetToAdd = 7;
 document.addEventListener("DOMContentLoaded", function () {
   copySidebar()
-
+  addTopMobileNav()
   const sidebarToggle = document.querySelector(".sidebar-nav");
   const sidebarContentLinks = document.querySelectorAll(".internal-nav a");
   const headings = document.querySelectorAll("h1, h2, h3, h4, h5, h6");
@@ -77,4 +77,13 @@ function copySidebar() {
     header.appendChild(sidebarCopy);
   }
   
+}
+
+function addTopMobileNav() {
+  
+  const sideBarNav = document.querySelector("#header-sidebar-container");
+  const headerNav = document.querySelector(".header-nav");
+  sideBarNav ?
+    headerNav.style.top = "60%" : headerNav.style.top = "100%"
+   
 }
