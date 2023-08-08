@@ -37,9 +37,8 @@
 
 /* checked tab */
 .tab-radio:checked + .tab-label {
-  border: 1px solid;
-  border-color: var(--secondary-s75);
-  background: var(--secondary-s50);
+  background: var(--primary-p500);
+  color: #fff;
 }
 
 .tab-radio:checked + .tab-label + .tab-content {
@@ -573,7 +572,7 @@ hr {
   border-top: 0.13rem solid var(--secondary-s75);
 }
 
-@media (max-device-width: 768px), (width <= 768px)  {
+@media (max-device-width: 768px), (width <= 768px) {
   .doodle-developer-container img,
   .left-doodle img,
   .right-doodle img,
@@ -699,7 +698,6 @@ hr {
   .homepage-block .text-large {
     font-size: 1rem;
   }
-
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -716,9 +714,9 @@ hr {
   }
 }
 
-@media(max-device-width: 1250px), (width <= 1250px) {
-  .left-doodle, .right-doodle {
+@media (max-device-width: 1250px), (width <= 1250px) {
+  .left-doodle,
+  .right-doodle {
     display: none;
   }
-
 }
