@@ -214,10 +214,10 @@
 }
 
 .developer-content {
-  padding: 2rem 2rem 0;
+  padding: 2rem 2rem 1.5rem;
   border-radius: 4px;
   background: var(--code-blocks-dark);
-  height: 24rem;
+  max-height: 24rem;
   width: 53rem;
 }
 
