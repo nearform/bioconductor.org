@@ -85,7 +85,7 @@ The former will run the `Pr - Preview` action on any non draft pull request, and
 - Run Axe accessibility:
     - We run the command 'npx run axe (url)' using the bioconductor url, the output is stored in the github environment variable `AXE_RESULTS`.
 - Add AXE comments to pull request.
-    - Similar to the pageSpeed comments step, we comment Axe results onto the pull request, the `message` this time being the contents of the `AXE_RESULTS` env variable. We provide also different `message-id`
+    - Similar to the pageSpeed comments step, we comment Axe results onto the pull request, the `message` this time being the contents of the `AXE_RESULTS` env variable. We provide also different `message-id`.
 
 *There is no specific repository configuration for this job.*
 
