@@ -35,7 +35,7 @@ Create a new IAM user with the following permissions:
     }
 ```
 
-Make sure that you keep a hold of the Access Key ID and the Secret Access Key for that IAM user, we  will need them to set up github.
+Make sure that you keep a hold of the `Access Key ID` and the `Secret Access Key` for that IAM user, we  will need them to set up github.
 
 
 ## Github Actions
@@ -53,7 +53,7 @@ The former will run the `Pr - Preview` action on any non draft pull request, and
 - Caches and retrieves the output directory(for faster build times).
 - Sets up and builds the website to the output directory.
 - Creates bucket, if bucket does not already exist.
-    - this step was required as the next action had outdated methods for creating the bucket.
+    - This step was required as the next action had outdated methods for creating the bucket.
 - Deploys contents of the output directory to bucket.
 
 ##### Repository configuration for this job:
@@ -65,8 +65,8 @@ The former will run the `Pr - Preview` action on any non draft pull request, and
     - There should be a button saying "new environment" on the page, once clicked we enter in our environment name `dev` and click "configure environment". *( This is to make sure that the access keys, which will be added in the next step are only accessible on a dev environment.)*
 - Add your IAM access key and ID *(from the aws section)* as secrets to the dev environment.
     - Once on the environments page there should be a section called "environment secrets". 
-    - click on "add secrets", give the secret a name of "AWS_SECRET_ACCESS_KEY" and paste in the IAM access key into the 'value' field *(from the aws section)*.
-    - once again click "add secrets" and give this secret a name of "AWS_ACCESS_KEY_ID" and paste in the IAM access key ID into the 'value' field *(from the aws section)*.
+    - Click on "add secrets", give the secret a name of "AWS_SECRET_ACCESS_KEY" and paste in the IAM access key into the 'value' field *(from the aws section)*.
+    - Once again click "add secrets" and give this secret a name of "AWS_ACCESS_KEY_ID" and paste in the IAM access key ID into the 'value' field *(from the aws section)*.
 
 #### kpi_metrics:
 
