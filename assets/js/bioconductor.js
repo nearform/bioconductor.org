@@ -161,7 +161,7 @@ function wrapChildDivs() {
   parentElement.appendChild(newLowerWrapperDiv);
 }
 
-window.onload = wrapChildDivs;
+window.addEventListener("load", wrapChildDivs);
 
 function log(message) {
   if (fb_lite) {
