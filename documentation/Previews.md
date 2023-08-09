@@ -74,7 +74,7 @@ The former will run the `Pr - Preview` action on any non draft pull request, and
 - Checks out repository.
 - Installs node for running the KPI scripts, and the relevant packages (`psi` and `@axe-core/cli`)
 - Runs PageSpeed insights:
-    - We run the js file PageSpeed.js and provide it with the relevant parameters:
+    - Using node, we run the js file PageSpeed.js and provide it with the relevant parameters:
         - `url` - website url 
         - `strategy` - desktop or mobile 
         - `threshold` - range from 0 - 100, the minimum score you would like to pass.
@@ -83,7 +83,7 @@ The former will run the `Pr - Preview` action on any non draft pull request, and
 - Add pageSpeed comments to the pull request.
     - This step gets the outputs of the pageSpeed step from the github environment variable and comments them onto the current pull request. We provide a `message`, this is the content we what to comment, and a `message-id`, since we will also make a comment for the AXE results.
 - Run Axe accessibility:
-    - We run the command 'npx run axe (url)' using the bioconductor url, the output is stored in the github environment variable `AXE_RESULTS`.
+    - Using npx, we run the command 'npx run axe (url)' using the bioconductor url, the output is stored in the github environment variable `AXE_RESULTS`.
 - Add AXE comments to pull request.
     - Similar to the pageSpeed comments step, we comment Axe results onto the pull request, the `message` this time being the contents of the `AXE_RESULTS` env variable. We provide also different `message-id`.
 
