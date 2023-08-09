@@ -24,6 +24,7 @@ li p {
 li:has(p) {
   margin-left: 1rem;
 }
+
 li:has(p)::before {
   margin-left: -1.1rem;
 }
