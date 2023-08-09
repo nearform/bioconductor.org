@@ -58,19 +58,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
   navLink.forEach((n) => n.addEventListener("click", closeMenu));
 
-  window.addEventListener( "resize", findHeaderTop);
-
+  window.addEventListener("resize", findHeaderTop);
 });
 
 function findHeaderTop() {
-
-  const announcementHeight = document.querySelector(".announcement")?.offsetHeight;
+  const announcementHeight =
+    document.querySelector(".announcement")?.offsetHeight;
   const header = document.querySelector(".site-masthead");
 
-  if(announcementHeight){
-    header.style.top = `-${announcementHeight}px`
+  if (announcementHeight) {
+    header.style.top = `-${announcementHeight}px`;
   }
-
 }
 
 //Changes body and hero background color once clicked on certain links
@@ -161,7 +159,38 @@ function wrapChildDivs() {
   parentElement.appendChild(newLowerWrapperDiv);
 }
 
-window.onload = wrapChildDivs;
+window.addEventListener("load", wrapChildDivs);
+
+function copyPackageSidebar() {
+  const header = document.querySelector("header");
+  const packages = document.querySelector(".packages-container");
+
+  if (packages) {
+    const packagesCopy = packages.cloneNode(true);
+    packagesCopy.id = "packages-subnav-copy";
+
+    header.appendChild(packagesCopy);
+  }
+}
+
+window.addEventListener("load", copyPackageSidebar);
+
+window.addEventListener("DOMContentLoaded", function () {
+  const packageToggle = document.querySelector(".packages-subnav");
+
+  console.log(packageToggle);
+
+  packageToggle?.addEventListener("click", () => {
+    console.log("clicked");
+    togglePackageMenu(packageToggle);
+  });
+
+  function togglePackageMenu(packageContent) {
+    packageContent.classList.contains("open")
+      ? packageContent.classList.remove("open")
+      : packageContent.classList.add("open");
+  }
+});
 
 function log(message) {
   if (fb_lite) {

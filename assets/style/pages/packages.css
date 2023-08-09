@@ -111,15 +111,31 @@ summary.package-details {
   padding-left: 0.75rem;
 }
 
+#packages-subnav-copy {
+  display: none;
+}
+
 @media (max-device-width: 768px), (max-width: 768px) {
   .biocViewsTreeContainer {
     display: flex;
     flex-direction: column;
   }
 
+  .packages-container {
+    display: none;
+  }
+
   .packages-subnav {
-    float: none;
-    width: inherit;
+    height: 1.7rem;
+    overflow: hidden;
+    transition: 0.3s;
+    margin-right: auto;
+    margin-left: auto;
+    border: 1.5px solid #0000;
+    border-radius: 8px;
+    width: calc(100vw - 5rem);
+    background: linear-gradient(white, white) padding-box,
+      var(--gradient-brand) border-box;
   }
 
   #autocompleter {
@@ -133,5 +149,16 @@ summary.package-details {
 
   #package-info-wrapper {
     gap: 2rem;
+  }
+
+  #packages-subnav-copy {
+    display: flex;
+    height: 4.5rem;
+    width: 100%;
+    background-color: #fff;
+  }
+
+  .packages-subnav.open {
+    height: calc(100% + 19rem);
   }
 }

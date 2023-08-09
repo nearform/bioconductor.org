@@ -27,24 +27,26 @@
 <link type="text/css" rel="stylesheet" href="/style/tree-widget/!style.css" />
 
 <div id="tree_outer" class="biocViewsTreeContainer">
-  <div class="packages-subnav">
-    <p class="format-bold">
-      Bioconductor version <span id="bioc_version"></span>
-    </p>
-    <div id="tree-toggler-div">
-      <p>
-        <input id="tree-toggler" type="checkbox" />
-        Developers: check this box to toggle the visibility of childless
-        biocViews.
+  <div class="packages-container">
+    <div class="packages-subnav">
+      <p class="format-bold">
+        Bioconductor version <span id="bioc_version"></span>
       </p>
-    </div>
+      <div id="tree-toggler-div">
+        <p>
+          <input id="tree-toggler" type="checkbox" />
+          Developers: check this box to toggle the visibility of childless
+          biocViews.
+        </p>
+      </div>
 
-    <div class="ui-widget">
-      <label for="autocompleter">Find biocViews:</label>
-      <input type="text" id="autocompleter" size="35" class="package-input" />
-    </div>
+      <div class="ui-widget">
+        <label for="autocompleter">Find biocViews:</label>
+        <input type="text" id="autocompleter" size="35" class="package-input" />
+      </div>
 
-    <div id="tree"></div>
+      <div id="tree"></div>
+    </div>
   </div>
 
   <div id="packages" class="biocViewsPackages"></div>
