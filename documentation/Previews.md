@@ -44,9 +44,9 @@ There are two yaml files in the workflows directory associated with the pr previ
 
 `pr_deploy.yaml` and `pr_close.yaml`
 
-The former will run the `Pr - Preview` action which will do the following jobs on any given pull request:
+The former will run the `Pr - Preview` action on any non draft pull request, and the latter will run the job `PR - Closed` action on any closed or non-open pull request. Below are the jobs and steps for each action 
 
-### pr_deploy.yaml
+### pr_deploy.yaml *(PR - Preview)*
 #### dev-pr-create-s3:
 ##### steps: 
 - Checks out repository.
@@ -89,7 +89,7 @@ The former will run the `Pr - Preview` action which will do the following jobs o
 
 *There is no specific repository configuration for this job.*
 
-### pr_close.yaml
+### pr_close.yaml *(PR - Closed)*
 ##### steps:
 - You need the secrets thats been used to configure the dev environment for pr_deploy
 - Checks the bucket to see if it exists, to do that you need:
