@@ -52,7 +52,7 @@ The former will run the `Pr - Preview` action on any non draft pull request, and
 - Checks out repository.
 - Caches and retrieves the output directory(for faster build times).
 - Sets up and builds the website to the output directory.
-- Creates bucket, if bucket does not already exists.
+- Creates bucket, if bucket does not already exist.
     - this step was required as the next action had outdated methods for creating the bucket.
 - Deploys contents of the output directory to bucket.
 
