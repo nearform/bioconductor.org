@@ -23,9 +23,9 @@ try {
 
 const nav_elements = [
   /^\/about\//,
-  /^\/developers\//,
   /^\/help\//,
   /^\/packages\//,
+  /^\/developers\//,
 ];
 
 function checkNav() {
