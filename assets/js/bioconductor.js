@@ -58,19 +58,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
   navLink.forEach((n) => n.addEventListener("click", closeMenu));
 
-  window.addEventListener( "resize", findHeaderTop);
-
+  window.addEventListener("resize", findHeaderTop);
 });
 
 function findHeaderTop() {
-
-  const announcementHeight = document.querySelector(".announcement")?.offsetHeight;
+  const announcementHeight =
+    document.querySelector(".announcement")?.offsetHeight;
   const header = document.querySelector(".site-masthead");
 
-  if(announcementHeight){
-    header.style.top = `-${announcementHeight}px`
+  if (announcementHeight) {
+    header.style.top = `-${announcementHeight}px`;
   }
-
 }
 
 //Changes body and hero background color once clicked on certain links
@@ -162,6 +160,19 @@ function wrapChildDivs() {
 }
 
 window.addEventListener("load", wrapChildDivs);
+
+window.addEventListener("load", function () {
+  if (window.innerWidth < 1250) {
+    var parentElement = document.getElementById("tree_outer");
+
+    parentElement.addEventListener("click", function (event) {
+      if (event.target.classList.contains("jstree-clicked")) {
+        var tbodyTable = document.querySelector(".dataTables_scroll");
+        tbodyTable.scrollIntoView({ behavior: "smooth" });
+      }
+    });
+  }
+});
 
 function log(message) {
   if (fb_lite) {
