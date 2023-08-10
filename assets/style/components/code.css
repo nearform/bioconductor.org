@@ -6,7 +6,7 @@ pre:has(code) {
   margin-bottom: 2rem;
 }
 
-code {
+code * {
   font-family: Courier, monospace;
 }
 
