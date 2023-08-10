@@ -2,7 +2,7 @@
 
 <% if @package.has_key? :vignettes and !@package[:vignettes].empty? %>
 <p>To view documentation for the version of this package installed in your system, start R and enter:</p>
-<pre><code>browseVignettes("<%=@package[:Package]%>")</code></pre>
+<pre>browseVignettes("<%=@package[:Package]%>")</pre>
 <% end %>
 
 <table>
@@ -11,7 +11,7 @@
     <tr><td>No vignettes available</td></tr>
   <% else %>
     <% doc_obj.each_with_index do |item, i|%>
-    <% if !item[:file].strip! then next end %>
+
       <tr>
         <td><%= item[:title]%></td>
         <td>
@@ -19,11 +19,11 @@
           <a href="../vignettes/<%=@package[:Package]%>/inst/doc/<%=item[:file]%>"><%=item[:type]%></a>
           <% end %>
         </td>
+        <% if item[:script] and item[:script] != "" %>
         <td>
-          <% if item[:script] and item[:script] != "" %>
           <a href="../vignettes/<%=@package[:Package]%>/inst/doc/<%=item[:script]%>">R Script</a>
-          <% end %>
         </td>
+        <% end %>
       </tr>
     <% end %>
   <% end %>
@@ -88,3 +88,5 @@
     <% end %>
   <% end %>
 </table>
+
+
