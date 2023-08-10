@@ -36,6 +36,7 @@ submitted packages must abide by the Bioconductor [Code of Conduct][].
 </ul>
 
 ## Past Package Reviewers
-
+<ul>
 <li>Martin Morgan</li>
 <li>Nitesh Turaga</li>
+</ul>
