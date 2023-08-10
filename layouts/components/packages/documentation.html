@@ -2,7 +2,7 @@
 
 <% if @package.has_key? :vignettes and !@package[:vignettes].empty? %>
 <p>To view documentation for the version of this package installed in your system, start R and enter:</p>
-<pre>browseVignettes("<%=@package[:Package]%>")</pre>
+<pre><code>browseVignettes("<%=@package[:Package]%>")</code></pre>
 <% end %>
 
 <table>
@@ -43,7 +43,6 @@
       <td>
         <a href="../readmes/<%=@package[:Package]%>/README">Text</a>
       </td>
-      <td>&nbsp;</td>
     </tr>
   <% end %>
 
@@ -54,7 +53,6 @@
       <td>
         <a href="../news/<%=@package[:Package]%>/NEWS">Text</a>
       </td>
-      <td>&nbsp;</td>
     </tr>
   <% end %>
 
@@ -65,7 +63,6 @@
       <td>
         <a href="../install/<%=@package[:Package]%>/INSTALL">Text</a>
       </td>
-      <td>&nbsp;</td>
     </tr>
   <% end %>
 
@@ -76,7 +73,6 @@
       <td>
         <a href="../licenses/<%=@package[:Package]%>/LICENSE">Text</a>
       </td>
-      <td>&nbsp;</td>
     </tr>
   <% end %>
 
@@ -88,10 +84,7 @@
         <td>
           <a href="<%=video%>">Video</a>
         </td>
-        <td>&nbsp;</td>
       </tr>
     <% end %>
   <% end %>
 </table>
-
-
