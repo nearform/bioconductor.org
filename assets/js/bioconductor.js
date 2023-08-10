@@ -21,7 +21,12 @@ try {
 
 //Sitehead code that will underline the nav element if the page URL matches the element
 
-const nav_elements = [/^\/about\//, /^\/developers\//, /^\/help\//];
+const nav_elements = [
+  /^\/about\//,
+  /^\/help\//,
+  /^\/packages\//,
+  /^\/developers\//,
+];
 
 function checkNav() {
   const currentPath = window.location.pathname;
