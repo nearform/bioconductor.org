@@ -54,6 +54,8 @@
   background-image: var(--gradient-brand);
   border-radius: 4px;
   padding: 1px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .warmcool-gradient-border {
