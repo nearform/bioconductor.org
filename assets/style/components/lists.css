@@ -5,6 +5,7 @@ ul {
 
 li {
   margin-bottom: 0.5rem;
+  padding-left: 8px;
 }
 
 li::before {
@@ -15,10 +16,6 @@ li::before {
   margin-right: 0.5rem;
   width: 0.25rem;
   height: 0.25rem;
-}
-
-li p {
-  display: inline;
 }
 
 li:has(p) {
