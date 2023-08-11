@@ -176,6 +176,7 @@ class GetJson
     call = "git archive --remote=ssh://git@git.bioconductor.org/packages/biocViews #{branch} inst/extdata/biocViewsVocab.sqlite | tar -x --strip=2 -C #{tempDir}"
 #    local test changes to biocViews
 #    call = "cp /home/lori/b/Rpacks/biocViews/inst/extdata/biocViewsVocab.sqlite #{tempDir}"
+
     system(call)
     dbfile = "#{tempDir}/biocViewsVocab.sqlite"
     db = SQLite3::Database.new(dbfile)
