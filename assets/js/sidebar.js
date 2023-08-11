@@ -1,15 +1,14 @@
 const addedTopBounding = 80;
 const headerOffSetToAdd = 7;
+let headerHeight;
 document.addEventListener("DOMContentLoaded", function () {
   copySidebar();
   addTopMobileNav();
   const sidebarToggle = document.querySelector(".sidebar-nav");
-  const sidebarContentLinks = document.querySelectorAll(
-    ".internal-nav > .sidebar-nav-button"
-  );
+  const sidebarContentLinks = document.querySelectorAll(".internal-nav a");
   const headings = document.querySelectorAll("h1, h2, h3, h4, h5, h6");
   const header = document.querySelector(".header-size");
-  const headerHeight = header.offsetHeight + headerOffSetToAdd;
+  headerHeight = header.offsetHeight + headerOffSetToAdd;
 
   sidebarToggle?.addEventListener("click", () => {
     toggleNavMenu(sidebarToggle);
@@ -21,7 +20,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
       const target = document.querySelector(this.getAttribute("href"));
       if (target) {
-        const offsetTop = target.offsetTop - headerHeight;
+        let offsetTop;
+        window.innerWidth < 768
+          ? (offsetTop = target.offsetTop + headerHeight)
+          : (offsetTop = target.offsetTop - headerHeight);
         window.scrollTo({
           top: offsetTop,
           behavior: "smooth",
