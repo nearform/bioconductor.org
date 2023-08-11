@@ -1,6 +1,7 @@
 ul {
   padding: 0;
   list-style: none;
+  padding-left: 10px;
 }
 
 li {
@@ -8,7 +9,7 @@ li {
   padding-left: 8px;
 }
 
-li::before {
+li::marker {
   content: "•";
   color: var(--primary);
   display: inline;
