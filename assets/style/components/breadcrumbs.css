@@ -8,6 +8,10 @@
   color: var(--neutral-n400);
 }
 
+.breadcrumbs li {
+  padding-left: 0 ;
+}
+
 .breadcrumbs li:not(:first-of-type) {
   background-image: url("/images/icons/svgs/chevron-right-n400.svg");
   background-repeat: no-repeat;
@@ -16,10 +20,6 @@
 
 .breadcrumbs li:last-of-type {
   font-weight: bold;
-}
-
-.breadcrumbs li {
-  padding-left: 0 ;
 }
 
 .breadcrumbs a {
