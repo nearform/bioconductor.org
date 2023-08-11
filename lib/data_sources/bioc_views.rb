@@ -160,7 +160,6 @@ class BiocViews < Nanoc::DataSource
             items.push(get_index_page(packages, v, version))
 
             for package in packages.keys
-              if (package != "limma") then next end
               repo = k
               id = "/#{version}/#{repo}#{package}/"
               pkgs = packages[package]
