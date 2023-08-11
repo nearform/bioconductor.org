@@ -45,7 +45,7 @@
   background: linear-gradient(white, white) padding-box,
     var(--gradient-brand) border-box;
   height: fit-content;
-  max-height: 35rem;
+  max-height: calc(100vh - 13rem);
 }
 
 .internal-nav {
